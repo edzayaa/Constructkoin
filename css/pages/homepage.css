@@ -55,7 +55,7 @@
   text-align: center;
   font-size: min(7rem, 7vh);
   font-weight: 300;
-  line-height: 100%;
+  line-height: 110%;
   margin-bottom: min(1.9rem, 1.9vh);
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
@@ -328,7 +328,7 @@
   text-align: center;
   font-size: 9rem;
   font-weight: 300;
-  line-height: 100%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -591,7 +591,7 @@
   text-align: center;
   font-size: min(6.2rem, 6.2vh);
   font-weight: 400;
-  line-height: normal;
+  line-height: 110%;
   background: linear-gradient(90deg, #030e17 0%, #f6f6f6 27.9%, #f6f6f6 82.66%, #030e17 107.46%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -870,7 +870,7 @@
 .protocol {
   padding-inline: 5rem;
   padding-block: min(16rem, 16vh) min(5rem, 5vh);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -891,6 +891,7 @@
     padding-inline: 1.5rem;
     padding-block: 10rem 5rem;
     height: fit-content;
+    min-height: fit-content;
   }
 
   .protocol .protocol-flex {
@@ -1524,7 +1525,7 @@
   font-size: min(6.5rem, 6.5vh);
   margin-bottom: min(5.4rem, 5.4vh);
   font-weight: 400;
-  line-height: normal;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -1968,7 +1969,7 @@
   text-align: center;
   font-size: min(6.5rem, 6.5vh);
   font-weight: 300;
-  line-height: 107.692%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2025,13 +2026,19 @@
   flex-shrink: 0;
   display: flex;
   overflow: hidden;
+  border: 0.75px solid #2699fe3d;
 }
 
 .token .token-swiper-container .token-swiper-slide .token-card__bg {
   position: absolute;
   inset: 0;
   z-index: -1;
-  object-fit: contain;
+  object-fit: cover;
+  width: 102%;
+  height: 102%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .token .token-swiper-container .token-swiper-slide .token-card__container {
@@ -2118,7 +2125,7 @@
 
 .real .real-content .real-description {
   text-align: center;
-  font-size: min(6.5rem);
+  font-size: min(6.5rem, 6.5VH);
   font-style: normal;
   line-height: 100%;
   margin-bottom: min(8.4rem, 8.4vh);
@@ -2130,6 +2137,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
+  line-height: 110%;
 }
 
 .real .real-content .real-description span {
@@ -2219,7 +2227,7 @@
 .buy .buy-flex .buy-content .buy-heading {
   font-size: min(8.5rem, 8.5vh);
   font-weight: 400;
-  line-height: 100%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2309,7 +2317,7 @@
 .models .models-content .models-heading {
   text-align: center;
   font-size: min(8.5rem, 8.5vh);
-  line-height: 100%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2492,7 +2500,7 @@
 .estate .estate-content .estate-heading {
   font-size: min(6.5rem, 6.5vh);
   font-weight: 300;
-  line-height: 107.692%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2618,7 +2626,7 @@
   margin-bottom: 0;
   font-size: 3.5rem;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 110%;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
