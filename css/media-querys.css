@@ -1,0 +1,54 @@
+/* === MOBILE PORTRAIT === */
+@media screen and (max-width: 991px), screen and (min-width: 992px) and (orientation: portrait) {
+  /* ...  ... */
+}
+
+/* === MOBILE LANDSCAPE === */
+@media screen and (max-width: 991px) and (orientation: landscape) {
+  /* ...  ... */
+}
+
+/* === LANDSCAPE === */
+@media screen and (orientation: landscape) {
+  /* ...  ... */
+}
+
+/* === PORTRAIT === */
+@media screen and (orientation: portrait) {
+  /* ...  ... */
+}
+
+/* === TABLET === */
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait){
+  /* ...  ... */
+}
+
+/* === DESKTOP === */
+@media screen and (min-width: 992px) {
+  /* ...  ... */
+}
+
+/* === DESKTOP PORTRAIT === */
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  /* ...  ... */
+}
+
+/* === LAPTOP === */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* ...  ... */
+}
+
+/* === LAPTOP PORTRAIT === */
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  /* ...  ... */
+}
+
+/* === SMALL LAPTOP === */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* ...  ... */
+}
+
+/* === LARGE SCREEN === */
+@media screen and (min-width: 1920px) {
+  /* ...  ... */
+}

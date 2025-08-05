@@ -1,0 +1,150 @@
+/* ========================================
+   BUTTONS STYLES
+======================================== */
+
+/* ========== TAGLINE ========== */
+.tagline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: #fff;
+  padding: 1.1rem 2.4rem;
+  border-radius: 3rem;
+  background: linear-gradient(to right, rgba(246, 246, 246, 0.02) 0%, rgba(246, 246, 246, 0.02) 100%), rgba(10, 23, 40, 0.1);
+  box-shadow: 0 4px 72.4px 0 rgba(15, 17, 16, 0.1);
+  backdrop-filter: blur(96px);
+  -webkit-backdrop-filter: blur(96px);
+}
+
+.tagline .tagline-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.tagline .tagline-text {
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
+@media screen and (orientation: portrait) {
+  .tagline {
+    gap: 1.3rem;
+    padding: 1.1rem 1.6rem;
+    border-radius: 2.3rem;
+    backdrop-filter: blur(76px);
+    -webkit-backdrop-filter: blur(76px);
+  }
+
+  .tagline .tagline-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .tagline .tagline-text {
+    font-size: 1.2rem;
+    line-height: 100%;
+  }
+}
+
+/* ========== CTA BUTTON 1 ========== */
+.cta-button-1 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.7rem 3rem 1.7rem 3.5rem;
+  background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
+  border: 0.825px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(7.424997329711914px);
+  border-radius: 5rem;
+  height: 4.9rem;
+}
+
+.cta-button-1.is--clear {
+  background: transparent;
+  border: 0.825px solid rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (orientation: portrait) {
+  .cta-button-1 {
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    border: 0.7px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    border-radius: 4.3rem;
+    height: 4.3rem;
+  }
+
+  .cta-button-1.is--clear {
+    background: transparent;
+    border: 0.7px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* text wrapper  */
+.cta-button-1 .cta-button-1__text-wrapper {
+  overflow: hidden;
+}
+.cta-button-1 .cta-button-1__text-wrapper .cta-button-1__text {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 0px 2.5rem 0px #fff;
+  transition: 0.5s var(--ease);
+  display: inline-block;
+}
+.cta-button-1.is--clear .cta-button-1__text {
+  color: #000;
+  text-shadow: 0px 2.5rem 0px #000;
+}
+
+@media screen and (orientation: portrait) {
+  .cta-button-1 .cta-button-1__text-wrapper .cta-button-1__text {
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-shadow: 0px 2.5rem 0px #fff;
+  }
+  .cta-button-1.is--clear .cta-button-1__text {
+    text-shadow: 0px 2.5rem 0px #000;
+  }
+}
+
+/* icon wrapper  */
+.cta-button-1 .cta-button-1__icon-wrapper {
+  width: 1.3rem;
+  height: 1.35rem;
+  overflow: hidden;
+}
+.cta-button-1 .cta-button-1__icon-wrapper svg {
+  vertical-align: text-top;
+  filter: drop-shadow(-1.5rem 0 0px #fff);
+  transition: 0.5s var(--ease);
+}
+
+.cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
+  filter: drop-shadow(-1.5rem 0 0px #000);
+}
+
+@media screen and (orientation: portrait) {
+  .cta-button-1 .cta-button-1__icon-wrapper {
+    width: 1.3rem;
+    height: 1.35rem;
+    overflow: hidden;
+  }
+  .cta-button-1 .cta-button-1__icon-wrapper svg {
+    vertical-align: text-top;
+    filter: drop-shadow(-1.5rem 0 0px #fff);
+    transition: 0.5s var(--ease);
+  }
+
+  .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
+    filter: drop-shadow(-1.5rem 0 0px #000);
+  }
+}
+
+/* hover states  */
+.cta-button-1:hover .cta-button-1__text {
+  transform: translateY(-2.5rem);
+}
+.cta-button-1:hover .cta-button-1__icon-wrapper svg {
+  transform: translateX(1.5rem);
+}
