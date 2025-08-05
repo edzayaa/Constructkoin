@@ -2479,14 +2479,12 @@
 
 @media screen and (orientation: portrait) {
   .estate {
-    padding-block: min(19rem, 19vh) min(10rem, 10vh);
-    padding-inline: 14rem;
+    padding-block: 9.5rem 5rem;
+    padding-inline: 1.5rem;
   }
 
   .estate .estate-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
   }
 }
 
@@ -2507,14 +2505,8 @@
 
 @media screen and (orientation: portrait) {
   .estate .estate-content .estate-heading {
-    font-size: min(6.5rem, 6.5vh);
-    font-weight: 300;
-    line-height: 107.692%;
-    background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: min(71.6rem, 71.6vh);
+    font-size: 3.5rem;
+    width: 100%;
   }
 }
 
@@ -2553,37 +2545,15 @@
 }
 
 @media screen and (orientation: portrait) {
-  .estate .accordion-css {
-    max-width: 100%;
-    position: relative;
-  }
-
-  .estate .accordion-css__list {
-    flex-flow: column;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    display: flex;
-    position: static;
-  }
-
   .estate .accordion-css__item {
-    list-style: none;
-    border-bottom: 1px solid #fff;
-  }
-
-  .estate .accordion-css__item:last-child {
-    border-bottom: none;
+    border-bottom: 0.5px solid #fff;
   }
 
   .estate .accordion-css__item-top {
-    cursor: pointer;
     align-items: flex-start;
-    padding: 5rem 0;
-    display: flex;
-    gap: 8rem;
-    position: relative;
-    perspective: 1000px;
+    padding: 4.5rem 0 0;
+    flex-direction: column;
+    gap: 0rem;
   }
 }
 
@@ -2700,140 +2670,52 @@
   transform: translateY(0) rotateX(0) rotateY(0) scale(1);
 }
 
-.estate .accordion-css__item-icon-svg {
-  width: 1em;
-}
-
-.estate .accordion-css__item-p {
-  color: #2c2c2c;
-  margin-bottom: 0;
-  font-size: 0.875em;
-  line-height: 1.5;
-}
-
 @media screen and (orientation: portrait) {
-  .estate .accordion-css__item-bottom,
-  .accordion-css__item-description {
-    transition: grid-template-rows 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-    grid-template-rows: 0fr;
+  .estate .accordion-css__item-headings {
     display: grid;
-    position: relative;
-    overflow: hidden;
-  }
-
-  [data-accordion-status="active"] .accordion-css__item-bottom,
-  [data-accordion-status="active"] .accordion-css__item-description {
-    grid-template-rows: 1fr;
-  }
-
-  .estate .accordion-css__item-bottom-wrap,
-  .accordion-css__item-description-wrap {
-    flex-flow: column;
-    height: 100000%;
-    display: flex;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 4.5rem;
   }
 
   /* bottom  */
   .estate .accordion-css__item-bottom-content {
     padding-bottom: 3.5rem;
-    display: flex;
-    gap: 8rem;
+    gap: 0rem;
+    margin-top: 3.5rem;
   }
 
   .accordion-css__item-bottom__buttons {
-    display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   /* headings  */
-  .estate .accordion-css__item-headings {
-    display: grid;
-  }
-
   .estate .accordion-css__item-image {
-    position: absolute;
-    top: 3rem;
-    right: 20rem;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 2.5rem;
-    z-index: 1;
-    transition: all 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-    opacity: 0;
-    pointer-events: none;
-    user-select: none;
-    transform: translateY(-20px) rotateX(-30deg) rotateY(-30deg) scale(0.6);
+    display: none;
   }
 
   .estate .accordion-css__item-h3,
   .accordion-css__item-span {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 100%;
-    background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    min-width: 45rem;
-    display: inline-block;
+    font-size: 3rem;
+    min-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .accordion-css__item-span {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
   }
 
   .estate .accordion-css__item-h2 {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.6rem;
-    line-height: normal;
+    font-size: 1.4rem;
   }
 
   .accordion-css__item-description-content {
-    width: 55rem;
-    color: #fff;
-    font-size: 1.8rem;
-    line-height: 130%;
-    overflow: hidden;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4rem;
+    line-height: 126%;
   }
 
   .estate .accordion-css__item-icon {
-    transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 9rem;
-    height: 9rem;
-    display: flex;
-    transform: rotate(-40deg);
-    margin-inline: auto 3rem;
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-  }
-
-  [data-accordion-status="active"] .accordion-css__item-icon {
-    transform: rotate(0.001deg);
-  }
-
-  [data-accordion-status="active"] .accordion-css__item-image {
-    opacity: 1;
-    transform: translateY(0) rotateX(0) rotateY(0) scale(1);
-  }
-
-  .estate .accordion-css__item-icon-svg {
-    width: 1em;
-  }
-
-  .estate .accordion-css__item-p {
-    color: #2c2c2c;
-    margin-bottom: 0;
-    font-size: 0.875em;
-    line-height: 1.5;
+    display: none;
   }
 }
 
