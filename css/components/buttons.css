@@ -52,7 +52,6 @@
   gap: 0.8rem;
   padding: 1.7rem 3rem 1.7rem 3.5rem;
   background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
-  border: 0.825px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(7.424997329711914px);
   border-radius: 5rem;
   height: 4.9rem;
@@ -61,6 +60,10 @@
 .cta-button-1.is--clear {
   background: transparent;
   border: 0.825px solid rgba(0, 0, 0, 0.2);
+}
+.cta-button-1.is--dark {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (orientation: portrait) {
@@ -76,6 +79,10 @@
   .cta-button-1.is--clear {
     background: transparent;
     border: 0.7px solid rgba(0, 0, 0, 0.2);
+  }
+  .cta-button-1.is--dark {
+    background: transparent;
+    border: 0.7px solid rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -97,6 +104,11 @@
   text-shadow: 0px 2.5rem 0px #000;
 }
 
+.cta-button-1.is--dark .cta-button-1__text {
+  color: #fff;
+  text-shadow: 0px 2.5rem 0px #fff;
+}
+
 @media screen and (orientation: portrait) {
   .cta-button-1 .cta-button-1__text-wrapper .cta-button-1__text {
     font-size: 1.45rem;
@@ -105,6 +117,9 @@
   }
   .cta-button-1.is--clear .cta-button-1__text {
     text-shadow: 0px 2.5rem 0px #000;
+  }
+  .cta-button-1.is--dark .cta-button-1__text {
+    text-shadow: 0px 2.5rem 0px #fff;
   }
 }
 
@@ -123,6 +138,9 @@
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-1.5rem 0 0px #000);
 }
+.cta-button-1.is--dark .cta-button-1__icon-wrapper svg {
+  filter: drop-shadow(-1.5rem 0 0px #fff);
+}
 
 @media screen and (orientation: portrait) {
   .cta-button-1 .cta-button-1__icon-wrapper {
@@ -138,6 +156,9 @@
 
   .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
     filter: drop-shadow(-1.5rem 0 0px #000);
+  }
+  .cta-button-1.is--dark .cta-button-1__icon-wrapper svg {
+    filter: drop-shadow(-1.5rem 0 0px #fff);
   }
 }
 
