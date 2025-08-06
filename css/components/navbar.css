@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4.5rem 5rem;
+  padding: min(4.5rem, 4.5vh) min(5rem, 5vh);
   z-index: 10;
 }
 

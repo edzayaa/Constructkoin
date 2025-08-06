@@ -6,6 +6,8 @@
 .footer {
   padding-block: min(14.5rem, 14.5vh) min(4.5rem, 4.5vh);
   padding-inline: 22.5rem;
+  position: relative;
+  isolation: isolate;
 }
 
 @media screen and (orientation: portrait) {
@@ -13,6 +15,14 @@
     padding-block: 1.5rem 2rem;
     padding-inline: 1.5rem;
   }
+}
+
+
+.footer-blur {
+  position: absolute;
+inset: 0;
+  z-index: -1;
+  mask-image: linear-gradient(transparent,  black);
 }
 
 /* content  */

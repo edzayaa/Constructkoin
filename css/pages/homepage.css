@@ -9,8 +9,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-block: min(17rem, 17vh) min(3.7rem, 3.7vh);
+  isolation: isolate;
 }
 
 .hero-content {
@@ -18,6 +19,24 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* mask-image: linear-gradient(black 95%, transparent); */
+}
+
+.hero-blurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  z-index: -2;
+  /* mask-image: linear-gradient(black 95%, transparent); */
 }
 
 @media screen and (orientation: portrait) {
@@ -294,7 +313,7 @@
 /*  */
 .presale {
   padding: 23rem 19rem 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @media screen and (orientation: portrait) {
@@ -611,6 +630,15 @@
   width: 100%;
   height: 100vh;
   padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
+  position: relative;
+  isolation: isolate;
+}
+
+.structure-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  mask-image: linear-gradient(transparent, black 35%);
 }
 
 @media screen and (orientation: portrait) {
@@ -647,6 +675,7 @@
 }
 .structure .structure-swiper-wrapper {
   display: flex;
+  transition: 0.4s ease-out !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -904,6 +933,17 @@
   padding-block: min(16rem, 16vh) min(5rem, 5vh);
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.protocol-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 
 .protocol .protocol-flex {
@@ -1578,6 +1618,7 @@
 
 .why .why-swiper-wrapper {
   display: flex;
+  transition: 0.4s ease-out !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -1697,6 +1738,18 @@
 /*  */
 .ai {
   padding-block: min(18.8rem, 18.8vh) min(6.5rem, 6.5vh);
+  position: relative;
+  isolation: isolate;
+}
+
+.ai-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  mask-image: linear-gradient(transparent, black 25%);
 }
 
 /* content  */
@@ -1970,6 +2023,18 @@
 /*  */
 .token {
   padding-block: min(18rem, 18vh) min(6rem, 6vh);
+  position: relative;
+  isolation: isolate;
+}
+
+.token-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  mask-image: linear-gradient(transparent, black 15%);
 }
 
 .token .token-content {
@@ -2036,6 +2101,7 @@
 
 .token .token-swiper-container .token-swiper-wrapper {
   display: flex;
+  transition: 0.4s ease-out !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -2125,6 +2191,16 @@
   width: 100%;
   padding-block: min(27rem, 27vh) min(16.5rem, 16.5vh);
   isolation: isolate;
+}
+
+.real-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  mask-image: linear-gradient(black 60%, transparent);
 }
 
 .real .real-bg {
@@ -2323,7 +2399,20 @@
   flex-direction: column;
   align-items: center;
   gap: 9.8rem;
+  position: relative;
+  isolation: isolate;
 }
+
+.models-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  mask-image: linear-gradient(black 60%, transparent);
+}
+
 .models .models-content {
   display: flex;
   flex-direction: column;
@@ -2435,6 +2524,18 @@
 .cards {
   padding-block: min(28.7rem, 28.7vh) min(18.5rem, 18.5vh);
   padding-inline: 5rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.cards-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  mask-image: linear-gradient(black 60%, transparent);
 }
 
 .cards .cards-content {
@@ -2517,6 +2618,7 @@
 .estate {
   padding-block: min(19rem, 19vh) min(10rem, 10vh);
   padding-inline: 14rem;
+  position: relative;
 }
 
 .estate .estate-content {
@@ -2828,6 +2930,7 @@
 .how .how-content .how-swiper-container .how-swiper-wrapper {
   display: flex;
   margin-bottom: min(6rem, 6vh);
+  transition: 0.5s ease-out !important;
 }
 
 @media screen and (orientation: portrait) {
