@@ -162,6 +162,7 @@
   backdrop-filter: blur(6.3px);
   -webkit-backdrop-filter: blur(6.3px);
   gap: 1rem;
+  flex-grow: 1;
 }
 
 .hero-buttons.is--portrait .hero-view-button .hero-view-button__text-wrapper {
@@ -178,6 +179,10 @@
   height: 1.2rem;
 }
 .hero-buttons.is--portrait .hero-view-button .hero-view-button__icon-wrapper svg {
+}
+
+.hero-buttons.is--portrait .hero-buy-button {
+  flex-grow: 1;
 }
 
 /* scrolldown  */
@@ -639,7 +644,7 @@
   position: absolute;
   inset: 0;
   border-radius: 2.5rem;
-  border: 0.5px solid #cde7ff;
+  border: 0.5px solid #cde7ff67;
   filter: blur(1px);
   -webkit-filter: blur(1px);
 }
@@ -655,9 +660,7 @@
   }
   .structure .structure-swiper-slide::before {
     border-radius: 2.2rem;
-    border: 0.4px solid #cde7ff;
-    filter: blur(0.8px);
-    -webkit-filter: blur(0.8px);
+    border: 0.4px solid #cde7ff67;
   }
 }
 
@@ -1093,8 +1096,6 @@
   .protocol .protocol-flex .protocol-card::before {
     border-radius: 1rem;
     border: 0.2px solid #cde7ff67;
-    filter: blur(0.4px);
-    -webkit-filter: blur(0.4px);
   }
 
   .protocol .protocol-flex .protocol-card .protocol-card__inner {

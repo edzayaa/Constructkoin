@@ -40,6 +40,7 @@
 
 .navbar .navbar-inner .navbar-logo img {
   transition: all 0.2s ease-out;
+  object-fit: contain;
 }
 
 .navbar .navbar-inner .navbar-logo:hover img {
