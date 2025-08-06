@@ -18,6 +18,7 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(18.5px);
   -webkit-backdrop-filter: blur(18.5px);
+  display: none;
 }
 
 .modal-wrapper[data-modal-open] {
@@ -311,6 +312,26 @@
 }
 .modal-video .modal-video__close:hover {
   transform: rotate(-90deg) scale(0.8);
+}
+
+@media screen and (orientation: portrait) {
+  .modal-video {
+    padding: 1.5rem;
+  }
+  .modal-video .modal-video__inner {
+    border-radius: 0.5rem;
+  }
+  .modal-video .modal-video__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .modal-video .modal-video__close:hover {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 .modal-wrapper[data-modal-open="video"] .modal-video {

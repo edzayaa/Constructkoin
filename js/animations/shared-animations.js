@@ -28,8 +28,8 @@ export class SharedAnimations {
           let fadeTimeline = gsap.timeline({
             scrollTrigger: {
               trigger: el,
-              start: isLandscape ? "top 90%" : "top bottom",
-              end: isLandscape ? "top top" : "top 30%",
+              start: isLandscape ? "top 80%" : "top bottom",
+              end: isLandscape ? "10% top" : "top 30%",
               scrub: scrub,
             },
           });
