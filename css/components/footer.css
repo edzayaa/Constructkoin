@@ -8,6 +8,7 @@
   padding-inline: 22.5rem;
   position: relative;
   isolation: isolate;
+  background-color: #000102;
 }
 
 @media screen and (orientation: portrait) {

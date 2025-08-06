@@ -2,6 +2,8 @@ export class SharedAnimations {
   constructor() {
     this.mm = gsap.matchMedia();
     this.init();
+
+    
   }
 
   init() {

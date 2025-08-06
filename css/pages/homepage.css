@@ -1581,6 +1581,9 @@
   height: 100vh;
   padding-block: min(15.7rem, 15.7vh) min(10rem, 10vh);
 }
+.why .why-content {
+  
+}
 
 @media screen and (orientation: portrait) {
   .why {
@@ -2874,6 +2877,7 @@
 /*  */
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
+  min-height: 100vh;
 }
 
 .how .how-content {
@@ -2885,6 +2889,7 @@
 @media screen and (orientation: portrait) {
   .how {
     padding-block: 10rem 2rem;
+    min-height: fit-content;
   }
 }
 

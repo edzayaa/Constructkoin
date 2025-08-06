@@ -33,6 +33,9 @@ export class HomepageAnimations {
     document.querySelectorAll("[data-bg]").forEach((element) => {
       const bg = element.dataset.bg;
 
+      let start = element.dataset.bgStart || "top 80%";
+      let end = element.dataset.bgEnd || "top 20%";
+
       let fromBgConfig = bg === "clear" ? { backgroundColor: "#000102" } : { backgroundColor: "#fff" };
       let toBgConfig = bg === "clear" ? { backgroundColor: "#fff" } : { backgroundColor: "#000102" };
 
@@ -43,8 +46,8 @@ export class HomepageAnimations {
         .timeline({
           scrollTrigger: {
             trigger: element,
-            start: "top 80%",
-            end: "top 20%",
+            start: start,
+            end: end,
             scrub: 1.1,
           },
         })
@@ -90,7 +93,6 @@ export class HomepageAnimations {
           )
         );
         tl.to(targetEl, { borderRadius: "0rem", duration: 0.5 }, 0.5);
-        console.log(tl.duration());
       }
 
       flipTimeline();

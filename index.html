@@ -294,6 +294,7 @@
       <section
         class="hero"
         data-bg="dark"
+        data-fade-out
       >
         <div class="hero-content">
           <div class="hero-tagline tagline">
@@ -536,7 +537,11 @@
         class="presale"
         data-flip-video="1"
       >
-        <div class="presale-content">
+        <div
+          class="presale-content"
+          data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <div class="presale-tagline tagline">
             <div class="tagline-icon">
               <svg
@@ -615,13 +620,18 @@
         class="about"
         data-bg="clear"
       >
+        <!-- background  -->
         <img
           src="/assets/images/about-landscape.png"
           alt="about"
           class="about-background"
         />
 
-        <div class="about-content">
+        <div
+          class="about-content"
+          data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <h2 class="about-heading">Web3 Meets Real World: <span>AI-Powered Finance Protocol</span> for the 21st Century Where Blockchain Meets Bricks and Mortar - Powered by Community.</h2>
 
           <!-- cta  -->
@@ -768,6 +778,7 @@
       <section
         class="structure"
         data-bg="dark"
+        data-fade-out
       >
         <h2 class="structure-heading">The Presale Structure</h2>
 
@@ -1359,106 +1370,110 @@
 
       <!-- WHY  -->
       <section class="why">
-        <h2 class="why-heading">Why This Model Stands Out</h2>
-
-        <!-- swiper  -->
         <div
-          class="why-swiper-container"
-          data-swiper-class="why"
-          data-swiper-slides-per-view="3.35"
-          data-swiper-space-between="16"
-          data-swiper-initial-slide="0"
-          data-swiper-slides-per-view-mobile="1"
-          data-swiper-space-between-mobile="10"
-          data-swiper-initial-slide-mobile="0"
+          class="why-content"
+          data-fade-out
         >
-          <div class="why-swiper-wrapper">
-            <!-- card  -->
-            <div class="why-swiper-slide">
-              <div class="why-card__container">
-                <div class="why-card__inner">
-                  <img
-                    src="/assets/images/symbol.png"
-                    alt="decorative layer"
-                    class="why-card__bg"
-                  />
+          <h2 class="why-heading">Why This Model Stands Out</h2>
+          <!-- swiper  -->
+          <div
+            class="why-swiper-container"
+            data-swiper-class="why"
+            data-swiper-slides-per-view="3.35"
+            data-swiper-space-between="16"
+            data-swiper-initial-slide="0"
+            data-swiper-slides-per-view-mobile="1"
+            data-swiper-space-between-mobile="10"
+            data-swiper-initial-slide-mobile="0"
+          >
+            <div class="why-swiper-wrapper">
+              <!-- card  -->
+              <div class="why-swiper-slide">
+                <div class="why-card__container">
+                  <div class="why-card__inner">
+                    <img
+                      src="/assets/images/symbol.png"
+                      alt="decorative layer"
+                      class="why-card__bg"
+                    />
 
-                  <div class="why-card__content">
-                    <h4 class="why-card__title">Global Accessibility</h4>
-                    <p class="why-card__text">2Web3 rails open commercial lending to anyone and self-certified investors worldwide.</p>
-                    <p class="why-card__text">Multi-jurisdiction flexibility: BVI and UK structure. Utility token issue and evolving regulatory framework. Unregulated UK B2B lending zone means fewer borders, more deals.</p>
+                    <div class="why-card__content">
+                      <h4 class="why-card__title">Global Accessibility</h4>
+                      <p class="why-card__text">2Web3 rails open commercial lending to anyone and self-certified investors worldwide.</p>
+                      <p class="why-card__text">Multi-jurisdiction flexibility: BVI and UK structure. Utility token issue and evolving regulatory framework. Unregulated UK B2B lending zone means fewer borders, more deals.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- card  -->
-            <div class="why-swiper-slide">
-              <div class="why-card__container">
-                <div class="why-card__inner">
-                  <img
-                    src="/assets/images/symbol.png"
-                    alt="decorative layer"
-                    class="why-card__bg"
-                  />
+              <!-- card  -->
+              <div class="why-swiper-slide">
+                <div class="why-card__container">
+                  <div class="why-card__inner">
+                    <img
+                      src="/assets/images/symbol.png"
+                      alt="decorative layer"
+                      class="why-card__bg"
+                    />
 
-                  <div class="why-card__content">
-                    <h4 class="why-card__title">Real Assets Back Returns</h4>
-                    <p class="why-card__text">CTK tokens are secured by tangible UK development loans and property assets, unlike typical crypto projects. Token holders receive priority payments from real estate income, providing downside protection with upside potential</p>
+                    <div class="why-card__content">
+                      <h4 class="why-card__title">Real Assets Back Returns</h4>
+                      <p class="why-card__text">CTK tokens are secured by tangible UK development loans and property assets, unlike typical crypto projects. Token holders receive priority payments from real estate income, providing downside protection with upside potential</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- card  -->
-            <div class="why-swiper-slide">
-              <div class="why-card__container">
-                <div class="why-card__inner">
-                  <img
-                    src="/assets/images/symbol.png"
-                    alt="decorative layer"
-                    class="why-card__bg"
-                  />
+              <!-- card  -->
+              <div class="why-swiper-slide">
+                <div class="why-card__container">
+                  <div class="why-card__inner">
+                    <img
+                      src="/assets/images/symbol.png"
+                      alt="decorative layer"
+                      class="why-card__bg"
+                    />
 
-                  <div class="why-card__content">
-                    <h4 class="why-card__title">Minutes Not Months</h4>
-                    <p class="why-card__text">Our innovative 50-phase presale creates systematic value appreciation from just $0.01 to a modest $1.00 USDT. Early phase participants capture maximum gains as token prices automatically increase, rewarding early adoption with exponential returns.</p>
+                    <div class="why-card__content">
+                      <h4 class="why-card__title">Minutes Not Months</h4>
+                      <p class="why-card__text">Our innovative 50-phase presale creates systematic value appreciation from just $0.01 to a modest $1.00 USDT. Early phase participants capture maximum gains as token prices automatically increase, rewarding early adoption with exponential returns.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- card  -->
-            <div class="why-swiper-slide">
-              <div class="why-card__container">
-                <div class="why-card__inner">
-                  <img
-                    src="/assets/images/symbol.png"
-                    alt="decorative layer"
-                    class="why-card__bg"
-                  />
+              <!-- card  -->
+              <div class="why-swiper-slide">
+                <div class="why-card__container">
+                  <div class="why-card__inner">
+                    <img
+                      src="/assets/images/symbol.png"
+                      alt="decorative layer"
+                      class="why-card__bg"
+                    />
 
-                  <div class="why-card__content">
-                    <h4 class="why-card__title">Global Accessibility</h4>
-                    <p class="why-card__text">Web3 rails open commercial lending to anyone and self-certified investors worldwide. Multi-jurisdiction flexibility: BVI and UK structure. Utility token issue and evolving regulatory framework. Unregulated UK B2B lending zone means fewer borders, more deals.</p>
+                    <div class="why-card__content">
+                      <h4 class="why-card__title">Global Accessibility</h4>
+                      <p class="why-card__text">Web3 rails open commercial lending to anyone and self-certified investors worldwide. Multi-jurisdiction flexibility: BVI and UK structure. Utility token issue and evolving regulatory framework. Unregulated UK B2B lending zone means fewer borders, more deals.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- card  -->
-            <div class="why-swiper-slide">
-              <div class="why-card__container">
-                <div class="why-card__inner">
-                  <img
-                    src="/assets/images/symbol.png"
-                    alt="decorative layer"
-                    class="why-card__bg"
-                  />
+              <!-- card  -->
+              <div class="why-swiper-slide">
+                <div class="why-card__container">
+                  <div class="why-card__inner">
+                    <img
+                      src="/assets/images/symbol.png"
+                      alt="decorative layer"
+                      class="why-card__bg"
+                    />
 
-                  <div class="why-card__content">
-                    <h4 class="why-card__title">Dual Income Potential</h4>
-                    <p class="why-card__text">Stake and earn from 9 % lending margins on a targeted £100 loan book and upside from ai licensing, Web3 investments, and the future real estate-backed stable coin.</p>
+                    <div class="why-card__content">
+                      <h4 class="why-card__title">Dual Income Potential</h4>
+                      <p class="why-card__text">Stake and earn from 9 % lending margins on a targeted £100 loan book and upside from ai licensing, Web3 investments, and the future real estate-backed stable coin.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1469,7 +1484,11 @@
 
       <!-- AI  -->
       <section class="ai">
-        <div class="ai-content">
+        <div
+          class="ai-content"
+          data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <!-- heading  -->
           <h2 class="ai-heading">Removing Bottlenecks</h2>
           <p class="ai-description">Conventional real estate finance can drag on for weeks, weighed down by manual checks and uncertain appraisals. Developers often lose precious build time, incurring higher costs and in a market in need of homes, that is lost sales revenue.</p>
@@ -1588,7 +1607,9 @@
           />
         </picture>
 
-        <div class="token-content">
+        <div
+          class="token-content"
+        >
           <div class="token-tagline tagline">
             <div class="tagline-icon">
               <svg
@@ -1613,7 +1634,10 @@
           <h2 class="token-heading"><span>Powerful. Secure. Effortless</span> Innovation in Property Development</h2>
         </div>
 
-        <div class="token-drag__wrapper">
+        <div class="token-drag__wrapper"
+          data-fade-out
+        
+        >
           <div
             class="token-swiper-container"
             data-swiper-class="token"
@@ -1704,7 +1728,11 @@
           />
         </picture>
 
-        <div class="real-content">
+        <div class="real-content"
+             data-fade-out
+          data-fade-out-scale="0.9"
+        
+        >
           <div class="real-tagline tagline">
             <div class="tagline-icon">
               <svg
@@ -1787,7 +1815,10 @@
         class="models"
         data-flip-video="2"
       >
-        <div class="models-content">
+        <div class="models-content"
+             data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <h2 class="models-heading">CTK Revenue Models</h2>
           <h3 class="models-subheading">Welcome the the future of real estate.</h3>
           <p class="models-description">
@@ -1833,7 +1864,10 @@
 
       <!-- CARDS  -->
       <section class="cards">
-        <div class="cards-content">
+        <div class="cards-content"
+           data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <!-- card  -->
           <div class="cards-item">
             <img
@@ -1889,7 +1923,10 @@
 
       <!-- ESTATE  -->
       <section class="estate">
-        <div class="estate-content">
+        <div class="estate-content"
+           data-fade-out
+        
+        >
           <h2 class="estate-heading">
             <span>ConstructKoin Protocol: </span> <br />
             AI Across Real Estate
@@ -2255,8 +2292,13 @@
       <section
         class="how"
         data-bg="clear"
+        data-bg-start="top center"
+        data-bg-end="top top"
       >
-        <div class="how-content">
+        <div class="how-content"
+           data-fade-out
+          data-fade-out-scale="0.9"
+        >
           <h2 class="how-heading"><span>AI Pillars </span>How We Operate</h2>
 
           <button class="how-cta-button cta-button-1">
@@ -2396,10 +2438,7 @@
       </section>
 
       <!-- SHOWREEL 3  -->
-      <section
-        class="showreel-3"
-        data-bg="dark"
-      >
+      <section class="showreel-3">
         <div class="showreel-3-content">
           <video
             src="/assets/videos/final-showreel.mp4"
