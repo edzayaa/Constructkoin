@@ -2430,7 +2430,7 @@
   width: 100%;
   height: auto;
   z-index: -1;
-  mask-image: linear-gradient(black 60%, transparent);
+  mask-image: linear-gradient(transparent, black 10%, transparent 90%);
 }
 
 .models .models-content {
