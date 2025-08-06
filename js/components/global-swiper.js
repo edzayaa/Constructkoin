@@ -70,6 +70,13 @@ export class CustomSwiper {
             direction: directionLandscape,
           },
         },
+
+        on: {
+          slideChange: function () {
+            const activeIndex = this.activeIndex + 1;
+            el.setAttribute("data-swiper-active-slide", activeIndex);
+          },
+        },
       });
 
       this.swiperList.push(swiper);
