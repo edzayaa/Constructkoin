@@ -514,20 +514,24 @@
           </div>
         </div>
 
+        <!-- backgrounds -->
         <img
-          src="/assets/images/hero-landscape.png"
+          src="/assets/images/hero-landscape.webp"
           alt=""
           class="hero-background"
         />
 
+        <!-- blurs  -->
         <picture>
           <source
-            srcset="/assets/images/hero-blurs-portrait.png"
+            srcset="/assets/images/hero-blurs-portrait.avif"
             media="screen and (orientation: portrait)"
+            type="image/avif"
           />
           <img
-            src="/assets/images/hero-blurs-landscape.png"
-            alt=""
+            src="/assets/images/hero-blurs-landscape.avif"
+            alt="blur layer"
+            type="image/avif"
             class="hero-blurs"
           />
         </picture>
@@ -613,7 +617,9 @@
       </section>
 
       <!-- SHOWREEL  -->
-      <section class="showreel">
+      <section class="showreel"
+      
+      >
         <div
           class="showreel-content"
           data-flip-wrapper="1"
@@ -624,18 +630,29 @@
       <section
         class="about"
         data-bg="clear"
+        data-bg-start="top 90%"
+        data-fade
+        
+
       >
         <!-- background  -->
         <img
-          src="/assets/images/about-landscape.png"
+          src="/assets/images/about-landscape.avif"
+          type="image/avif"
           alt="about"
           class="about-background"
+          loading="lazy"
+          data-fade-element
+          data-fade-alpha="0"
         />
 
         <div
           class="about-content"
           data-fade-out
           data-fade-out-scale="0.9"
+            data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="150"
         >
           <h2 class="about-heading">Web3 Meets Real World: <span>AI-Powered Finance Protocol</span> for the 21st Century Where Blockchain Meets Bricks and Mortar - Powered by Community.</h2>
 
@@ -806,7 +823,8 @@
               <div class="structure-card__container">
                 <div class="structure-card__inner">
                   <img
-                    src="/assets/images/card-layer-1.png"
+                    src="/assets/images/card-layer-1.webp"
+                    loading="lazy"
                     alt="decorative layer"
                     class="structure-card__layer"
                   />
@@ -862,7 +880,8 @@
               <div class="structure-card__container">
                 <div class="structure-card__inner">
                   <img
-                    src="/assets/images/card-layer-1.png"
+                    src="/assets/images/card-layer-1.webp"
+                    loading="lazy"
                     alt="decorative layer"
                     class="structure-card__layer"
                   />
@@ -917,7 +936,8 @@
               <div class="structure-card__container">
                 <div class="structure-card__inner">
                   <img
-                    src="/assets/images/card-layer-1.png"
+                    src="/assets/images/card-layer-1.webp"
+                    loading="lazy"
                     alt="decorative layer"
                     class="structure-card__layer"
                   />
@@ -971,7 +991,8 @@
               <div class="structure-card__container">
                 <div class="structure-card__inner">
                   <img
-                    src="/assets/images/card-layer-1.png"
+                    src="/assets/images/card-layer-1.webp"
+                    loading="lazy"
                     alt="decorative layer"
                     class="structure-card__layer"
                   />
@@ -1023,7 +1044,8 @@
               <div class="structure-card__container">
                 <div class="structure-card__inner">
                   <img
-                    src="/assets/images/card-layer-1.png"
+                    src="/assets/images/card-layer-1.webp"
+                    loading="lazy"
                     alt="decorative layer"
                     class="structure-card__layer"
                   />
@@ -1075,13 +1097,16 @@
         <!-- background  -->
         <picture>
           <source
-            srcset="/assets/images/structure-portrait.png"
+            srcset="/assets/images/structure-portrait.avif"
             media="screen and (orientation: portrait)"
+            type="image/avif"
           />
           <img
-            src="/assets/images/structure-landscape.png"
+            src="/assets/images/structure-landscape.avif"
             alt="structure blur layer"
+            type="image/avif"
             class="structure-background"
+            loading="lazy"
           />
         </picture>
       </section>
@@ -1203,9 +1228,10 @@
           >
             <div class="protocol-card__inner">
               <img
-                src="/assets/images/card-layer-mid.png"
+                src="/assets/images/card-layer-mid.webp"
                 alt="decorative layer"
                 class="protocol-card__bg"
+                loading="lazy"
               />
 
               <div class="protocol-card__content">
@@ -1384,9 +1410,11 @@
 
         <!-- background  -->
         <img
-          src="/assets/images/protocol-landscape.png"
+          src="/assets/images/protocol-landscape.avif"
           alt="blur layer"
+          type="image/avif"
           class="protocol-background"
+          loading="lazy"
         />
       </section>
 
@@ -1419,9 +1447,10 @@
                 <div class="why-card__container">
                   <div class="why-card__inner">
                     <img
-                      src="/assets/images/symbol.png"
+                      src="/assets/images/symbol.webp"
                       alt="decorative layer"
                       class="why-card__bg"
+                      loading="lazy"
                     />
 
                     <div class="why-card__content">
@@ -1438,9 +1467,10 @@
                 <div class="why-card__container">
                   <div class="why-card__inner">
                     <img
-                      src="/assets/images/symbol.png"
+                      src="/assets/images/symbol.webp"
                       alt="decorative layer"
                       class="why-card__bg"
+                      loading="lazy"
                     />
 
                     <div class="why-card__content">
@@ -1456,9 +1486,11 @@
                 <div class="why-card__container">
                   <div class="why-card__inner">
                     <img
-                      src="/assets/images/symbol.png"
+                      src="/assets/images/symbol.webp"
                       alt="decorative layer"
                       class="why-card__bg"
+                      loading="lazy"
+
                     />
 
                     <div class="why-card__content">
@@ -1474,8 +1506,9 @@
                 <div class="why-card__container">
                   <div class="why-card__inner">
                     <img
-                      src="/assets/images/symbol.png"
+                      src="/assets/images/symbol.webp"
                       alt="decorative layer"
+                      loading="lazy"
                       class="why-card__bg"
                     />
 
@@ -1492,9 +1525,11 @@
                 <div class="why-card__container">
                   <div class="why-card__inner">
                     <img
-                      src="/assets/images/symbol.png"
+                      src="/assets/images/symbol.webp"
                       alt="decorative layer"
                       class="why-card__bg"
+                      loading="lazy"
+
                     />
 
                     <div class="why-card__content">
@@ -1621,9 +1656,11 @@
 
         <!-- background  -->
         <img
-          src="/assets/images/ai-landscape.png"
+          src="/assets/images/ai-landscape.avif"
           alt="blur layer"
           class="ai-background"
+          type="image/avif"
+          loading="lazy"
         />
       </section>
 
@@ -1631,9 +1668,11 @@
       <section class="token">
         <!-- background  -->
         <img
-          src="/assets/images/token-landscape.png"
+          src="/assets/images/token-landscape.avif"
           alt="blur layer"
           class="token-background"
+          type="image/avif"
+          loading="lazy"
         />
 
         <div class="token-content">
@@ -1677,7 +1716,8 @@
               <!-- card  -->
               <div class="token-swiper-slide">
                 <img
-                  src="/assets/images/token-card-1.png"
+                  src="/assets/images/token-card-1.webp"
+                  loading="lazy"
                   alt="decorative layer"
                   class="token-card__bg"
                 />
@@ -1691,7 +1731,8 @@
               <!-- card  -->
               <div class="token-swiper-slide">
                 <img
-                  src="/assets/images/token-card-2.png"
+                  src="/assets/images/token-card-2.webp"
+                  loading="lazy"
                   alt="decorative layer"
                   class="token-card__bg"
                 />
@@ -1705,7 +1746,8 @@
               <!-- card  -->
               <div class="token-swiper-slide">
                 <img
-                  src="/assets/images/token-card-3.png"
+                  src="/assets/images/token-card-3.webp"
+                  loading="lazy"
                   alt="decorative layer"
                   class="token-card__bg"
                 />
@@ -1719,7 +1761,8 @@
               <!-- card  -->
               <div class="token-swiper-slide">
                 <img
-                  src="/assets/images/token-card-4.png"
+                  src="/assets/images/token-card-4.webp"
+                  loading="lazy"
                   alt="decorative layer"
                   class="token-card__bg"
                 />
@@ -1741,14 +1784,17 @@
       >
         <!-- background  -->
         <img
-          src="/assets/images/real-landscape.png"
+          src="/assets/images/real-landscape.webp"
           alt="real landscape background"
           class="real-bg"
+          type="image/webp"
         />
         <img
-          src="/assets/images/real-blur-landscape.png"
-          alt=" "
+          src="/assets/images/real-blur-landscape.avif"
+          alt="blur layer"
           class="real-blur"
+          type="image/avif"
+          loading="lazy"
         />
 
         <div
@@ -1885,9 +1931,11 @@
 
         <!-- background  -->
         <img
-          src="/assets/images/models-landscape.png"
+          src="/assets/images/models-landscape.avif"
           alt="models landscape background"
           class="models-blur"
+          type="image/avif"
+          loading="lazy"
         />
       </section>
 
@@ -1919,8 +1967,10 @@
             data-rotate-x="50"
           >
             <img
-              src="/assets/images/cards-1.png"
+              src="/assets/images/cards-1.webp"
+              loading="lazy"
               alt="card bg"
+              type="image/webp"
               class="cards-item__bg"
             />
 
@@ -1938,8 +1988,10 @@
             data-rotate-x="50"
           >
             <img
-              src="/assets/images/cards-2.png"
+              src="/assets/images/cards-2.webp"
+              loading="lazy"
               alt="card bg"
+              type="image/webp"
               class="cards-item__bg"
             />
 
@@ -1958,8 +2010,10 @@
             data-rotate-x="50"
           >
             <img
-              src="/assets/images/cards-3.png"
+              src="/assets/images/cards-3.webp"
+              loading="lazy"
               alt="card bg"
+              type="image/webp"
               class="cards-item__bg"
             />
 
@@ -1973,8 +2027,10 @@
         <!-- background  -->
         <picture>
           <img
-            src="/assets/images/cards-landscape.png"
+            src="/assets/images/cards-landscape.avif"
             alt="cards landscape background"
+            type="image/avif"
+            loading="lazy"
             class="cards-blur"
           />
         </picture>
@@ -2053,7 +2109,8 @@
 
                   <!-- image  -->
                   <img
-                    src="/assets/images/acc-1.png"
+                    src="/assets/images/acc-1.webp"
+                    loading="lazy"
                     alt="accordion image"
                     class="accordion-css__item-image"
                   />
@@ -2169,7 +2226,8 @@
 
                   <!-- image  -->
                   <img
-                    src="/assets/images/acc-2.png"
+                    src="/assets/images/acc-2.webp"
+                    loading="lazy"
                     alt="accordion image"
                     class="accordion-css__item-image"
                   />
@@ -2285,7 +2343,8 @@
 
                   <!-- image  -->
                   <img
-                    src="/assets/images/acc-3.png"
+                    src="/assets/images/acc-3.webp"
+                    loading="lazy"
                     alt="accordion image"
                     class="accordion-css__item-image"
                   />
@@ -2357,7 +2416,7 @@
       <section
         class="how"
         data-bg="clear"
-        data-bg-start="top center"
+        data-bg-start="top 40%"
         data-bg-end="top top"
         data-fade
       >
@@ -2414,8 +2473,10 @@
 
                   <div class="how-card__video">
                     <img
-                      src="/assets/images/symbol-small.png"
+                      src="/assets/images/symbol-small.webp"
                       alt="ConstructKoin symbol"
+                      loading="lazy"
+
                     />
                   </div>
 
@@ -2436,8 +2497,10 @@
 
                   <div class="how-card__video">
                     <img
-                      src="/assets/images/symbol-small.png"
+                      src="/assets/images/symbol-small.webp"
                       alt="ConstructKoin symbol"
+                      loading="lazy"
+
                     />
                   </div>
 
@@ -2460,8 +2523,10 @@
 
                   <div class="how-card__video">
                     <img
-                      src="/assets/images/symbol-small.png"
+                      src="/assets/images/symbol-small.webp"
                       alt="ConstructKoin symbol"
+                      loading="lazy"
+
                     />
                   </div>
 
@@ -2483,8 +2548,10 @@
 
                   <div class="how-card__video">
                     <img
-                      src="/assets/images/symbol-small.png"
+                      src="/assets/images/symbol-small.webp"
                       alt="ConstructKoin symbol"
+                      loading="lazy"
+
                     />
                   </div>
 
@@ -2536,8 +2603,7 @@
               playsinline
             ></video>
           </div>
-         
-         
+
           <h2
             class="footer-heading"
             data-fade-element
@@ -2725,14 +2791,16 @@
         <!-- background  -->
         <picture>
           <source
-            srcset="/assets/images/footer-blur-portrait.png"
+            srcset="/assets/images/footer-blur-portrait.webp"
             media="(orientation: portrait)"
           />
 
           <img
-            src="/assets/images/footer-blur.png"
+            src="/assets/images/footer-blur.webp"
             alt="footer  background"
             class="footer-blur"
+            type="image/webp"
+            loading="lazy"
           />
         </picture>
       </footer>
@@ -2744,8 +2812,8 @@
         <div class="modal-newsletter">
           <div class="modal-newsletter__inner">
             <img
-              src="/assets/images/card-layer-1.png"
-              alt=""
+              src="/assets/images/card-layer-1.webp"
+              alt="blur layer"
               class="modal-newsletter__layer"
             />
             <img
@@ -2782,7 +2850,7 @@
 
               <div class="modal-newsletter__loop">
                 <img
-                  src="/assets/images/symbol.png"
+                  src="/assets/images/symbol.webp"
                   alt="constructkoin symbol"
                 />
               </div>

@@ -1760,7 +1760,7 @@
   width: 100%;
   height: auto;
   z-index: -1;
-  mask-image: linear-gradient(transparent, black 25%);
+  mask-image: linear-gradient(transparent, black 25%, transparent 80%);
 }
 
 /* content  */
