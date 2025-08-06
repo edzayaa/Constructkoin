@@ -235,12 +235,23 @@
 .hero-left .hero-left__link {
   display: grid;
   place-content: center;
-  border: 0.6px solid #fff;
   border-radius: 100%;
   width: 4.1rem;
   height: 4.1rem;
   transition: var(--transition);
+  background: #0e0f10;
 }
+
+.hero-left .hero-left__link:nth-of-type(1) svg {
+  width: 1.6rem;
+  height: 1.7rem;
+}
+
+.hero-left .hero-left__link:nth-of-type(2) svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 .hero-left .hero-left__link svg {
   width: 1.5rem;
   height: 1.5rem;
@@ -274,6 +285,7 @@
   line-height: 125%;
   width: 29.9rem;
 }
+
 .hero-bottom .hero-bottom__left span {
   font-weight: 700;
 }
@@ -285,7 +297,13 @@
   width: 29.7rem;
   height: 19rem;
   cursor: pointer;
+  transition: var(--transition);
 }
+
+.hero-bottom .hero-bottom__right:hover {
+  opacity: 0.8;
+}
+
 .hero-bottom .hero-bottom__right:hover .hero-bottom__play {
   transform: translateY(-50%) scale(0.9);
 }
@@ -948,6 +966,7 @@
   width: 100%;
   height: auto;
   z-index: -1;
+  mask-image: linear-gradient(black 90%, transparent);
 }
 
 .protocol .protocol-flex {
@@ -961,6 +980,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 63.6rem;
+  will-change: transform;
 }
 
 @media screen and (orientation: portrait) {
@@ -1109,6 +1129,7 @@
   width: 82.9rem;
   padding: 1.8rem;
   isolation: isolate;
+  will-change: transform;
 }
 
 .protocol .protocol-flex .protocol-card::before {
@@ -2219,7 +2240,7 @@
   width: 100%;
   height: auto;
   z-index: -1;
-  mask-image: linear-gradient(black 60%, transparent);
+  mask-image: linear-gradient(black 85%, transparent);
 }
 
 .real .real-bg {
@@ -2566,7 +2587,7 @@
   gap: 6.5rem;
   width: 100%;
 
-perspective: 1000px;
+  perspective: 1000px;
 }
 
 @media screen and (orientation: portrait) {

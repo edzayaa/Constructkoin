@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   padding: min(4.5rem, 4.5vh) min(5rem, 5vh);
-  z-index: 10;
+  z-index: 30;
 }
 
 @media screen and (orientation: portrait) {
@@ -242,11 +242,18 @@
   width: 100%;
   height: 100vh;
   isolation: isolate;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-out;
+  background: rgba(249, 249, 249, 0.02);
+  box-shadow: 0 3.451px 62.463px 0 rgba(15, 17, 16, 0.1);
+  backdrop-filter: blur(81.01176452636719px);
 }
+
 @media screen and (orientation: portrait) {
-  .menu {
-    /* display: block; */
+  .menu[data-menu-active] {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -254,9 +261,6 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(249, 249, 249, 0.02);
-  box-shadow: 0 3.451px 62.463px 0 rgba(15, 17, 16, 0.1);
-  backdrop-filter: blur(81.01176452636719px);
 }
 
 .menu-inner {
@@ -265,6 +269,12 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  transform: scale(1) translateY(30px);
+  transition: 0.6s var(--ease);
+}
+
+.menu[data-menu-active] .menu-inner {
+  transform: scale(1) translateY(0);
 }
 
 /* top nav  */

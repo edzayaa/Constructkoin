@@ -7,6 +7,7 @@ import { HomepageAnimations } from "../animations/homepage.js";
 import { SharedAnimations } from "../animations/shared-animations.js";
 import { Accordion } from "../components/accordion.js";
 import { DragFollower } from "../animations/drag-follower.js";
+import { Toggles } from "../components/toggles.js";
 
 window.addEventListener("load", async () => {
   new LenisSmooth();
@@ -17,4 +18,5 @@ window.addEventListener("load", async () => {
   new SharedAnimations();
   new Accordion();
   new DragFollower();
+  new Toggles();
 });

@@ -49,7 +49,7 @@ export class HomepageAnimations {
             trigger: element,
             start: start,
             end: end,
-            scrub: 1.1,
+            scrub: true,
           },
         })
         .fromTo(targetBg, { ...fromBgConfig }, { ...toBgConfig }, 0)
