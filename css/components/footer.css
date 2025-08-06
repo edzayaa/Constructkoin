@@ -49,7 +49,7 @@ inset: 0;
 
 @media screen and (orientation: portrait) {
   .footer-loop {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
     height: 12rem;
   }
   .footer-loop video {
@@ -150,7 +150,7 @@ inset: 0;
     gap: 1.5rem;
   }
   .footer-column .footer-column__heading {
-    font-size: 1.8;
+    font-size: 1.8rem;
     font-weight: 500;
   }
   .footer-column .footer-column__list {

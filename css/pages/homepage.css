@@ -9,7 +9,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  /* border: 1px solid red; */
   padding-block: min(17rem, 17vh) min(3.7rem, 3.7vh);
   isolation: isolate;
 }
@@ -25,7 +24,6 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  /* mask-image: linear-gradient(black 95%, transparent); */
 }
 
 .hero-blurs {
@@ -34,9 +32,7 @@
   left: 0;
   width: 100%;
   height: auto;
-
   z-index: -2;
-  /* mask-image: linear-gradient(black 95%, transparent); */
 }
 
 @media screen and (orientation: portrait) {
@@ -44,6 +40,10 @@
     padding-block: min(13rem, 13vh) min(4.5rem, 4.5vh);
     padding-inline: 1.5rem;
     /* height: fit-content; */
+  }
+
+  .hero-background {
+    display: none;
   }
 }
 
@@ -124,6 +124,7 @@
 .hero-loop video {
   mix-blend-mode: screen;
   transform: scale(1.4);
+  will-change: opacity;
 }
 
 /* loop  */
@@ -646,6 +647,9 @@
     height: fit-content;
     padding-block: min(13.5rem, 13.5vh) min(7.5rem, 7.5vh);
   }
+
+  .structure-background {
+  }
 }
 
 .structure .structure-heading {
@@ -675,7 +679,7 @@
 }
 .structure .structure-swiper-wrapper {
   display: flex;
-  transition: 0.4s ease-out !important;
+  transition: var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -691,7 +695,7 @@
   min-height: min(58.6rem, 58.6vh);
   position: relative;
   isolation: isolate;
-  transition: var(--transition);
+  transition: var(--swiper-transition);
   flex-shrink: 0;
 }
 .structure .structure-swiper-slide.swiper-slide-active {
@@ -949,6 +953,7 @@
 .protocol .protocol-flex {
   display: flex;
   justify-content: space-between;
+  perspective: 1000px;
 }
 
 .protocol .protocol-flex .protocol-content {
@@ -976,6 +981,10 @@
     justify-content: flex-start;
     max-width: 100%;
     gap: 2rem;
+  }
+
+  .protocol-background {
+    display: none;
   }
 }
 
@@ -1582,7 +1591,6 @@
   padding-block: min(15.7rem, 15.7vh) min(10rem, 10vh);
 }
 .why .why-content {
-  
 }
 
 @media screen and (orientation: portrait) {
@@ -1621,7 +1629,7 @@
 
 .why .why-swiper-wrapper {
   display: flex;
-  transition: 0.4s ease-out !important;
+  transition: var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -1771,6 +1779,10 @@
 
   .ai .ai-content {
     gap: 0;
+  }
+
+  .ai-background {
+    display: none;
   }
 }
 
@@ -2050,6 +2062,10 @@
   .token {
     padding-block: min(11rem, 11vh) min(6rem, 6vh);
   }
+
+  .token-background {
+    display: none;
+  }
 }
 
 .token .token-content .token-tagline {
@@ -2104,7 +2120,7 @@
 
 .token .token-swiper-container .token-swiper-wrapper {
   display: flex;
-  transition: 0.4s ease-out !important;
+  transition: var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -2218,7 +2234,8 @@
     padding-block: 10rem 5rem;
     padding-inline: 1.5rem;
   }
-  .real .real-bg {
+  .real .real-bg,
+  .real-blur {
     display: none;
   }
 }
@@ -2431,6 +2448,9 @@
   .models .models-content {
     gap: 2rem;
   }
+  .models-blur {
+    display: none;
+  }
 }
 
 /* headings  */
@@ -2545,6 +2565,8 @@
   display: flex;
   gap: 6.5rem;
   width: 100%;
+
+perspective: 1000px;
 }
 
 @media screen and (orientation: portrait) {
@@ -2556,6 +2578,10 @@
   .cards .cards-content {
     flex-direction: column;
     gap: 3rem;
+  }
+
+  .cards-blur {
+    display: none;
   }
 }
 
@@ -2878,6 +2904,7 @@
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
   min-height: 100vh;
+  perspective: 1000px;
 }
 
 .how .how-content {
@@ -2935,7 +2962,7 @@
 .how .how-content .how-swiper-container .how-swiper-wrapper {
   display: flex;
   margin-bottom: min(6rem, 6vh);
-  transition: 0.5s ease-out !important;
+  transition: var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -2958,7 +2985,7 @@
   padding: min(6rem, 6vh) 3.5rem min(6rem, 6vh) 6.5rem;
   background: #fff;
   transform-origin: bottom;
-  transition: var(--transition);
+  transition: var(--swiper-transition);
   position: relative;
   isolation: isolate;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
@@ -3067,7 +3094,7 @@
 .how .how-content .how-swiper-container .how-swiper-percent {
   position: relative;
   width: 42rem;
-  height: 3px;
+  height: 5px;
   border-radius: 10rem;
   background: rgba(0, 0, 0, 0.05);
   margin-inline: auto;
@@ -3076,30 +3103,30 @@
 
 .how .how-content .how-swiper-container .how-swiper-percent__bar {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   height: 100%;
-  border-radius: 10rem;
+  border-radius: 5px;
   width: 100%;
   background: linear-gradient(270deg, #39a3fe 0%, #3467d7 100%);
-  transform: scaleX(0);
+  transform: scaleX(0) translateY(-50%);
   transform-origin: left;
-  transition: 0.5s var(--ease);
+  transition: var(--swiper-transition);
 }
 
 .how .how-swiper-container[data-swiper-active-slide="1"] .how-swiper-percent__bar {
-  transform: scaleX(0.25);
+  transform: scaleX(0.25) translateY(-50%);
 }
 
 .how .how-swiper-container[data-swiper-active-slide="2"] .how-swiper-percent__bar {
-  transform: scaleX(0.5);
+  transform: scaleX(0.5) translateY(-50%);
 }
 
 .how .how-swiper-container[data-swiper-active-slide="3"] .how-swiper-percent__bar {
-  transform: scaleX(0.75);
+  transform: scaleX(0.75) translateY(-50%);
 }
 .how .how-swiper-container[data-swiper-active-slide="4"] .how-swiper-percent__bar {
-  transform: scaleX(1);
+  transform: scaleX(1) translateY(-50%);
 }
 
 @media screen and (orientation: portrait) {
@@ -3111,7 +3138,6 @@
 
   .how .how-content .how-swiper-container .how-swiper-percent__bar {
     border-radius: 3em;
-    transform: scale(0.4);
   }
 }
 

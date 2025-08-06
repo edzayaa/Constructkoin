@@ -2,8 +2,6 @@ export class SharedAnimations {
   constructor() {
     this.mm = gsap.matchMedia();
     this.init();
-
-    
   }
 
   init() {
@@ -30,18 +28,20 @@ export class SharedAnimations {
           let fadeTimeline = gsap.timeline({
             scrollTrigger: {
               trigger: el,
-              start: "top bottom",
+              start: isLandscape ? "top 90%" : "top bottom",
               end: isLandscape ? "top top" : "top 30%",
               scrub: scrub,
             },
           });
 
           el.querySelectorAll("[data-fade-element]").forEach((el, i) => {
-            const { fadeX, fadeY, fadeScale, fadeAlpha } = el.dataset;
+            const { fadeX, fadeY, fadeScale, fadeAlpha, rotateX, rotateY } = el.dataset;
 
             let fromConfig = {
               ...(fadeX && { x: fadeX }),
               ...(fadeY && { y: fadeY }),
+              ...(rotateX && { rotateX: rotateX }),
+              ...(rotateY && { rotateY: rotateY }),
               ...(fadeScale && { scale: fadeScale }),
               ...(fadeAlpha && { autoAlpha: fadeAlpha }),
             };
@@ -49,6 +49,8 @@ export class SharedAnimations {
             let toConfig = {
               ...(fadeX && { x: 0 }),
               ...(fadeY && { y: 0 }),
+              ...(rotateX && { rotateX: 0 }),
+              ...(rotateY && { rotateY: 0 }),
               ...(fadeScale && { scale: 1 }),
               ...(fadeAlpha && { autoAlpha: 1 }),
             };
@@ -77,6 +79,9 @@ export class SharedAnimations {
           if (!el) return;
 
           const { fadeOutScale } = el.dataset;
+          const { fadeOutMobile } = el.dataset;
+
+          if (!isLandscape && fadeOutMobile === "none") return;
 
           let fromConfig = {
             ...(fadeOutScale && { scale: 1 }),

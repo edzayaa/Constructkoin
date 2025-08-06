@@ -294,7 +294,6 @@
       <section
         class="hero"
         data-bg="dark"
-        data-fade-out
       >
         <div class="hero-content">
           <div class="hero-tagline tagline">
@@ -515,15 +514,17 @@
           </div>
         </div>
 
-        <picture>
-          <img
-            src="/assets/images/hero-landscape.png"
-            alt=""
-            class="hero-background"
-          />
-        </picture>
+        <img
+          src="/assets/images/hero-landscape.png"
+          alt=""
+          class="hero-background"
+        />
 
         <picture>
+          <source
+            srcset="/assets/images/hero-blurs-portrait.png"
+            media="screen and (orientation: portrait)"
+          />
           <img
             src="/assets/images/hero-blurs-landscape.png"
             alt=""
@@ -536,11 +537,15 @@
       <section
         class="presale"
         data-flip-video="1"
+        data-fade
       >
         <div
           class="presale-content"
           data-fade-out
           data-fade-out-scale="0.9"
+          data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
         >
           <div class="presale-tagline tagline">
             <div class="tagline-icon">
@@ -1069,18 +1074,31 @@
 
         <!-- background  -->
         <picture>
+          <source
+            srcset="/assets/images/structure-portrait.png"
+            media="screen and (orientation: portrait)"
+          />
           <img
             src="/assets/images/structure-landscape.png"
-            alt=" "
+            alt="structure blur layer"
             class="structure-background"
           />
         </picture>
       </section>
 
       <!-- PROTOCOL  -->
-      <section class="protocol">
+      <section
+        class="protocol"
+        data-fade
+      >
         <div class="protocol-flex">
-          <div class="protocol-content">
+          <div
+            class="protocol-content"
+            data-fade-element
+            data-fade-alpha="0"
+            data-fade-x="-400"
+            data-rotate-x="80"
+          >
             <h3 class="protocol-heading"><span>ConstructKoin</span> Protocol (CTK)</h3>
 
             <p class="protocol-description">The Construct Koin (CTK) Protocol is building the future of real estate through Proprietary AI models to fund property development that combines asset- backed security with growth potential for token holders.</p>
@@ -1176,7 +1194,13 @@
             </ul>
           </div>
 
-          <div class="protocol-card">
+          <div
+            class="protocol-card"
+            data-fade-element
+            data-fade-alpha="0"
+            data-rotate-x="80"
+            data-fade-x="400"
+          >
             <div class="protocol-card__inner">
               <img
                 src="/assets/images/card-layer-mid.png"
@@ -1359,20 +1383,20 @@
         </div>
 
         <!-- background  -->
-        <picture>
-          <img
-            src="/assets/images/protocol-landscape.png"
-            alt=" "
-            class="protocol-background"
-          />
-        </picture>
+        <img
+          src="/assets/images/protocol-landscape.png"
+          alt="blur layer"
+          class="protocol-background"
+        />
       </section>
 
       <!-- WHY  -->
-      <section class="why">
-        <div
-          class="why-content"
-          data-fade-out
+      <section class="why"
+      data-fade>
+        <div class="why-content"
+          data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
         >
           <h2 class="why-heading">Why This Model Stands Out</h2>
           <!-- swiper  -->
@@ -1483,12 +1507,18 @@
       </section>
 
       <!-- AI  -->
-      <section class="ai">
+      <section class="ai"
+        data-fade
+      >
         <div
           class="ai-content"
           data-fade-out
           data-fade-out-scale="0.9"
-        >
+
+   data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
+          >
           <!-- heading  -->
           <h2 class="ai-heading">Removing Bottlenecks</h2>
           <p class="ai-description">Conventional real estate finance can drag on for weeks, weighed down by manual checks and uncertain appraisals. Developers often lose precious build time, incurring higher costs and in a market in need of homes, that is lost sales revenue.</p>
@@ -1587,29 +1617,23 @@
         </div>
 
         <!-- background  -->
-        <picture>
-          <img
-            src="/assets/images/ai-landscape.png"
-            alt=" "
-            class="ai-background"
-          />
-        </picture>
+        <img
+          src="/assets/images/ai-landscape.png"
+          alt="blur layer"
+          class="ai-background"
+        />
       </section>
 
       <!-- TOKEN  -->
       <section class="token">
         <!-- background  -->
-        <picture>
-          <img
-            src="/assets/images/token-landscape.png"
-            alt=" "
-            class="token-background"
-          />
-        </picture>
+        <img
+          src="/assets/images/token-landscape.png"
+          alt="blur layer"
+          class="token-background"
+        />
 
-        <div
-          class="token-content"
-        >
+        <div class="token-content">
           <div class="token-tagline tagline">
             <div class="tagline-icon">
               <svg
@@ -1634,10 +1658,7 @@
           <h2 class="token-heading"><span>Powerful. Secure. Effortless</span> Innovation in Property Development</h2>
         </div>
 
-        <div class="token-drag__wrapper"
-          data-fade-out
-        
-        >
+        <div class="token-drag__wrapper">
           <div
             class="token-swiper-container"
             data-swiper-class="token"
@@ -1711,27 +1732,28 @@
       </section>
 
       <!-- REAL  -->
-      <section class="real">
+      <section class="real"
+        data-fade
+      >
         <!-- background  -->
-
         <img
           src="/assets/images/real-landscape.png"
           alt="real landscape background"
           class="real-bg"
         />
+        <img
+          src="/assets/images/real-blur-landscape.png"
+          alt=" "
+          class="real-blur"
+        />
 
-        <picture>
-          <img
-            src="/assets/images/real-blur-landscape.png"
-            alt=" "
-            class="real-blur"
-          />
-        </picture>
-
-        <div class="real-content"
-             data-fade-out
+        <div
+          class="real-content"
+          data-fade-out
           data-fade-out-scale="0.9"
-        
+             data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
         >
           <div class="real-tagline tagline">
             <div class="tagline-icon">
@@ -1761,7 +1783,9 @@
       </section>
 
       <!-- BUY  -->
-      <section class="buy">
+      <section class="buy"
+      data-fade
+      >
         <div class="buy-flex">
           <div class="buy-media">
             <video
@@ -1773,7 +1797,12 @@
             ></video>
           </div>
 
-          <div class="buy-content">
+          <div class="buy-content"
+          
+             data-fade-element
+          data-fade-alpha="0"
+          data-fade-x="150"
+          >
             <h3 class="buy-heading">The ConstructKoin Protocol</h3>
             <h4 class="buy-subheading">Real Innovation. Real Assets. Real Returns.</h4>
 
@@ -1814,10 +1843,15 @@
       <section
         class="models"
         data-flip-video="2"
+        data-fade
       >
-        <div class="models-content"
-             data-fade-out
+        <div
+          class="models-content"
+          data-fade-out
           data-fade-out-scale="0.9"
+            data-fade-element
+          data-fade-alpha="0"
+          data-fade-x="-150"
         >
           <h2 class="models-heading">CTK Revenue Models</h2>
           <h3 class="models-subheading">Welcome the the future of real estate.</h3>
@@ -1845,13 +1879,11 @@
         </div>
 
         <!-- background  -->
-        <picture>
-          <img
-            src="/assets/images/models-landscape.png"
-            alt="models landscape background"
-            class="models-blur"
-          />
-        </picture>
+        <img
+          src="/assets/images/models-landscape.png"
+          alt="models landscape background"
+          class="models-blur"
+        />
       </section>
 
       <!-- SHOWREEL 2 -->
@@ -1863,13 +1895,24 @@
       </section>
 
       <!-- CARDS  -->
-      <section class="cards">
-        <div class="cards-content"
-           data-fade-out
+      <section class="cards"
+        data-fade
+      
+      >
+        <div
+          class="cards-content"
+          data-fade-out
           data-fade-out-scale="0.9"
+          data-fade-out-mobile="none"
         >
           <!-- card  -->
-          <div class="cards-item">
+          <div class="cards-item"
+            data-fade-element
+          data-fade-alpha="0"
+          data-fade-x="-350"
+          data-rotate-x="50"
+          
+          >
             <img
               src="/assets/images/cards-1.png"
               alt="card bg"
@@ -1883,7 +1926,12 @@
           </div>
 
           <!-- card  -->
-          <div class="cards-item">
+          <div class="cards-item"
+                  data-fade-element
+          data-fade-alpha="0"
+          data-rotate-x="50"
+
+          >
             <img
               src="/assets/images/cards-2.png"
               alt="card bg"
@@ -1897,7 +1945,13 @@
           </div>
 
           <!-- card  -->
-          <div class="cards-item">
+          <div class="cards-item"
+                  data-fade-element
+          data-fade-alpha="0"
+
+               data-fade-x="350"
+          data-rotate-x="50"
+          >
             <img
               src="/assets/images/cards-3.png"
               alt="card bg"
@@ -1922,10 +1976,16 @@
       </section>
 
       <!-- ESTATE  -->
-      <section class="estate">
-        <div class="estate-content"
-           data-fade-out
-        
+      <section class="estate"
+      data-fade
+      >
+        <div
+          class="estate-content"
+          data-fade-out
+      data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="150"
+
         >
           <h2 class="estate-heading">
             <span>ConstructKoin Protocol: </span> <br />
@@ -2294,10 +2354,17 @@
         data-bg="clear"
         data-bg-start="top center"
         data-bg-end="top top"
+        data-fade
       >
-        <div class="how-content"
-           data-fade-out
+        <div
+          class="how-content"
+          data-fade-out
           data-fade-out-scale="0.9"
+          data-fade-element
+          data-fade-alpha="0"
+          data-rotate-x="50"
+          data-fade-scale="1.4"
+         
         >
           <h2 class="how-heading"><span>AI Pillars </span>How We Operate</h2>
 
@@ -2635,6 +2702,11 @@
 
         <!-- background  -->
         <picture>
+          <source
+            srcset="/assets/images/footer-blur-portrait.png"
+            media="(orientation: portrait)"
+          />
+
           <img
             src="/assets/images/footer-blur.png"
             alt="footer  background"
@@ -2729,7 +2801,7 @@
         <div class="backgrounds-pixels">
           <picture>
             <source
-              srcset="/assets/images/background-pixel-portrair.png"
+              srcset="/assets/images/background-pixel-portrait.png"
               type="image/webp"
               media="screen and (orientation: portrait)"
             />

@@ -10,6 +10,7 @@ export class HomepageAnimations {
     this.setOrientation();
     this.updateBackground();
     this.initFlipOnScroll();
+    this.heroFade();
   }
 
   setOrientation() {
@@ -105,5 +106,35 @@ export class HomepageAnimations {
         }, 100);
       });
     });
+  }
+
+  heroFade() {
+    this.mm.add(
+      {
+        isDesktop: "(min-width: 992px)",
+        isMobile: "(max-width: 991px)",
+        isLandscape: "(orientation: landscape)",
+        isPortrait: "(orientation: portrait)",
+      },
+      (context) => {
+        const { isLandscape } = context.conditions;
+
+        const hero = document.querySelector(".hero");
+        const elementsPortrait = hero.querySelectorAll(".hero-heading, .hero-description, .hero-text.is--portrait, .hero-buttons.is--portrait, .hero-discover");
+        const elementsLandscape = hero.querySelectorAll(".hero-heading, .hero-description, .hero-left, .hero-bottom,.hero-discover");
+        const target = isLandscape ? elementsLandscape : elementsPortrait;
+
+        let fadeTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: hero,
+            start: "20% top",
+            end: "bottom top",
+            scrub: 1.1,
+          },
+        });
+
+        fadeTimeline.fromTo(target, { autoAlpha: 1 }, { autoAlpha: 0 }, 0);
+      }
+    );
   }
 }
