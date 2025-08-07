@@ -9,7 +9,6 @@
   position: relative;
   isolation: isolate;
   background-color: #000102;
-
 }
 
 @media screen and (orientation: portrait) {
@@ -19,12 +18,11 @@
   }
 }
 
-
 .footer-blur {
   position: absolute;
-inset: 0;
+  inset: 0;
   z-index: -1;
-  mask-image: linear-gradient(transparent,  black);
+  mask-image: linear-gradient(transparent, black);
 }
 
 /* content  */
@@ -68,7 +66,6 @@ inset: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: min(7rem, 7vh);
-
 }
 
 @media screen and (orientation: portrait) {

@@ -241,7 +241,7 @@
   border-radius: 100%;
   width: 4.1rem;
   height: 4.1rem;
-  transition: var(--transition);
+  transition: opacity var(--transition);
   background: #0e0f10;
 }
 
@@ -300,19 +300,12 @@
   width: 29.7rem;
   height: 19rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: transform var(--transition), opacity var(--transition);
 }
 
 .hero-bottom .hero-bottom__right:hover {
   opacity: 0.8;
   transform: scale(0.98);
-}
-
-.hero-bottom .hero-bottom__right:hover .hero-bottom__play {
-  transform: translateY(-50%) scale(0.9);
-}
-
-.hero-bottom .hero-bottom__right video {
 }
 
 .hero-bottom .hero-bottom__play {
@@ -322,7 +315,6 @@
   transform: translateY(-50%);
   width: 2.8rem;
   height: 3.1rem;
-  transition: var(--transition);
 }
 
 @media screen and (orientation: portrait) {
@@ -581,7 +573,7 @@
   flex-shrink: 0;
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 .about .about-content .about-selectors .selector__play {
   width: 4.3rem;
@@ -606,7 +598,7 @@
   font-weight: 400;
   line-height: 120%;
   width: 14.5rem;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 .about .about-content .about-selectors .selector__text span {
   color: rgba(0, 1, 2, 0.6);
@@ -701,7 +693,7 @@
 }
 .structure .structure-swiper-wrapper {
   display: flex;
-  transition: var(--swiper-transition) !important;
+  transition:  var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -790,6 +782,8 @@
   width: 105%;
   height: 105%;
   z-index: -2;
+  opacity: 0;
+  transition: opacity var(--transition);
 }
 .structure .structure-card__pixels {
   position: absolute;
@@ -850,24 +844,29 @@
   position: relative;
   overflow: hidden;
 }
+
 .structure .structure-card__content .structure-card__button::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  transition: var(--transition);
+  transition: opacity var(--transition);
   background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
   opacity: 0;
 }
-.structure .structure-swiper-slide.swiper-slide-active .structure-card__button::before {
+
+.structure .structure-swiper-slide.swiper-slide-active .structure-card__button::before,
+.structure .structure-swiper-slide.swiper-slide-active .structure-card__layer {
   opacity: 1;
 }
+
 .structure .structure-card__content .structure-card__button-text {
   color: #fff;
   font-size: min(1.6rem, 1.6vh);
   font-weight: 700;
   line-height: normal;
 }
+
 .structure .structure-card__content .structure-card__button-icon-wrapper {
   width: 1rem;
   height: 1.2rem;
@@ -1525,7 +1524,7 @@
   justify-content: center;
   border-radius: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .protocol .protocol-card__google:hover,
@@ -1588,7 +1587,6 @@
     padding: 1.1rem;
     border-radius: 1.8rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: var(--transition);
   }
 
   .protocol .protocol-card__google:hover,
@@ -1886,7 +1884,7 @@
   flex-shrink: 0;
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .ai .selector__play {
@@ -1913,7 +1911,7 @@
   font-weight: 400;
   line-height: 120%;
   width: 14.5rem;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .ai .selector__text span {
@@ -2809,7 +2807,7 @@
   height: 30rem;
   border-radius: 2.5rem;
   z-index: 1;
-  transition: all 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1), opacity 0.6s cubic-bezier(0.625, 0.05, 0, 1);
   opacity: 0;
   pointer-events: none;
   user-select: none;
@@ -3245,11 +3243,10 @@
 }
 
 .loader .loader-bar {
-  width: 100%;
+  width: 0%;
   height: 100%;
   border-radius: 5px;
   background: linear-gradient(270deg, #39a3fe 0%, #3467d7 100%);
-  transform: translateX(-100%);
   transform-origin: left;
 }
 
@@ -3259,10 +3256,9 @@
   }
 
   .loader .loader-logo {
-  height: 18rem;
-  width: 18rem;
-}
-
+    height: 18rem;
+    width: 18rem;
+  }
 
   .loader .loader-bar__container {
     width: 12.5rem;

@@ -25,10 +25,16 @@
   position: relative;
 }
 
+/* logo  */
 .navbar .navbar-inner .navbar-logo {
   height: 4.7rem;
   width: 27.5rem;
   cursor: pointer;
+  position: relative;
+}
+.navbar .navbar-inner .navbar-logo a {
+  display: grid;
+  grid-template-areas: "logo";
 }
 
 @media screen and (orientation: portrait) {
@@ -39,15 +45,27 @@
 }
 
 .navbar .navbar-inner .navbar-logo img {
-  transition: all 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity var(--transition);
   object-fit: contain;
+  grid-area: logo;
 }
 
 .navbar .navbar-inner .navbar-logo:hover img {
   transform: scale(0.97);
 }
 
-@media screen and (orientation: portrait) {
+.navbar .navbar-inner .navbar-logo-clear {
+  opacity: 1;
+}
+.navbar .navbar-inner .navbar-logo-dark {
+  opacity: 0;
+}
+
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-logo-clear {
+  opacity: 0;
+}
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-logo-dark {
+  opacity: 1;
 }
 
 /* center  */
@@ -63,6 +81,10 @@
   box-shadow: 0 0 47.5px 0 rgba(102, 102, 102, 0.04);
   backdrop-filter: blur(9.75px);
   -webkit-backdrop-filter: blur(9.75px);
+}
+
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-center {
+  border: 1px solid #0000002a;
 }
 
 @media screen and (orientation: portrait) {
@@ -89,9 +111,13 @@
   backdrop-filter: blur(96.19999694824219px);
   -webkit-backdrop-filter: blur(96.19999694824219px);
   cursor: pointer;
-  transition: var(--transition);
+  transition: color var(--transition);
   overflow: hidden;
   isolation: isolate;
+}
+
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-center .navbar-center-list-item {
+  color: #000;
 }
 
 .navbar .navbar-inner .navbar-center .navbar-center-list-item::before {
@@ -101,7 +127,7 @@
   z-index: -1;
   background: radial-gradient(90.43% 90.43% at 50% 51.06%, rgba(38, 153, 254, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 255, 255, 0.05);
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .navbar .navbar-inner .navbar-center .navbar-center-list-item.is--active {
@@ -115,6 +141,10 @@
 /* hover states  */
 .navbar .navbar-inner .navbar-center .navbar-center-list:hover .navbar-center-list-item {
   color: #fff;
+}
+
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-center .navbar-center-list:hover .navbar-center-list-item {
+  color: #000;
 }
 .navbar .navbar-inner .navbar-center .navbar-center-list:hover .navbar-center-list-item::before {
   opacity: 0;
@@ -141,6 +171,10 @@
   -webkit-backdrop-filter: blur(9.75px);
 }
 
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-right {
+  border: 1px solid #0000002a;
+}
+
 @media screen and (orientation: portrait) {
   .navbar .navbar-inner .navbar-right {
     display: none;
@@ -156,7 +190,7 @@
   border-radius: 2.5rem;
   background: radial-gradient(90.43% 90.43% at 50% 51.06%, rgba(38, 153, 254, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 255, 255, 0.05);
   cursor: pointer;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price:hover {
@@ -179,6 +213,10 @@
   font-weight: 700;
 }
 
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-right .navbar-price__text {
+  color: #000;
+}
+
 .navbar .navbar-inner .navbar-right .navbar-price__text-info,
 .navbar .navbar-inner .navbar-right .navbar-price__text-loader {
   grid-area: stack;
@@ -189,14 +227,13 @@
   grid-template-areas: "stack";
   justify-items: center;
   align-items: center;
-
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-info span {
   color: #2699fe;
   margin-left: 0.5rem;
   grid-area: stack;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-loader {
@@ -207,7 +244,7 @@
   display: none;
 }
 
-:root[data-price-loading] .navbar .navbar-inner .navbar-right .navbar-price__text-info span{
+:root[data-price-loading] .navbar .navbar-inner .navbar-right .navbar-price__text-info span {
   opacity: 0;
   visibility: hidden;
 }
@@ -224,6 +261,10 @@
   stroke-dashoffset: 0;
   stroke-linecap: round;
   animation: dash4 1.5s ease-in-out infinite;
+}
+
+.navbar[data-navbar-theme="clear"] .navbar-inner .navbar-right .navbar-price__text-loader circle {
+  stroke: #000;
 }
 
 @keyframes rotate4 {
