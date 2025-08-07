@@ -32,6 +32,7 @@
   left: 0;
   width: 100%;
   height: auto;
+  min-height: 150vh;
   z-index: -2;
 }
 
@@ -45,6 +46,11 @@
   .hero-background {
     display: none;
   }
+
+.hero-blurs {
+  min-height: auto;
+}
+
 }
 
 /* tagline  */
@@ -2926,7 +2932,6 @@
 /*  */
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
-  min-height: 100vh;
   perspective: 1000px;
 }
 

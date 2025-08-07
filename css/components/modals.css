@@ -18,7 +18,6 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(18.5px);
   -webkit-backdrop-filter: blur(18.5px);
-
 }
 
 .modal-wrapper[data-modal-open] {
@@ -53,6 +52,7 @@
   visibility: hidden;
   transform: scale(0.5) rotateX(50deg);
   transition: 0.5s var(--ease);
+  margin-top: min(10rem, 10vh);
 }
 
 .modal-newsletter::before {
@@ -67,7 +67,7 @@
 
 .modal-newsletter .modal-newsletter__inner {
   position: relative;
-  padding: 7rem 9.4rem 4.5rem;
+  padding: min(7rem, 7vh) 9.4rem min(4.5rem, 4.5vh);
   border-radius: 2.5rem;
   border: 1px solid rgba(246, 246, 246, 0.12);
   overflow: hidden;
@@ -95,6 +95,7 @@
     border-radius: 1rem;
     padding: 0.8rem;
     width: calc(100% - 3rem);
+    margin-top: 0;
   }
 
   .modal-newsletter::before {
@@ -113,8 +114,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
   transform: translate(100%, -50%);
   transition: 0.5s var(--ease);
@@ -143,7 +144,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: min(4.5rem, 4.5vh);
+  gap: min(2rem, 2vh);
   align-items: center;
   color: #fff;
 }
@@ -290,23 +291,25 @@
   transition: 0.5s var(--ease);
   perspective: 1000px;
 }
+
 .modal-video .modal-video__inner {
   border-radius: 2rem;
   overflow: hidden;
-  background-color: red;
+  background-color: #3467d7;
   width: 100%;
   height: calc(100% - 10rem);
   position: relative;
   transition: 0.6s var(--ease);
   transform: scale(1.1) rotateX(50deg);
 }
+
 .modal-video .modal-video__close {
   position: absolute;
   z-index: 1;
   top: 3rem;
   right: 3rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
   transition: 0.5s var(--ease);
 }
