@@ -1,5 +1,8 @@
 export class HomepageAnimations {
   constructor() {
+    this.lenis = window.lenis;
+    this.lenis.stop();
+
     this.mm = gsap.matchMedia();
     this.orientation = null;
 
@@ -7,10 +10,8 @@ export class HomepageAnimations {
   }
 
   init() {
+    this.loader();
     this.setOrientation();
-    this.updateBackground();
-    this.initFlipOnScroll();
-    this.heroFade();
   }
 
   setOrientation() {
@@ -25,6 +26,41 @@ export class HomepageAnimations {
         this.orientation = context.conditions.isLandscape ? "landscape" : "portrait";
       }
     );
+  }
+
+  loader() {
+    const heroElements = document.querySelector(".hero-content").children;
+
+    gsap.set([".navbar", heroElements], { willChange: "transform" });
+
+    gsap
+      .timeline({
+        defaults: {
+          ease: "CTK-ease",
+        },
+      })
+
+      .fromTo([".loader-logo", ".loader-bar__container"], { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 2, stagger: 0.1, clearProps: "transform" }, 0)
+
+      .to(".loader-bar", { xPercent: 33, duration: 1 })
+      .to(".loader-bar", { xPercent: 66, duration: 1, delay: 0.3 })
+      .to(".loader-bar", { xPercent: 100, duration: 1, delay: 0.3 })
+
+      .to(".loader-bar__container", { autoAlpha: 0, y: 30, delay: 0.2, duration: 1.5 })
+      .to(".loader-logo", { scale: 0.3, autoAlpha: 0, rotate: -15, duration: 1.5 }, "<")
+
+      .fromTo(".navbar", { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 1.5, clearProps: "willChange" })
+      .fromTo(".hero-left", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 1.5, delay: 0.1, clearProps: "transform" }, "<")
+      .fromTo(".hero-bottom", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.5, delay: 0.1, clearProps: "transform," }, "<")
+      .fromTo([".hero-tagline", ".hero-heading", ".hero-description", ".hero-loop", ".hero-text.is--portrait", ".hero-buttons.is--portrait",".hero-discover"], { autoAlpha: 0, y: 20 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
+
+      .set(".loader", { display: "none" })
+      .call(() => {
+        this.heroFade();
+        this.initFlipOnScroll();
+        this.updateBackground();
+        this.lenis.start();
+      });
   }
 
   updateBackground() {

@@ -120,11 +120,14 @@
   display: flex;
   margin-block: min(5rem, 5vh) min(4rem, 4vh);
   height: 30vh;
+  mix-blend-mode: screen;
+  transform: translateZ(0px);
 }
+
 .hero-loop video {
+  transform: translateZ(0px);
   mix-blend-mode: screen;
   transform: scale(1.4);
-  will-change: opacity;
 }
 
 /* loop  */
@@ -3173,6 +3176,96 @@
 .showreel-3 .showreel-3-content {
   width: 100%;
   height: 100%;
+}
+
+/*  */
+/* ========== LOADER ========== */
+/*  */
+
+/* .hero-content, */
+.hero-left,
+.hero-bottom,
+.hero-background,
+.navbar,
+.hero-tagline,
+.hero-heading,
+.hero-description,
+.hero-loop,
+.hero-discover,
+.hero-text.is--portrait,
+.hero-buttons.is--portrait {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .loader-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: min(6.5rem, 6.5vh);
+}
+
+.loader .loader-logo {
+  height: 30rem;
+  width: 30rem;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.loader .loader-bar__container {
+  width: 29rem;
+  height: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 72.4px 0 rgba(15, 17, 16, 0.1);
+  backdrop-filter: blur(96px);
+  -webkit-backdrop-filter: blur(96px);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.loader .loader-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(270deg, #39a3fe 0%, #3467d7 100%);
+  transform: translateX(-100%);
+  transform-origin: left;
+}
+
+@media screen and (orientation: portrait) {
+  .loader .loader-inner {
+    gap: min(4.5rem, 4.5vh);
+  }
+
+  .loader .loader-logo {
+  height: 18rem;
+  width: 18rem;
+}
+
+
+  .loader .loader-bar__container {
+    width: 12.5rem;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .loader .loader-bar {
+    border-radius: 3px;
+  }
 }
 
 /* .hero, */
