@@ -76,7 +76,13 @@
           <div class="navbar-logo">
             <a href="/">
               <img
+                class="navbar-logo-clear"
                 src="/assets/images/logo.png"
+                alt="Logo png"
+              />
+              <img
+                class="navbar-logo-dark"
+                src="/assets/images/logo-black.png"
                 alt="Logo png"
               />
             </a>
@@ -527,6 +533,7 @@
         data-flip-video="1"
         data-fade
       >
+        <!-- content  -->
         <div
           class="presale-content"
           data-fade-out
@@ -582,6 +589,7 @@
           </button>
         </div>
 
+        <!-- media  -->
         <div class="presale-media__container">
           <div
             class="presale-media__wrapper"
@@ -589,7 +597,7 @@
           >
             <video
               data-flip-target="1"
-              src="/assets/videos/presale-showreel.mp4"
+              src="/assets/videos/presale-showreel-landscape.mp4"
               autoplay
               loop
               muted
@@ -612,7 +620,11 @@
       <section
         class="about"
         data-bg="clear"
-        data-bg-start="top 90%"
+        data-bg-start="top 100%"
+        data-bg-end="top 90%"
+        data-nav="clear"
+        data-nav-start="top 10%"
+        data-nav-end="bottom 50%"
         data-fade
       >
         <!-- background  -->
@@ -788,9 +800,18 @@
       <section
         class="structure"
         data-bg="dark"
+        data-bg-start="top 50%"
         data-fade-out
+        data-fade
       >
-        <h2 class="structure-heading">The Presale Structure</h2>
+        <h2
+          class="structure-heading"
+          data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
+        >
+          The Presale Structure
+        </h2>
 
         <!-- swiper  -->
         <div
@@ -804,6 +825,9 @@
           data-swiper-centered-mobile="true"
           data-swiper-space-between-mobile="25"
           data-swiper-initial-slide-mobile="0"
+          data-fade-element
+          data-fade-alpha="0"
+          data-fade-y="100"
         >
           <div class="structure-swiper-wrapper">
             <!-- card  -->
@@ -1239,7 +1263,7 @@
                 <div class="protocol-card__block protocol-card__block--2">
                   <div class="protocol-card__flex">
                     <span class="protocol-card__current-price">1 CTK: <strong></strong></span>
-                    <span class="protocol-card__next-price">Next Price: <strong></strong></span>
+                    <span class="protocol-card__next-price">Next Price: <strong>$0.02</strong></span>
                   </div>
 
                   <div class="protocol-card__flex-buttons">
@@ -2406,6 +2430,9 @@
         data-bg="clear"
         data-bg-start="top 40%"
         data-bg-end="top top"
+        data-nav="clear"
+        data-nav-start="top 40%"
+        data-nav-end="bottom 50%"
         data-fade
       >
         <div

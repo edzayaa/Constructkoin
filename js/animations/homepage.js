@@ -1,7 +1,7 @@
 export class HomepageAnimations {
   constructor() {
     this.lenis = window.lenis;
-    this.lenis.scrollTo(0, {immediate:true})
+    this.lenis.scrollTo(0, { immediate: true });
     this.lenis.stop();
 
     this.mm = gsap.matchMedia();
@@ -11,7 +11,10 @@ export class HomepageAnimations {
   }
 
   init() {
+    this.updateBackground();
+    this.updateNavbarColors();
     this.loader();
+    this.updateVideoSource();
     this.setOrientation();
   }
 
@@ -43,14 +46,13 @@ export class HomepageAnimations {
 
       .fromTo([".loader-logo", ".loader-bar__container"], { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 2, stagger: 0.1, clearProps: "transform" }, 0)
 
-      .to(".loader-bar", { xPercent: 33, duration: 1 })
-      .to(".loader-bar", { xPercent: 66, duration: 1, delay: 0.3 })
-      .to(".loader-bar", { xPercent: 100, duration: 1, delay: 0.3 })
+      .to(".loader-bar", { width: "33%", duration: 1 })
+      .to(".loader-bar", { width: "66%", duration: 1, delay: 0.3 })
+      .to(".loader-bar", { width: "100%", duration: 1, delay: 0.3 })
 
       .to(".loader-bar__container", { autoAlpha: 0, y: 30, delay: 0.2, duration: 1.5 })
       .to(".loader-logo", { scale: 0.3, autoAlpha: 0, rotate: -15, duration: 1.5 }, "<")
-      .to(".loader-bg", {  autoAlpha: 0,  duration: 1.2 }, "<")
-
+      .to(".loader-bg", { autoAlpha: 0, duration: 1.2 }, "<")
 
       .fromTo(".navbar", { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 1.5, clearProps: "willChange" })
       .fromTo(".hero-left", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 1.5, delay: 0.1, clearProps: "transform" }, "<")
@@ -61,9 +63,9 @@ export class HomepageAnimations {
       .call(() => {
         this.heroFade();
         this.initFlipOnScroll();
-        this.updateBackground();
         this.lenis.start();
         this.setUpNewsletter();
+        ScrollTrigger.refresh();
       });
   }
 
@@ -85,15 +87,47 @@ export class HomepageAnimations {
 
       gsap
         .timeline({
+          defaults: {
+            ease: "linear",
+            duration: 0.6,
+          },
           scrollTrigger: {
             trigger: element,
             start: start,
             end: end,
-            scrub: true,
+            toggleActions: "play none none reverse",
           },
         })
         .fromTo(targetBg, { ...fromBgConfig }, { ...toBgConfig }, 0)
         .fromTo(targetPixels, { ...fromPxConfig }, { ...toPxConfig }, 0);
+    });
+  }
+
+  updateNavbarColors() {
+    const navbar = document.querySelector(".navbar");
+
+    document.querySelectorAll("[data-nav]").forEach((element) => {
+      const theme = element.dataset.nav;
+      const start = element.dataset.navStart || "top 20%";
+      const end = element.dataset.navEnd || "bottom top";
+
+      ScrollTrigger.create({
+        trigger: element,
+        start: start,
+        end: end,
+        onEnter: () => {
+          navbar.setAttribute("data-navbar-theme", theme);
+        },
+        onEnterBack: () => {
+          navbar.setAttribute("data-navbar-theme", theme);
+        },
+        onLeave: () => {
+          navbar.removeAttribute("data-navbar-theme");
+        },
+        onLeaveBack: () => {
+          navbar.removeAttribute("data-navbar-theme");
+        },
+      });
     });
   }
 
@@ -184,5 +218,19 @@ export class HomepageAnimations {
       modalWrapper.setAttribute("data-modal-open", "newsletter");
       this.lenis.stop();
     }, 700);
+  }
+
+  updateVideoSource() {
+    const video = document.querySelector(".presale-media__video");
+
+    function updatePresaleVideoSource() {
+      const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+      video.src = isPortrait ? "/assets/videos/presale-showreel-portrait.mp4" : "/assets/videos/presale-showreel-landscape.mp4";
+
+      video.load();
+    }
+
+    window.addEventListener("orientationchange", updatePresaleVideoSource);
+    window.addEventListener("resize", updatePresaleVideoSource);
   }
 }

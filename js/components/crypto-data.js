@@ -47,13 +47,13 @@ export class CryptoData {
     const tokenSoldElement = document.querySelector(".protocol-card__token-sold strong");
     const tokenSoldLineElement = document.querySelector(".protocol-card__loader-line");
     const currentPriceElement = document.querySelector(".protocol-card__current-price strong");
-    const nextPriceElement = document.querySelector(".protocol-card__next-price strong");
+    // const nextPriceElement = document.querySelector(".protocol-card__next-price strong");
 
     if (tokenSoldPercentageElement) tokenSoldPercentageElement.textContent = `${percentageSold}% Sold`;
     if (tokenSoldElement) tokenSoldElement.textContent = tokensSold.toLocaleString();
     if (tokenSoldLineElement) tokenSoldLineElement.style = `transform: translateX(${percentageSold * 100}%)`;
     if (currentPriceElement) currentPriceElement.textContent = `$${data.price}`;
-    if (nextPriceElement) nextPriceElement.textContent = `$${data.price}`;
+    // if (nextPriceElement) nextPriceElement.textContent = `$${data.price}`;
   }
 
   setupPriceButton() {
