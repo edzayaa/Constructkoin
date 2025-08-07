@@ -295,12 +295,15 @@
 .modal-video .modal-video__inner {
   border-radius: 2rem;
   overflow: hidden;
-  background-color: #3467d7;
   width: 100%;
   height: calc(100% - 10rem);
   position: relative;
   transition: 0.6s var(--ease);
   transform: scale(1.1) rotateX(50deg);
+}
+
+.modal-video .modal-video__inner video {
+  object-fit: none;
 }
 
 .modal-video .modal-video__close {
