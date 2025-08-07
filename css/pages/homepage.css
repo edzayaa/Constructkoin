@@ -970,7 +970,7 @@
 /* ========== PROTOCOL ========== */
 /*  */
 .protocol {
-  padding-inline: 5rem;
+  /* padding-inline: 5rem; */
   padding-block: min(16rem, 16vh) min(5rem, 5vh);
   min-height: 100vh;
   width: 100%;
@@ -992,6 +992,8 @@
   display: flex;
   justify-content: space-between;
   perspective: 1000px;
+  overflow: hidden;
+
 }
 
 .protocol .protocol-flex .protocol-content {
@@ -1000,6 +1002,7 @@
   justify-content: center;
   max-width: 63.6rem;
   will-change: transform;
+  margin-left: 5rem;
 }
 
 @media screen and (orientation: portrait) {
@@ -1014,12 +1017,15 @@
     display: flex;
     flex-direction: column;
     gap: 4.5rem;
+  overflow: visible;
+
   }
 
   .protocol .protocol-flex .protocol-content {
     justify-content: flex-start;
     max-width: 100%;
     gap: 2rem;
+    margin-left: 0;
   }
 
   .protocol-background {
@@ -1149,6 +1155,7 @@
   padding: 1.8rem;
   isolation: isolate;
   will-change: transform;
+  margin-right: 5rem;
 }
 
 .protocol .protocol-flex .protocol-card::before {
@@ -1209,6 +1216,7 @@
   .protocol .protocol-flex .protocol-card {
     width: 100%;
     padding: 1rem;
+    margin-right: 0;
   }
 
   .protocol .protocol-flex .protocol-card::before {
@@ -2942,6 +2950,7 @@
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .how .how-content {
