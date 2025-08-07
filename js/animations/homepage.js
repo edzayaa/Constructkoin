@@ -64,7 +64,7 @@ export class HomepageAnimations {
         this.heroFade();
         this.initFlipOnScroll();
         this.lenis.start();
-        // this.setUpNewsletter();
+        this.setUpNewsletter();
         ScrollTrigger.refresh();
       });
   }
@@ -153,6 +153,7 @@ export class HomepageAnimations {
             endTrigger: wrapperElements[1],
             end: "center center",
             scrub: true,
+            ignoreMobileResize: true,
           },
         });
 

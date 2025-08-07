@@ -3,7 +3,6 @@ export class Toggles {
     this.closeToggles = document.querySelectorAll("[data-close-modal]");
     this.modalWrapper = document.querySelector(".modal-wrapper");
     this.modalVideoInner = document.querySelector(".modal-video__inner");
-    console.log(this.modalVideoInner);
 
     this.lenis = window.lenis;
 
@@ -65,7 +64,6 @@ export class Toggles {
     if (!videoElement && videoSrc) {
       videoElement = this.createVideoElement(videoId, videoSrc, videoType);
       isExistingVideo = false;
-      console.log(videoElement);
     }
 
     if (!videoElement) {
@@ -143,7 +141,10 @@ export class Toggles {
         this.currentVideo.element.remove();
       } else if (this.currentVideo.originalParent) {
         this.currentVideo.element.controls = false;
+        this.currentVideo.element.muted = true;
         this.currentVideo.element.play();
+        console.log("sd");
+        
 
         if (this.currentVideo.originalNextSibling) {
           this.currentVideo.originalParent.insertBefore(this.currentVideo.element, this.currentVideo.originalNextSibling);

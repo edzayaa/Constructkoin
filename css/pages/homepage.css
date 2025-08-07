@@ -848,7 +848,7 @@
   border-radius: 5rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .structure .structure-card__content .structure-card__button::before {
@@ -862,7 +862,7 @@
 }
 
 .structure .structure-card__content .structure-card__button:hover {
-  transform: scale(0.98);
+  opacity: 0.8;
 }
 
 .structure .structure-swiper-slide.swiper-slide-active .structure-card__button::before,
@@ -897,6 +897,10 @@
   .structure .structure-card__content .structure-card__button-text {
     font-size: min(1.38rem, 1.38vh);
     font-weight: 600;
+  }
+  .structure .structure-card__content .structure-card__button-icon-wrapper {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 
@@ -1284,7 +1288,6 @@
 
   .protocol .protocol-card__loader-line {
     border-radius: 50px;
-    width: 13.3rem;
   }
 
   .protocol .protocol-card__loader-text {
