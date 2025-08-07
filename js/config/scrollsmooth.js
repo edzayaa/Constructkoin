@@ -1,5 +1,6 @@
 export class LenisSmooth {
   constructor(wrapper, content) {
+
     this.lenis = null;
     this.wrapper = wrapper;
     this.content = content;
@@ -28,6 +29,7 @@ export class LenisSmooth {
 
     gsap.ticker.lagSmoothing(0);
 
+    lenis.scrollTo(0)
     this.lenis = lenis;
     window.lenis = lenis;
   }

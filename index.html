@@ -225,7 +225,6 @@
                       fill="white"
                     />
                   </g>
-                 
                 </svg>
               </a>
 
@@ -248,7 +247,6 @@
                       fill="white"
                     />
                   </g>
-                
                 </svg>
               </a>
 
@@ -279,7 +277,6 @@
                       fill="white"
                     />
                   </g>
-                
                 </svg>
               </a>
             </div>
@@ -449,7 +446,6 @@
                   fill="white"
                 />
               </g>
-             
             </svg>
           </a>
         </div>
@@ -1679,11 +1675,10 @@
           <div
             class="token-swiper-container"
             data-swiper-class="token"
-            data-swiper-slides-per-view="auto"
-            data-swiper-space-between="43"
+            data-swiper-slides-per-view="4"
+            data-swiper-space-between="20"
             data-swiper-initial-slide="0"
-            data-swiper-slides-per-view-mobile="1"
-            data-swiper-centered-mobile="false"
+            data-swiper-slides-per-view-mobile="1.05"
             data-swiper-space-between-mobile="20"
             data-swiper-initial-slide-mobile="0"
           >
@@ -2879,24 +2874,35 @@
         </div>
       </div>
 
-
       <!-- LOADER  -->
-        <div class="loader">
-          <div class="loader-inner">
+      <div class="loader">
+        <picture>
+          <source
+            srcset="/assets/images/preloader-portrait.webp"
+            media="screen and (orientation: portrait)"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/preloader-landscape.webp"
+            alt="loader landscape"
+            type="image/webp"
+            class="loader-bg"
+          />
+        </picture>
 
-            <div class="loader-logo">
-              <img src="/assets/images/symbol.webp" alt="constructkoin logo" >
-            </div>
-
-            <div class="loader-bar__container">
-              <div class="loader-bar"></div>
-            </div>
-
-
+        <div class="loader-inner">
+          <div class="loader-logo">
+            <img
+              src="/assets/images/symbol.webp"
+              alt="constructkoin logo"
+            />
           </div>
 
+          <div class="loader-bar__container">
+            <div class="loader-bar"></div>
+          </div>
         </div>
-
+      </div>
     </main>
 
     <!-- CDN SCRIPTS  -->

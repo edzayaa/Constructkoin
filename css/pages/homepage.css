@@ -3207,6 +3207,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  isolation: isolate;
+  z-index: 100;
+}
+
+.loader .loader-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
 .loader .loader-inner {

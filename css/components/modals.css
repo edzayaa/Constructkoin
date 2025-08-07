@@ -18,7 +18,7 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(18.5px);
   -webkit-backdrop-filter: blur(18.5px);
-  display: none;
+
 }
 
 .modal-wrapper[data-modal-open] {

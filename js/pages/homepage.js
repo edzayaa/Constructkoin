@@ -6,7 +6,6 @@ import { CustomSwiper } from "../components/global-swiper.js";
 import { HomepageAnimations } from "../animations/homepage.js";
 import { SharedAnimations } from "../animations/shared-animations.js";
 import { Accordion } from "../components/accordion.js";
-import { DragFollower } from "../animations/drag-follower.js";
 import { Toggles } from "../components/toggles.js";
 
 window.addEventListener("load", async () => {
@@ -17,6 +16,5 @@ window.addEventListener("load", async () => {
   new HomepageAnimations();
   new SharedAnimations();
   new Accordion();
-  new DragFollower();
   new Toggles();
 });
