@@ -47,10 +47,9 @@
     display: none;
   }
 
-.hero-blurs {
-  min-height: auto;
-}
-
+  .hero-blurs {
+    min-height: auto;
+  }
 }
 
 /* tagline  */
@@ -699,7 +698,7 @@
 }
 .structure .structure-swiper-wrapper {
   display: flex;
-  transition:  var(--swiper-transition) !important;
+  transition: var(--swiper-transition) !important;
 }
 
 @media screen and (orientation: portrait) {
@@ -712,7 +711,7 @@
 /* slide  */
 .structure .structure-swiper-slide {
   width: 44.6rem;
-  min-height: min(58.6rem, 58.6vh);
+  min-height: 58.6rem;
   position: relative;
   isolation: isolate;
   transition: var(--swiper-transition);
@@ -812,7 +811,7 @@
 
 .structure .structure-card__content .structure-card__text {
   color: rgba(255, 255, 255, 0.6);
-  font-size: min(1.6rem, 1.6vh);
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 125%;
   margin-bottom: min(3.2rem, 3.2vh);
@@ -849,6 +848,7 @@
   border-radius: 5rem;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease-out;
 }
 
 .structure .structure-card__content .structure-card__button::before {
@@ -861,6 +861,10 @@
   opacity: 0;
 }
 
+.structure .structure-card__content .structure-card__button:hover {
+  transform: scale(0.98);
+}
+
 .structure .structure-swiper-slide.swiper-slide-active .structure-card__button::before,
 .structure .structure-swiper-slide.swiper-slide-active .structure-card__layer {
   opacity: 1;
@@ -868,14 +872,16 @@
 
 .structure .structure-card__content .structure-card__button-text {
   color: #fff;
-  font-size: min(1.6rem, 1.6vh);
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: normal;
+  line-height: 0.9;
+  display: flex;
 }
 
 .structure .structure-card__content .structure-card__button-icon-wrapper {
-  width: 1rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
 }
 
 @media screen and (orientation: portrait) {
@@ -940,7 +946,7 @@
 
 .structure .structure-card__content .structure-card__list-item {
   color: rgba(255, 255, 255, 0.6);
-  font-size: min(1.6rem, 1.6vh);
+  font-size: 1.6rem;
   list-style: disc;
   list-style-position: outside;
   margin-left: 1.5rem;
@@ -2617,7 +2623,7 @@
 .cards .cards-content .cards-item {
   position: relative;
   flex-grow: 1;
-  height: min(60.7rem, 60.7vh);
+  height: 60.7rem;
   padding: 6.5rem 4.5rem;
   isolation: isolate;
   display: flex;
