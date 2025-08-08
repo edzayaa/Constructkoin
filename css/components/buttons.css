@@ -52,8 +52,9 @@
 .cta-button-1 {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
-  padding: 1.7rem 3rem 1.7rem 3.5rem;
+  padding: 1.7rem 3rem 1.7rem 3rem;
   background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
   backdrop-filter: blur(7.424997329711914px);
   border-radius: 5rem;
@@ -138,14 +139,14 @@
 }
 .cta-button-1 .cta-button-1__icon-wrapper svg {
   vertical-align: text-top;
-  filter: drop-shadow(-1.8rem 0 0px #fff);
+  filter: drop-shadow(-2.5rem 0 0px #fff);
   transition: 0.5s var(--ease);
 }
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
-  filter: drop-shadow(-1.8rem 0 0px #000);
+  filter: drop-shadow(-2.5rem 0 0px #000);
 }
 .cta-button-1.is--dark .cta-button-1__icon-wrapper svg {
-  filter: drop-shadow(-1.8rem 0 0px #fff);
+  filter: drop-shadow(-2.5rem 0 0px #fff);
 }
 
 @media screen and (orientation: portrait) {
@@ -172,5 +173,5 @@
   transform: translateY(-2.5rem);
 }
 .cta-button-1:hover .cta-button-1__icon-wrapper svg {
-  transform: translateX(1.8rem);
+  transform: translateX(2.5rem);
 }

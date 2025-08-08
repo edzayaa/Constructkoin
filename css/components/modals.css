@@ -114,6 +114,17 @@
   }
 }
 
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+ .modal-newsletter {
+  
+    max-height: 70rem;
+    max-width: 60%;
+    margin-block: auto;
+    
+  }
+}
+
+
 .modal-newsletter .modal-newsletter__close {
   position: absolute;
   top: 0;

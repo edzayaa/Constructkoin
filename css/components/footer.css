@@ -18,6 +18,14 @@
   }
 }
 
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .footer {
+    padding-inline: 3.5rem;
+  }
+}
+
+
 .footer-blur {
   position: absolute;
   inset: 0;
@@ -56,6 +64,15 @@
   }
 }
 
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+ .footer-loop {
+    height: 32rem;
+  }
+ 
+
+}
+
+
 /* heading  */
 .footer-heading {
   text-align: center;
@@ -74,6 +91,14 @@
     margin-bottom: 4rem;
     width: 26.7rem;
   }
+}
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .footer-heading {
+    font-size: 5.5rem;
+    width: 46.7rem;
+  }
+
 }
 
 /* grid  */
