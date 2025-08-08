@@ -17,7 +17,9 @@ export class Accordion {
         const isActive = singleAccordion.getAttribute("data-accordion-status") === "active";
         singleAccordion.setAttribute("data-accordion-status", isActive ? "not-active" : "active");
 
-        ScrollTrigger.refresh();
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 300);
 
         if (closeSiblings && !isActive) {
           accordion.querySelectorAll('[data-accordion-status="active"]').forEach((sibling) => {

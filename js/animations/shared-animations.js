@@ -23,7 +23,7 @@ export class SharedAnimations {
         document.querySelectorAll("[data-fade]").forEach((el) => {
           if (!el) return;
 
-          const scrub = el.dataset.fadeScrub === "false" ? false : 1.1;
+          const scrub = el.dataset.fadeScrub === "false" ? false : 1;
 
           let fadeTimeline = gsap.timeline({
             scrollTrigger: {

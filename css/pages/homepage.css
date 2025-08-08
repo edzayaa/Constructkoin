@@ -3081,7 +3081,6 @@
 /*  */
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
-  perspective: 1000px;
   overflow: hidden;
 }
 
@@ -3089,6 +3088,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  perspective: 1000px;
+
 }
 
 @media screen and (orientation: portrait) {
