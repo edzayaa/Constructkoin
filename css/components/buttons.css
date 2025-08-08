@@ -141,6 +141,7 @@
   vertical-align: text-top;
   filter: drop-shadow(-2.5rem 0 0px #fff);
   transition: 0.5s var(--ease);
+  will-change: transform;
 }
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-2.5rem 0 0px #000);
