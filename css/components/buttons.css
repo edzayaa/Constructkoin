@@ -151,9 +151,12 @@
 }
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-2.5rem 0 0px #000);
+  -webkit-filter: drop-shadow(-2.5rem 0 0px #000);
+
 }
 .cta-button-1.is--dark .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-2.5rem 0 0px #fff);
+  -webkit-filter: drop-shadow(-2.5rem 0 0px #fff);
 }
 
 @media screen and (orientation: portrait) {
