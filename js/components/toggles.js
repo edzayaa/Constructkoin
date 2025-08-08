@@ -4,6 +4,11 @@ export class Toggles {
     this.modalWrapper = document.querySelector(".modal-wrapper");
     this.modalVideoInner = document.querySelector(".modal-video__inner");
 
+    this.bounds = {
+      width: this.modalWrapper.offsetWidth,
+      height: this.modalWrapper.offsetHeight,
+    };
+
     this.lenis = window.lenis;
 
     this.currentVideo = {
@@ -35,6 +40,8 @@ export class Toggles {
     document.querySelectorAll("[data-toggle-menu]").forEach((toggle) => {
       toggle.addEventListener("click", () => {
         document.querySelector(".menu").toggleAttribute("data-menu-active");
+        document.querySelector(".navbar").toggleAttribute("data-menu-active");
+
         if (this.lenis.isStopped) {
           this.lenis.start();
         } else {
@@ -90,6 +97,11 @@ export class Toggles {
     if (videoElement.tagName === "VIDEO") {
       videoElement.play().catch((e) => console.log("Autoplay prevented:", e));
     }
+
+    videoElement.oncanplay = () => {
+      document.querySelector(".modal-video__loader").remove();
+      videoElement.setAttribute("controls", "");
+    };
   }
 
   createVideoElement(videoId, videoSrc, videoType) {
@@ -119,7 +131,6 @@ export class Toggles {
       default:
         videoElement = document.createElement("video");
         videoElement.src = videoSrc;
-        videoElement.setAttribute("controls", "");
         videoElement.setAttribute("preload", "metadata");
         break;
     }
@@ -142,9 +153,8 @@ export class Toggles {
       } else if (this.currentVideo.originalParent) {
         this.currentVideo.element.controls = false;
         this.currentVideo.element.muted = true;
+        this.currentVideo.element.controls = false;
         this.currentVideo.element.play();
-        console.log("sd");
-        
 
         if (this.currentVideo.originalNextSibling) {
           this.currentVideo.originalParent.insertBefore(this.currentVideo.element, this.currentVideo.originalNextSibling);

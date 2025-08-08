@@ -31,6 +31,7 @@ export class SharedAnimations {
               start: isLandscape ? "top 80%" : "top bottom",
               end: isLandscape ? "10% top" : "top 30%",
               scrub: scrub,
+              id: "fade-in-trigger",
             },
           });
 
@@ -57,7 +58,7 @@ export class SharedAnimations {
 
             gsap.set(el, { willChange: "transform" });
 
-            fadeTimeline.fromTo(el, { ...fromConfig }, { ...toConfig, clearProps: "transform", duration: 1 }, i * 0.1);
+            fadeTimeline.fromTo(el, { ...fromConfig }, { ...toConfig, duration: 1 }, i * 0.1);
           });
         });
       }
@@ -99,6 +100,7 @@ export class SharedAnimations {
               start: "20% top",
               end: "bottom top",
               scrub: 1.1,
+              id: "fade-out-trigger",
             },
           });
 
