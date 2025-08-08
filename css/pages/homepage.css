@@ -534,6 +534,12 @@
   }
 }
 
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .about .about-content .about-heading {
+    width: 70%;
+  }
+}
+
 /* cta  */
 .about .about-content .about-cta__container {
   display: flex;
