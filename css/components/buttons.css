@@ -134,14 +134,20 @@
 /* icon wrapper  */
 .cta-button-1 .cta-button-1__icon-wrapper {
   height: 1.35rem;
+  width: 1.35rem;
   overflow: hidden;
   display: flex;
+  will-change: transform;
 }
+
 .cta-button-1 .cta-button-1__icon-wrapper svg {
   vertical-align: text-top;
   filter: drop-shadow(-2.5rem 0 0px #fff);
+  -webkit-filter: drop-shadow(-2.5rem 0 0px #fff);
   transition: 0.5s var(--ease);
-  will-change: transform;
+  display: flex;
+  overflow: visible;
+
 }
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-2.5rem 0 0px #000);
