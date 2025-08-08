@@ -255,6 +255,7 @@
 
 .navbar[data-navbar-theme="clear"] .navbar-inner .navbar-right .navbar-price__text {
   color: #000;
+
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-info,
@@ -267,6 +268,8 @@
   grid-template-areas: "stack";
   justify-items: center;
   align-items: center;
+  position: relative;
+
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-info span {
@@ -278,9 +281,15 @@
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-loader {
   width: 3rem;
+  height: 3rem;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
   grid-area: stack;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
 }
 
