@@ -9,7 +9,7 @@ import { Accordion } from "../components/accordion.js";
 import { Toggles } from "../components/toggles.js";
 import { CryptoData } from "../components/crypto-data.js";
 
-window.addEventListener("load", async () => {
+window.addEventListener("DOMContentLoaded", () => {
   new LenisSmooth();
   new ActiveLinks();
   new Navbar();
