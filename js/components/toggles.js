@@ -7,7 +7,9 @@ export class Toggles {
     this.bounds = {
       width: this.modalWrapper.offsetWidth,
       height: this.modalWrapper.offsetHeight,
+      ratio: this.modalWrapper.offsetWidth / this.modalWrapper.offsetHeight,
     };
+
 
     this.lenis = window.lenis;
 
@@ -96,12 +98,10 @@ export class Toggles {
 
     if (videoElement.tagName === "VIDEO") {
       videoElement.play().catch((e) => console.log("Autoplay prevented:", e));
+      videoElement.oncanplay = () => {
+        videoElement.setAttribute("controls", "true");
+      };
     }
-
-    videoElement.oncanplay = () => {
-      document.querySelector(".modal-video__loader").remove();
-      videoElement.setAttribute("controls", "");
-    };
   }
 
   createVideoElement(videoId, videoSrc, videoType) {
@@ -132,6 +132,7 @@ export class Toggles {
         videoElement = document.createElement("video");
         videoElement.src = videoSrc;
         videoElement.setAttribute("preload", "metadata");
+
         break;
     }
 
@@ -151,9 +152,7 @@ export class Toggles {
       if (this.currentVideo.element.getAttribute("data-dynamic-video") === "true") {
         this.currentVideo.element.remove();
       } else if (this.currentVideo.originalParent) {
-        this.currentVideo.element.controls = false;
         this.currentVideo.element.muted = true;
-        this.currentVideo.element.controls = false;
         this.currentVideo.element.play();
 
         if (this.currentVideo.originalNextSibling) {
@@ -162,12 +161,13 @@ export class Toggles {
           this.currentVideo.originalParent.appendChild(this.currentVideo.element);
         }
       }
+      
+              this.currentVideo = {
+                element: null,
+                originalParent: null,
+                originalNextSibling: null,
+              };
 
-      this.currentVideo = {
-        element: null,
-        originalParent: null,
-        originalNextSibling: null,
-      };
     }
   }
 }

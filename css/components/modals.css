@@ -308,15 +308,10 @@
   position: relative;
   transition: 0.6s var(--ease);
   transform: scale(1.1) rotateX(50deg);
+  aspect-ratio: 1.77;
 }
 
 .modal-video .modal-video__inner video {
-  object-fit: cover;
-  border-radius: 2rem;
-  width: 100%;
-  /* height: auto; */
-
-
 }
 
 .modal-video .modal-video__close {
