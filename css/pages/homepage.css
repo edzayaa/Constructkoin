@@ -40,7 +40,6 @@
   .hero {
     padding-block: min(13rem, 13vh) min(4.5rem, 4.5vh);
     padding-inline: 1.5rem;
-    /* height: fit-content; */
   }
 
   .hero-background {
@@ -131,6 +130,7 @@
   display: flex;
   margin-block: min(5rem, 5vh) min(4rem, 4vh);
   height: 30vh;
+  max-height: min(50rem, 50vh);
   mix-blend-mode: screen;
   transform: translateZ(0px);
 }
@@ -146,6 +146,7 @@
   .hero-loop {
     margin-block: min(4rem, 4vh) min(4rem, 4vh);
     height: 20.16vh;
+    max-height: auto;
   }
   .hero-loop video {
     transform: scale(1.4);
@@ -228,6 +229,7 @@
 /* scrolldown  */
 .hero-discover {
   display: flex;
+  margin-top: auto;
 }
 .hero-discover .hero-discover-icon {
   width: 2.3rem;
@@ -1001,11 +1003,7 @@
 /* ========== PROTOCOL ========== */
 /*  */
 .protocol {
-  /* padding-inline: 5rem; */
-  /* padding-block: min(16rem, 16vh) min(5rem, 5vh); */
   padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
-
-  /* min-height: 100vh; */
   width: 100%;
   position: relative;
   isolation: isolate;
@@ -1026,16 +1024,17 @@
   justify-content: space-between;
   perspective: 1000px;
   overflow: hidden;
-  padding-inline: 5rem;
+  padding-inline: 20rem;
   padding-block: 1rem;
 }
 
 .protocol .protocol-flex .protocol-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 63.6rem;
+  justify-content: flex-start;
+  max-width: 64.6rem;
   will-change: transform;
+  padding-top: min(6.5rem, 6.5vh);
 }
 
 @media screen and (orientation: portrait) {
@@ -1079,11 +1078,11 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: min(8.5rem, 8.5vh);
+  font-size: min(8rem, 8vh);
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 0.9;
   width: min(60rem, 60vh);
-  margin-bottom: min(2.4rem, 2.4vh);
+  margin-bottom: min(2rem, 2vh);
 }
 
 .protocol .protocol-flex .protocol-content .protocol-heading span {
@@ -1092,19 +1091,20 @@
 
 .protocol .protocol-flex .protocol-content .protocol-description {
   color: #fff;
-  font-size: min(2.5rem, 2.5vh);
+  font-size: min(2rem, 2vh);
   font-weight: 700;
-  margin-bottom: min(3rem, 3vh);
+  margin-bottom: min(2.5rem, 2.5vh);
 }
 
 .protocol .protocol-flex .protocol-content .protocol-description__wrapper {
-  margin-bottom: min(3rem, 3vh);
+  margin-bottom: min(1.5rem, 1.5vh);
 }
 
 .protocol .protocol-flex .protocol-content .protocol-description__text.is--small {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 2rem;
+  font-size: min(1.6rem, 1.6vh);
   font-weight: 400;
+  line-height: normal;
 }
 
 @media screen and (orientation: portrait) {
@@ -1168,7 +1168,7 @@
 
 .protocol .protocol-list-item__text {
   color: rgba(255, 255, 255, 0.6);
-  font-size: min(2rem, 2vh);
+  font-size: min(1.6rem, 1.6vh);
   line-height: 175%;
 }
 
@@ -1197,8 +1197,8 @@
 /* card  */
 .protocol .protocol-flex .protocol-card {
   position: relative;
-  width: 82.9rem;
-  padding: 1.8rem;
+  width: fit-content;
+  padding: min(1.5rem, 1.5vh);
   isolation: isolate;
   will-change: transform;
 }
@@ -1220,7 +1220,7 @@
   border-radius: 2rem;
   border: 1px solid rgba(246, 246, 246, 0.12);
   overflow: hidden;
-  padding: min(5rem, 5vh) 9.5rem min(3.5rem, 3.5vh);
+  padding: min(3rem, 3vh) 8rem min(3rem, 3vh);
 }
 
 .protocol .protocol-flex .protocol-card .protocol-card__bg {
@@ -1244,17 +1244,16 @@
 .protocol .protocol-card__title {
   color: #fff;
   text-align: center;
-  font-size: min(5rem, 5vh);
+  font-size: min(4rem, 4vh);
   font-weight: 700;
-  margin-bottom: 5px;
 }
 
 .protocol .protocol-card__subtitle {
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  font-size: min(2rem, 2vh);
+  font-size: min(1.6rem, 1.6vh);
   font-weight: 400;
-  margin-bottom: min(3rem, 3vh);
+  margin-bottom: min(2.5rem, 2.5vh);
 }
 
 @media screen and (orientation: portrait) {
@@ -1295,18 +1294,18 @@
 
 /* block 1  */
 .protocol .protocol-card__block.protocol-card__block--1 {
-  margin-bottom: min(3rem, 3vh);
+  margin-bottom: min(1rem, 1vh);
   width: 100%;
 }
 
 .protocol .protocol-card__loader {
   position: relative;
-  height: 2rem;
+  height: 1rem;
   width: 100%;
   border-radius: 2.5rem;
   background: rgba(255, 255, 255, 0.2);
   overflow: hidden;
-  margin-bottom: min(1.6rem, 1.6vh);
+  margin-bottom: min(0.9rem, 0.9vh);
 }
 
 .protocol .protocol-card__loader-line {
@@ -1323,12 +1322,12 @@
 .protocol .protocol-card__loader-text {
   width: 100%;
   text-align: right;
-  font-size: 2rem;
+  font-size: min(1.6rem, 1.6vh);
   display: block;
 }
 
 .protocol .protocol-card__token-sold {
-  font-size: 2rem;
+  font-size: min(1.6rem, 1.6vh);
   font-weight: 300;
 }
 .protocol .protocol-card__token-sold strong {
@@ -1362,7 +1361,7 @@
 
 /* block 2  */
 .protocol .protocol-card__block.protocol-card__block--2 {
-  margin-bottom: min(3rem, 3vh);
+  margin-bottom: min(2rem, 2vh);
   width: 100%;
 }
 
@@ -1373,7 +1372,7 @@
 }
 
 .protocol .protocol-card__flex span {
-  font-size: min(2rem, 2vh);
+  font-size: min(1.6rem, 1.6vh);
   font-weight: 300;
 }
 
@@ -1385,7 +1384,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 1.8rem 1.3rem;
+  gap: min(1.6rem, 1.6vh) 1rem;
 }
 
 .protocol .protocol-card__crypto-button {
@@ -1393,13 +1392,14 @@
   background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
   backdrop-filter: blur(7.42px);
   border-radius: 5rem;
-  padding: 0.8rem;
+  padding: min(0.8rem, 0.8vh) 4.4rem;
   display: flex;
   align-items: center;
   gap: 0.9rem;
   justify-content: center;
   color: #fff;
   transition: 0.3s var(--ease);
+  max-height: min(4.7rem, 4.7vh);
 }
 
 .protocol .protocol-card__crypto-button:hover {
@@ -1407,15 +1407,15 @@
 }
 
 .protocol .protocol-card__flex-buttons .protocol-card__crypto-button-text {
-  font-size: min(1.8rem, 1.8vh);
+  font-size: min(1.5rem, 1.5vh);
   font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
 }
 
 .protocol .protocol-card__flex-buttons .protocol-card__crypto-button-icon {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   aspect-ratio: 1/1;
 }
@@ -1461,8 +1461,8 @@
 /* block 3  */
 .protocol .protocol-card__block.protocol-card__block--3 {
   display: grid;
-  gap: 1.6rem;
-  margin-bottom: min(5.7rem, 5.7vh);
+  gap: min(1.3rem, 1.3vh);
+  margin-bottom: min(4rem, 4vh);
   width: 100%;
 }
 
@@ -1471,10 +1471,10 @@
 
 .protocol .protocol-card__group label {
   color: #fff;
-  font-size: min(2rem, 2vh);
+  font-size: min(1.6rem, 1.6vh);
   line-height: normal;
   font-weight: 400;
-  margin-bottom: min(1.6rem, 1.6vh);
+  margin-bottom: min(1.3rem, 1.3vh);
   display: inline-block;
 }
 
@@ -1486,15 +1486,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1rem 1rem 1rem 2.8rem;
+  padding: min(0.8rem, 0.8vh) min(0.8rem, 0.8vh) min(0.8rem, 0.8vh) 2.3rem;
   gap: 0.5rem;
   border-radius: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .protocol .protocol-card__group img {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   aspect-ratio: 1/1;
   border-radius: 100%;
@@ -1503,13 +1503,13 @@
 .protocol .protocol-card__group input {
   flex-grow: 1;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
 .protocol .protocol-card__group input::placeholder {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
@@ -1551,7 +1551,7 @@
 .protocol .protocol-card__block.protocol-card__block--4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.9rem 2.2rem;
+  gap: min(2.4rem, 2.4vh) 1.8rem;
   width: 100%;
 }
 
@@ -1582,18 +1582,18 @@
 .protocol .protocol-card__metamask .protocol-card__metamask-text {
   color: #fff;
   text-align: center;
-  font-size: min(1.8rem, 1.8vh);
+  font-size: min(1.5rem, 1.5vh);
   font-weight: 700;
 }
 .protocol .protocol-card__metamask .protocol-card__metamask-icon {
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 2.6rem;
+  height: 2.6rem;
   flex-shrink: 0;
 }
 
 .protocol .protocol-card__google,
 .protocol .protocol-card__apple {
-  padding: 1.4rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1611,13 +1611,13 @@
 .protocol .protocol-card__apple .protocol-card__apple-text {
   color: #fff;
   text-align: center;
-  font-size: min(1.8rem, 1.8vh);
+  font-size: min(1.5rem, 1.5vh);
   font-weight: 400;
 }
 .protocol .protocol-card__google .protocol-card__google-icon,
 .protocol .protocol-card__apple .protocol-card__apple-icon {
-  width: 5.5rem;
-  height: 2.3rem;
+  width: 4.7em;
+  height: 1.9rem;
   flex-shrink: 0;
   display: flex;
 }
@@ -1678,6 +1678,31 @@
   .protocol .protocol-card__apple .protocol-card__apple-icon {
     width: 3rem;
     height: 1.2rem;
+  }
+}
+
+/* disclaimer  */
+.protocol .protocol-card__disclaimer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: min(1.4rem, 1.4vh);
+  font-weight: 400;
+  margin-top: min(2.5rem, 2.5vh);
+}
+
+.protocol .protocol-card__disclaimer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.protocol .protocol-card__disclaimer span {
+  color: #2699fe;
+}
+
+@media screen and (orientation: portrait) {
+  .protocol .protocol-card__disclaimer {
+    font-size: 1rem;
+    text-align: center;
+    width: 80%;
   }
 }
 
@@ -1779,7 +1804,7 @@
   border-radius: 2rem;
   border: 1.115px solid #cde7ff2f;
   background: linear-gradient(0deg, rgba(5, 20, 33, 0) 8.11%, rgba(5, 20, 33, 0) 51.76%, rgba(38, 153, 254, 0.2) 95.41%);
-  padding: 6.5rem 6rem 6.5rem 4rem;
+  padding: 6.5rem 6rem min(6.5rem, 6.5vh) 4rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -2371,7 +2396,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(135.6rem, 135.6vh);
+  width: min(144.5rem, 144.5vh);
   margin-inline: auto;
 }
 
@@ -2390,7 +2415,7 @@
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  font-size: min(6.5rem, 6.5vh);
+  font-size: min(6.2rem, 6.2vh);
   margin-bottom: min(8.4rem, 8.4vh);
 }
 
@@ -3082,6 +3107,7 @@
 .how {
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
   overflow: hidden;
+  height: 100vh;
 }
 
 .how .how-content {
@@ -3089,7 +3115,6 @@
   flex-direction: column;
   align-items: center;
   perspective: 1000px;
-
 }
 
 @media screen and (orientation: portrait) {
@@ -3124,7 +3149,7 @@
 /* buttons  */
 .how .how-content .how-cta-button.cta-button-1 {
   width: fit-content;
-  margin-bottom: min(11rem, 11vh);
+  margin-bottom: min(8rem, 8vh);
 }
 
 @media screen and (orientation: portrait) {

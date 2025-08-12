@@ -12,6 +12,18 @@
   z-index: 30;
 }
 
+body[data-scrolling-direction="down"] .navbar {
+  opacity: 0;
+  transform: translateY(-120%);
+  transition: transform 0.8s ease-out, opacity 0.4s ease-out;
+}
+
+body[data-scrolling-direction="up"] .navbar {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
 @media screen and (orientation: portrait) {
   .navbar {
     padding: 3rem 1.5rem;

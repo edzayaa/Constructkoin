@@ -68,7 +68,10 @@
     />
   </head>
 
-  <body>
+  <body
+    data-scrolling-started="false"
+    data-scrolling-direction="up"
+  >
     <main class="overflow-wrapper">
       <!-- NAVBAR  -->
       <nav class="navbar">
@@ -569,7 +572,7 @@
 
           <h2 class="presale-heading"><span>The ConstructKoin </span> Presale is Now Live</h2>
 
-          <p class="presale-description"><span>ConstructKoin is transforming property development finance using property</span> development partnerships, an existing <span> £22m asset book, £50m</span> in booked deal flow, and proprietary AI technology. T<span>he 100 phase presale offers CTK token holders early gains and growth secured by real land assets from day 1 generating revenue streams immediately. Starting at $0.01 to $1.00 USDT.</span></p>
+          <p class="presale-description"><span>ConstructKoin is transforming property development finance</span> using property development partnerships, an existing <span>£22m asset book, £50m </span>in booked deal flow, and proprietary AI technology. T<span>he 100 phase presale offers CTK token holders early gains and growth secured by real land assets from day 1 generating revenue streams immediately. Starting at $0.01 to $1.00 USDT.</span></p>
 
           <button class="presale-cta-button cta-button-1">
             <div class="cta-button-1__text-wrapper">
@@ -1148,10 +1151,14 @@
           >
             <h3 class="protocol-heading"><span>ConstructKoin</span> Protocol (CTK)</h3>
 
-            <p class="protocol-description">The Construct Koin (CTK) Protocol is building the future of real estate through Proprietary AI models to fund property development that combines asset- backed security with growth potential for token holders.</p>
+            <p class="protocol-description">
+              The Construct Koin (CTK) Protocol is building the future of real estate through Proprietary AI models to fund property development that combines asset- backed security with growth potential for token holders. Integrating Ai into construction processes. Reimagining the sales and letting process of property to building Smarter Homes. Whilst making property ownership possible for everyone through either fractional ownership or innovative on chain financing models. Join the
+              ConstructKoin Protocol and build the future of real estate with CTK.
+            </p>
 
             <div class="protocol-description__wrapper">
-              <p class="protocol-description__text is--small">Integrating Ai into construction processes. Reimagining the sales and letting process of property to building Smarter Homes. Whilst making property ownership possible for everyone through either fractional ownership or innovative on chain financing models. Join the ConstructKoin Protocol and build the future of real estate with CTK.</p>
+              <p class="protocol-description__text is--small">Core innovation lies in AI technology that removes traditional lending bottlenecks, while these Web3 alliances build a diversified, asset-backed network poised for international market reach and future stablecoin status.</p>
+              <p class="protocol-description__text is--small">During the presale period, CTK is laying the groundwork for its DEX launch and stablecoin rollout, evolving from a utility token into a global real-estate finance infrastructure.</p>
             </div>
 
             <ul class="protocol-list">
@@ -1260,6 +1267,7 @@
                 <h4 class="protocol-card__title">Buy now</h4>
                 <h5 class="protocol-card__subtitle">Before Price Rises</h5>
 
+                <!-- block 1 -->
                 <div class="protocol-card__block protocol-card__block--1">
                   <div class="protocol-card__loader">
                     <div class="protocol-card__loader-line"></div>
@@ -1270,6 +1278,7 @@
                   <span class="protocol-card__token-sold">Token Sold: <strong></strong></span>
                 </div>
 
+                <!-- block 2 -->
                 <div class="protocol-card__block protocol-card__block--2">
                   <div class="protocol-card__flex">
                     <span class="protocol-card__current-price">1 CTK: <strong></strong></span>
@@ -1345,6 +1354,7 @@
                   </div>
                 </div>
 
+                <!-- block 3 -->
                 <div class="protocol-card__block protocol-card__block--3">
                   <div class="protocol-card__group">
                     <label for="pay"> <span>USDT</span> you pay </label>
@@ -1385,6 +1395,7 @@
                   </div>
                 </div>
 
+                <!-- block 4 -->
                 <div class="protocol-card__block protocol-card__block--4">
                   <button class="protocol-card__metamask">
                     <div class="protocol-card__container">
@@ -1425,6 +1436,8 @@
                     </div>
                   </button>
                 </div>
+
+                <p class="protocol-card__disclaimer"><span>* </span>Subject to availability in your region, consult our <a href="#">Terms and Conditions</a></p>
               </div>
             </div>
           </div>
@@ -1812,14 +1825,6 @@
           class="real-bg"
           type="image/webp"
         />
-        <!-- <img
-          src="/assets/images/real-blur-landscape.avif"
-          alt="blur layer"
-          class="real-blur"
-          type="image/avif"
-          loading="lazy"
-        /> -->
-
         <div
           class="real-content"
           data-fade-out
@@ -1849,7 +1854,7 @@
             <div class="tagline-text">Secured by Real World Assets</div>
           </div>
 
-          <p class="real-description">The CTK protocol offers token holders diverse revenue streams from secured interest on UK development loans, global Web3 investments, and AI licensing, plus token appreciation over 50 phases.<span> A UK security trustee mechanism ensures priority payments backed by profitable land assets, providing strong security.</span></p>
+          <p class="real-description">The CTK Protocol offers staking mechanisms to token holders secured by property developments generating returns. The opportunity to access fractional ownership opportunities within a growing portfolio of smarter homes. <span>Innovative, and premium revenue generating property generating instant returns as well as token appreciation of 100x over each phase.</span></p>
 
           <h4 class="real-heading">Real innovation. Real World Assets in Real Estate.</h4>
         </div>
@@ -2819,16 +2824,19 @@
         <!-- newsletter  -->
         <div class="modal-newsletter">
           <div class="modal-newsletter__inner">
-            <img
-              src="/assets/images/card-layer-1.webp"
-              alt="blur layer"
-              class="modal-newsletter__layer"
-            />
-            <img
-              src="/assets/images/card-pixels-1.png"
-              alt=""
-              class="modal-newsletter__pixels"
-            />
+            <picture>
+              <source
+                srcset="/assets/images/newsletter-bg-portrait.webp"
+                media="(orientation: portrait)"
+              />
+
+              <img
+                src="/assets/images/newsletter-bg.webp"
+                alt="blur layer"
+                class="modal-newsletter__layer"
+                type="image/webp"
+              />
+            </picture>
 
             <div class="modal-newsletter__content">
               <div
@@ -2946,10 +2954,17 @@
         <div class="backgrounds-pixels">
           <picture>
             <source
+              srcset="/assets/images/background-pixel-tablet.png"
+              type="image/png"
+              media="screen and (orientation: portrait) and (min-width: 482px) and (max-width: 991px)"
+            />
+
+            <source
               srcset="/assets/images/background-pixel-portrait.png"
-              type="image/webp"
+              type="image/png"
               media="screen and (orientation: portrait)"
             />
+
             <img
               src="/assets/images/background-pixel-landscape.png"
               alt="background pixels"
@@ -2962,6 +2977,12 @@
       <!-- LOADER  -->
       <div class="loader">
         <picture>
+          <source
+          srcset="/assets/images/preloader-tablet.webp"
+          type="image/webp"
+          media="screen and (orientation: portrait) and (min-width: 482px) and (max-width: 991px)"
+        />
+
           <source
             srcset="/assets/images/preloader-portrait.webp"
             media="screen and (orientation: portrait)"

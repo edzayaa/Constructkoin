@@ -29,7 +29,7 @@ export class SharedAnimations {
             scrollTrigger: {
               trigger: el,
               start: isLandscape ? "top 80%" : "top bottom",
-              end: isLandscape ? "10% top" : "top 30%",
+              end: isLandscape ? "top 10%" : "top 30%",
               scrub: scrub,
               id: "fade-in-trigger",
             },

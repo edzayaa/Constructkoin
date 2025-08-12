@@ -8,9 +8,11 @@ import { SharedAnimations } from "../animations/shared-animations.js";
 import { Accordion } from "../components/accordion.js";
 import { Toggles } from "../components/toggles.js";
 import { CryptoData } from "../components/crypto-data.js";
+import {initDetectScrollingDirection} from "../utils/detect-scroll-direction.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   new LenisSmooth();
+  initDetectScrollingDirection();
   new ActiveLinks();
   new Navbar();
   new CustomSwiper();

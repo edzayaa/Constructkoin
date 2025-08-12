@@ -54,7 +54,7 @@ export class HomepageAnimations {
       .to(".loader-logo", { scale: 0.3, autoAlpha: 0, rotate: -15, duration: 1.5 }, "<")
       .to(".loader-bg", { autoAlpha: 0, duration: 1.2 }, "<")
 
-      .fromTo(".navbar", { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 1.5, clearProps: "willChange" })
+      .fromTo(".navbar", { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 1.5, clearProps: "transform" })
       .fromTo(".hero-left", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 1.5, delay: 0.1, clearProps: "transform" }, "<")
       .fromTo(".hero-bottom", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.5, delay: 0.1, clearProps: "transform," }, "<")
       .fromTo([".hero-tagline", ".hero-heading", ".hero-description", ".hero-loop", ".hero-text.is--portrait", ".hero-buttons.is--portrait", ".hero-discover"], { autoAlpha: 0, y: 20 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
