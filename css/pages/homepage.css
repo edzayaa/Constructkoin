@@ -230,6 +230,7 @@
 .hero-discover {
   display: flex;
   margin-top: auto;
+  display: none;
 }
 .hero-discover .hero-discover-icon {
   width: 2.3rem;
