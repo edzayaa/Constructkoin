@@ -10,8 +10,10 @@ import { Toggles } from "../components/toggles.js";
 import { CryptoData } from "../components/crypto-data.js";
 import { initDetectScrollingDirection } from "../utils/detect-scroll-direction.js";
 import { initVimeoBGVideo, initVimeoLightboxAdvanced } from "../utils/vimeo-bg-video.js";
+import { Newsletter } from "../components/newsletter.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+  new Newsletter();
   new LenisSmooth();
   initDetectScrollingDirection();
   new ActiveLinks();

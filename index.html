@@ -518,10 +518,12 @@
               </div>
             </button>
 
-            <button class="hero-view-button"
-            data-vimeo-lightbox-control="open"
-            data-vimeo-lightbox-id=1109107740>
+            <button
+              class="hero-view-button"
+              data-vimeo-lightbox-control="open"
+              data-vimeo-lightbox-id="1109107740"
             >
+              >
               <div class="hero-view-button__text-wrapper">
                 <span class="hero-view-button__text">View Video</span>
               </div>
@@ -637,8 +639,9 @@
           <div
             class="hero-bottom__right"
             data-vimeo-lightbox-control="open"
-            data-vimeo-lightbox-id=1109107740>
+            data-vimeo-lightbox-id="1109107740"
           >
+            >
             <img
               src="/assets/images/video-placeholder-medium.webp"
               alt="ConstructKoin video"
@@ -866,7 +869,7 @@
             <div
               class="about-selector__wrapper selector-wrapper selector-wrapper-1"
               data-vimeo-lightbox-control="open"
-              data-vimeo-lightbox-id=1109638459
+              data-vimeo-lightbox-id="1109638459"
             >
               <div class="selector__video">
                 <img
@@ -897,9 +900,10 @@
               </p>
             </div>
 
-            <div class="about-selector__wrapper selector-wrapper selector-wrapper-2"
-             data-vimeo-lightbox-control="open"
-              data-vimeo-lightbox-id=1109110334
+            <div
+              class="about-selector__wrapper selector-wrapper selector-wrapper-2"
+              data-vimeo-lightbox-control="open"
+              data-vimeo-lightbox-id="1109110334"
             >
               <div class="selector__video">
                 <img
@@ -926,9 +930,11 @@
               <p class="selector__text">Security Explained</p>
             </div>
 
-            <div class="about-selector__wrapper selector-wrapper selector-wrapper-3"
-            data-vimeo-lightbox-control="open"
-            data-vimeo-lightbox-id=1109107740>
+            <div
+              class="about-selector__wrapper selector-wrapper selector-wrapper-3"
+              data-vimeo-lightbox-control="open"
+              data-vimeo-lightbox-id="1109107740"
+            >
               <div class="selector__video">
                 <img
                   src="/assets/images/video-placeholder-small.png"
@@ -1776,9 +1782,10 @@
               </div>
             </button>
 
-            <div class="ai-selector__wrapper selector-wrapper"
-                data-vimeo-lightbox-control="open"
-              data-vimeo-lightbox-id=1109110334
+            <div
+              class="ai-selector__wrapper selector-wrapper"
+              data-vimeo-lightbox-control="open"
+              data-vimeo-lightbox-id="1109110334"
             >
               <div class="selector__video">
                 <img
@@ -3091,29 +3098,56 @@
 
               <h3 class="modal-newsletter__heading">Subscribe to our newsletter</h3>
 
-              <form class="modal-newsletter__form">
-                <label
-                  for="email"
-                  class="modal-newsletter__label"
-                  >Email Address</label
+              <form
+              class="modal-newsletter__form"
+                data-form-validate
+                novalidate
+              >
+                <div
+                  data-validate
+                  class="modal-newsletter__form-group"
                 >
+                  <label
+                    for="email"
+                    class="modal-newsletter__label"
+                    >Email Address</label
+                  >
 
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  class="modal-newsletter__input"
-                />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    max="256"
+                    class="modal-newsletter__input"
+                  />
 
-                <button
-                  data-close-modal
-                  type="button"
-                  class="modal-newsletter__submit"
-                >
-                  <span class="modal-newsletter__submit-bg"></span>
-                  <span class="modal-newsletter__submit-text">Subscribe</span>
-                </button>
+                  <div data-error-message></div>
+
+                  <button
+                    type="submit"
+                    class="modal-newsletter__submit"
+                    data-loading="false"
+                  >
+                    <span class="modal-newsletter__submit-bg"></span>
+                    <span class="modal-newsletter__submit-text">Subscribe</span>
+
+                    <svg
+                    class="submit-loader"
+                    viewBox="25 25 50 50"
+                  >
+                    <circle
+                      r="20"
+                      cy="50"
+                      cx="50"
+                    ></circle>
+                  </svg>
+                  </button>
+
+                  <div data-form-status-message="error"></div>
+                  <div data-form-status-message="success"></div>
+                </div>
               </form>
             </div>
           </div>
@@ -3150,7 +3184,6 @@
                 />
               </svg>
             </div>
-          
 
             <div
               class="vimeo-lightbox"
@@ -3184,7 +3217,6 @@
                     fill="currentColor"
                     d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
                   ></path>
-               
                 </svg>
               </div>
 
@@ -3464,13 +3496,11 @@
                           fill="currentColor"
                           d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
                         ></path>
-                      
                       </svg>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
