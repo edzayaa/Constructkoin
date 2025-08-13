@@ -2685,12 +2685,10 @@
   inset: 0;
 }
 
-.models .models-media__container .models-media__video {
-  position: absolute;
-  inset: 0;
-  will-change: transform;
+.models .models-media__container .vimeo-bg {
+  /* will-change: transform;
   border-radius: 2rem;
-  z-index: 1;
+  overflow: hidden; */
 }
 
 @media screen and (orientation: portrait) {
@@ -3356,6 +3354,56 @@
 .showreel-3 .showreel-3-content {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.vimeo-bg {
+  pointer-events: auto;
+  isolation: isolate;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transform: translateX(0);
+}
+
+.vimeo-bg__iframe-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.vimeo-bg__before {
+  padding-top: 62.5%;
+}
+
+.vimeo-bg__iframe {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.vimeo-bg__placeholder {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s linear;
+  display: block;
+  position: absolute;
+}
+
+.vimeo-bg[data-vimeo-activated="true"][data-vimeo-loaded="true"] .vimeo-bg__placeholder {
+  opacity: 0;
+  transition-delay: 0.2s;
+  pointer-events:   none;
 }
 
 /*  */
