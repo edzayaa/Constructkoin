@@ -65,7 +65,7 @@ body {
 
 /* RESPONSIVE */
 html {
-  font-size: calc(10 * (100vw / 1920));
+    font-size: clamp(6px, calc(10 * (calc(100vw + 2.1rem) / 1920)), 19px);
 }
 
 /* === MOBILE PORTRAIT === */
@@ -120,6 +120,8 @@ html {
 .overflow-wrapper {
   overflow: hidden;
   width: 100%;
+  max-width: 3440px;
+  margin-inline: auto;
 }
 
 /*  LENIS */

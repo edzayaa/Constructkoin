@@ -146,7 +146,9 @@
   .hero-loop {
     margin-block: min(4rem, 4vh) min(4rem, 4vh);
     height: 20.16vh;
-    max-height: auto;
+    max-height: 30vh;
+    margin-block: auto;
+
   }
   .hero-loop video {
     transform: scale(1.4);
@@ -3122,6 +3124,7 @@
   .how {
     padding-block: 10rem 2rem;
     min-height: fit-content;
+    height: auto;
   }
 }
 
