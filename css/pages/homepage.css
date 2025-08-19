@@ -481,6 +481,7 @@
   position: relative;
   padding-block: min(21.5rem, 21.5vh) min(11.5rem, 11.5vh);
   isolation: isolate;
+  background: #fff;
 }
 
 .about .about-background {
@@ -3107,6 +3108,7 @@
   padding-block: min(20rem, 20vh) min(8rem, 8vh);
   overflow: hidden;
   height: 100vh;
+  background: #fff;
 }
 
 .how .how-content {

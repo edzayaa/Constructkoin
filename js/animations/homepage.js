@@ -11,7 +11,7 @@ export class HomepageAnimations {
   }
 
   init() {
-    this.updateBackground();
+    // this.updateBackground();
     this.updateNavbarColors();
     this.loader();
     this.updateVideoSource();
