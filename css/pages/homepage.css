@@ -754,7 +754,7 @@
   flex-shrink: 0;
 }
 .structure .structure-swiper-slide:hover {
-  transform: translateY(-15%);
+  transform: translateY(-10%);
 }
 .structure .structure-swiper-slide::before {
   content: "";
@@ -785,6 +785,10 @@
   .structure .structure-swiper-slide {
     min-width: 44.6rem;
   }
+
+  .structure .structure-swiper-slide:hover {
+  transform: translateY(-5%);
+}
 }
 
 .structure .structure-card__container {
@@ -1433,6 +1437,12 @@
   max-height: min(4.7rem, 4.7vh);
 }
 
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .protocol .protocol-card__crypto-button {
+    max-height: none;
+  }
+}
+
 .protocol .protocol-card__crypto-button:hover {
   transform: scale(0.95);
 }
@@ -1468,10 +1478,12 @@
 
   .protocol .protocol-card__flex-buttons {
     gap: 1rem 0.6rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .protocol .protocol-card__crypto-button {
     border-radius: 3.7rem;
+    padding: min(0.8rem, 0.8vh) 0rem;
     gap: 0.5rem;
   }
 
@@ -3146,19 +3158,17 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
-.estate .accordion-css__item-h3,
-.accordion-css__item-span {
-  min-width: auto;
-  display: inline-block;
-  font-size: 2.5rem;
-  max-width: 20rem;
+  .estate .accordion-css__item-h3,
+  .accordion-css__item-span {
+    min-width: auto;
+    display: inline-block;
+    font-size: 2.5rem;
+    max-width: 20rem;
+  }
 
-}
-
-.estate .accordion-css__item-h2 {
-  max-width: 20rem;
-}
-
+  .estate .accordion-css__item-h2 {
+    max-width: 20rem;
+  }
 }
 
 .accordion-css__item-span {
@@ -3182,9 +3192,9 @@ input[type="number"] {
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
   .accordion-css__item-description-content {
-  width: 45rem;
-  font-size: 1.4rem;
-}
+    width: 45rem;
+    font-size: 1.4rem;
+  }
 }
 
 .estate .accordion-css__item-icon {
@@ -3281,8 +3291,6 @@ input[type="number"] {
   align-items: center;
   perspective: 1000px;
 }
-
-
 
 @media screen and (orientation: portrait) {
   .how {
@@ -3688,4 +3696,3 @@ input[type="number"] {
 /* {
   display: none;
 } */
-
