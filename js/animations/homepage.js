@@ -11,7 +11,6 @@ export class HomepageAnimations {
   }
 
   init() {
-    // this.updateBackground();
     this.updateNavbarColors();
     this.loader();
     this.updateVideoSource();
@@ -46,9 +45,9 @@ export class HomepageAnimations {
 
       .fromTo([".loader-logo", ".loader-bar__container"], { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 2, stagger: 0.1, clearProps: "transform" }, 0)
 
-      .to(".loader-bar", { width: "33%", duration: 1 })
-      .to(".loader-bar", { width: "66%", duration: 1, delay: 0.3 })
-      .to(".loader-bar", { width: "100%", duration: 1, delay: 0.3 })
+      .to(".loader-bar", { width: "33%", duration: 0.6 })
+      .to(".loader-bar", { width: "66%", duration: 0.6, delay: 0.15 })
+      .to(".loader-bar", { width: "100%", duration: 0.6, delay: 0.15 })
 
       .to(".loader-bar__container", { autoAlpha: 0, y: 30, delay: 0.2, duration: 1.5 })
       .to(".loader-logo", { scale: 0.3, autoAlpha: 0, rotate: -15, duration: 1.5 }, "<")
@@ -67,40 +66,6 @@ export class HomepageAnimations {
         this.setUpNewsletter();
         ScrollTrigger.refresh();
       });
-  }
-
-  updateBackground() {
-    const targetBg = document.querySelector(".backgrounds .backgrounds-color");
-    const targetPixels = document.querySelector(".backgrounds .backgrounds-pixels");
-
-    document.querySelectorAll("[data-bg]").forEach((element) => {
-      const bg = element.dataset.bg;
-
-      let start = element.dataset.bgStart || "top 80%";
-      let end = element.dataset.bgEnd || "top 20%";
-
-      let fromBgConfig = bg === "clear" ? { backgroundColor: "#000102" } : { backgroundColor: "#fff" };
-      let toBgConfig = bg === "clear" ? { backgroundColor: "#fff" } : { backgroundColor: "#000102" };
-
-      let fromPxConfig = bg === "clear" ? { autoAlpha: 1 } : { autoAlpha: 0 };
-      let toPxConfig = bg === "clear" ? { autoAlpha: 0 } : { autoAlpha: 1 };
-
-      gsap
-        .timeline({
-          defaults: {
-            ease: "linear",
-            duration: 0.6,
-          },
-          scrollTrigger: {
-            trigger: element,
-            start: start,
-            end: end,
-            toggleActions: "play none none reverse",
-          },
-        })
-        .fromTo(targetBg, { ...fromBgConfig }, { ...toBgConfig }, 0)
-        .fromTo(targetPixels, { ...fromPxConfig }, { ...toPxConfig }, 0);
-    });
   }
 
   updateNavbarColors() {

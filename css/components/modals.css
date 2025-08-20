@@ -75,6 +75,8 @@
   isolation: isolate;
 }
 
+
+
 .modal-newsletter__layer,
 .modal-newsletter__pixels {
   position: absolute;
@@ -131,6 +133,19 @@
   cursor: pointer;
   transform: translate(100%, -50%);
   transition: 0.5s var(--ease);
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .modal-newsletter .modal-newsletter__inner {
+    padding: min(4.5rem, 4.5vh) 9.4rem;
+  }
+
+  .modal-newsletter .modal-newsletter__close {
+  top: 1.5rem;
+  right: -2rem;
+
+}
+
 }
 
 .modal-newsletter .modal-newsletter__close:hover {
