@@ -1439,6 +1439,7 @@ as we achieve our financial goals.</p>
             data-fade-alpha="0"
             data-rotate-x="30"
             data-fade-x="50"
+            data-crypto-swap
           >
             <div class="protocol-card__inner">
               <img
@@ -1471,7 +1472,7 @@ as we achieve our financial goals.</p>
                   </div>
 
                   <div class="protocol-card__flex-buttons">
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="eth">
                       <span class="protocol-card__crypto-button-text">ETH</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1482,7 +1483,7 @@ as we achieve our financial goals.</p>
                       </div>
                     </button>
 
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="usdt">
                       <span class="protocol-card__crypto-button-text">USDT</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1493,7 +1494,7 @@ as we achieve our financial goals.</p>
                       </div>
                     </button>
 
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="card">
                       <span class="protocol-card__crypto-button-text">CARD</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1504,7 +1505,7 @@ as we achieve our financial goals.</p>
                       </div>
                     </button>
 
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="sol">
                       <span class="protocol-card__crypto-button-text">SOL</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1515,7 +1516,7 @@ as we achieve our financial goals.</p>
                       </div>
                     </button>
 
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="btc">
                       <span class="protocol-card__crypto-button-text">BTC</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1526,7 +1527,7 @@ as we achieve our financial goals.</p>
                       </div>
                     </button>
 
-                    <button class="protocol-card__crypto-button">
+                    <button class="protocol-card__crypto-button" data-crypto-swap-btn="bnb">
                       <span class="protocol-card__crypto-button-text">BNB</span>
                       <div class="protocol-card__crypto-button-icon">
                         <img
@@ -1542,7 +1543,7 @@ as we achieve our financial goals.</p>
                 <!-- block 3 -->
                 <div class="protocol-card__block protocol-card__block--3">
                   <div class="protocol-card__group">
-                    <label for="pay"> <span>USDT</span> you pay </label>
+                    <label for="pay"> <span data-crypto-swap-text>USDT</span> you pay </label>
 
                     <div class="protocol-card__group-input">
                       <input
@@ -1553,6 +1554,7 @@ as we achieve our financial goals.</p>
                       />
 
                       <img
+                      data-crypto-swap-icon
                         src="/assets/icons/usdt.png"
                         alt="crypto icon"
                         loading="lazy"

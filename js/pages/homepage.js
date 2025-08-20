@@ -9,21 +9,22 @@ import { Accordion } from "../components/accordion.js";
 import { Toggles } from "../components/toggles.js";
 import { CryptoData } from "../components/crypto-data.js";
 import { initDetectScrollingDirection } from "../utils/detect-scroll-direction.js";
-import { initVimeoBGVideo, initVimeoLightboxAdvanced } from "../utils/vimeo-bg-video.js";
+import { VimeoBGVideo } from "../utils/vimeo-bg-video.js";
 import { Newsletter } from "../components/newsletter.js";
+import { CryptoSwap } from "../components/crypto-swap.js";
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
   new Newsletter();
-  new LenisSmooth();
+  const lenis = new LenisSmooth();
   initDetectScrollingDirection();
   new ActiveLinks();
   new Navbar();
   new CustomSwiper();
-  new HomepageAnimations();
+  new HomepageAnimations(lenis);
   new SharedAnimations();
   new Accordion();
-  new Toggles();
-  new CryptoData();
-  initVimeoBGVideo();
-  initVimeoLightboxAdvanced();
+  new Toggles(lenis);
+  new VimeoBGVideo(lenis);
+  const cryptoData = await new CryptoData().init();
+  new CryptoSwap(cryptoData);
 });

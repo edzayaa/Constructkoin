@@ -1,8 +1,6 @@
 export class HomepageAnimations {
-  constructor() {
-    this.lenis = window.lenis;
-    this.lenis.scrollTo(0, { immediate: true });
-    this.lenis.stop();
+  constructor(lenis) {
+    this.lenis = lenis.getLenisInstance();
 
     this.mm = gsap.matchMedia();
     this.orientation = null;
@@ -32,6 +30,8 @@ export class HomepageAnimations {
   }
 
   loader() {
+    this.lenis.stop();
+
     const heroElements = document.querySelector(".hero-content").children;
 
     gsap.set([".navbar", heroElements], { willChange: "transform" });

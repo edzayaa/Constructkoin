@@ -1,5 +1,5 @@
 export class Toggles {
-  constructor() {
+  constructor(lenis) {
     this.closeToggles = document.querySelectorAll("[data-close-modal]");
     this.modalWrapper = document.querySelector(".modal-wrapper");
     this.modalVideoInner = document.querySelector(".modal-video__inner");
@@ -10,7 +10,7 @@ export class Toggles {
       ratio: this.modalWrapper.offsetWidth / this.modalWrapper.offsetHeight,
     };
 
-    this.lenis = window.lenis;
+    this.lenis = lenis.getLenisInstance();
 
     this.currentVideo = {
       element: null,

@@ -31,7 +31,6 @@ export class LenisSmooth {
 
     lenis.scrollTo(0)
     this.lenis = lenis;
-    window.lenis = lenis;
   }
 
   getLenisInstance() {
@@ -55,5 +54,14 @@ export class LenisSmooth {
         });
       });
     });
+  }
+
+
+  stopLenis() {
+    this.lenis.stop();
+  }
+
+  startLenis() {
+    this.lenis.start();
   }
 }

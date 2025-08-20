@@ -2,17 +2,20 @@ export class CryptoData {
   constructor() {
     this.isFetching = false;
     this.navbarPriceElement = document.querySelector(".navbar-price__text span");
-    this.init();
+    this.currentPrice = 0
   }
 
   async init() {
     const data = await this.fetchCryptoData();
     if (data) {
+      this.currentPrice = data.price;
       this.updateNavbarPrice(data.price);
       this.updateCardData(data);
     }
 
     this.setupPriceButton();
+
+    return this;
   }
 
   async fetchCryptoData() {
