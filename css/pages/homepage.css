@@ -1883,7 +1883,6 @@ input[type="number"] {
 }
 
 .why .why-swiper-container {
-  overflow: hidden;
   width: 100%;
   padding-inline: 5rem;
   position: relative;
@@ -1902,7 +1901,6 @@ input[type="number"] {
 
 @media screen and (orientation: portrait) {
   .why .why-swiper-container {
-    overflow: hidden;
     width: 100%;
     padding-inline: 1.5rem;
   }
@@ -2048,10 +2046,9 @@ input[type="number"] {
 
 .why-swiper-navigation {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: -11rem;
+  right: 5rem;
   z-index: 1;
-  transform: translateY(-50%);
   width: 100%;
   padding-inline: 2rem;
   display: flex;
@@ -2059,47 +2056,18 @@ input[type="number"] {
   justify-content: space-between;
 }
 
-.swiper-button-icon {
-  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 9rem;
-  display: flex;
-  flex-shrink: 0;
-  backdrop-filter: blur(10px);
-}
-
-.why-swiper-button-prev {
-  transform: rotate(140deg);
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-.why-swiper-button-next {
-  border-radius: 100%;
-  overflow: hidden;
-  transform: rotate(-40deg);
-}
-
 @media (orientation: portrait) {
   .why-swiper-navigation {
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: calc(100% + 2rem);
+    left: 50%;
     z-index: 1;
-    transform: translateY(-50%);
+    transform: translate(-50%, 0%);
     width: 100%;
     padding-inline: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .swiper-button-icon {
-    width: 4rem;
-    height: 4rem;
   }
 }
 
@@ -2490,7 +2458,6 @@ input[type="number"] {
 
 /* swiper  */
 .token .token-swiper-container {
-  overflow: hidden;
   padding-inline: 5rem;
   position: relative;
 }
@@ -2612,61 +2579,17 @@ input[type="number"] {
 
 /* navigation  */
 .token-swiper-navigation {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  transform: translateY(-50%);
-  width: 100%;
-  padding-inline: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   display: none;
-}
-
-.swiper-button-icon {
-  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 9rem;
-  display: flex;
-  flex-shrink: 0;
-  backdrop-filter: blur(10px);
-}
-
-.token-swiper-button-prev {
-  transform: rotate(140deg);
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-.token-swiper-button-next {
-  border-radius: 100%;
-  overflow: hidden;
-  transform: rotate(-40deg);
 }
 
 @media (orientation: portrait) {
   .token-swiper-navigation {
     position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 1;
-    transform: translateY(-50%);
-    width: 100%;
-    padding-inline: 1rem;
+    top: calc(100% + 2rem);
+    left: 50%;
+    transform: translate(-50%, 0%);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
-
-  .swiper-button-icon {
-    width: 4rem;
-    height: 4rem;
+    z-index: 3;
   }
 }
 
@@ -2701,7 +2624,7 @@ input[type="number"] {
 @media screen and (orientation: portrait) {
   .real {
     padding-block: 10rem 5rem;
-    padding-block: 5rem 5rem;
+    padding-block: 10rem 5rem;
 
     padding-inline: 1.5rem;
   }
@@ -3733,36 +3656,7 @@ input[type="number"] {
   top: 50%;
   left: 0;
   z-index: 1;
-  transform: translateY(-50%);
-  width: 100%;
-  padding-inline: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.swiper-button-icon {
-  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 9rem;
-  display: flex;
-  flex-shrink: 0;
-  backdrop-filter: blur(10px);
-}
-
-.how-swiper-button-prev {
-  transform: rotate(140deg);
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-.how-swiper-button-next {
-  border-radius: 100%;
-  overflow: hidden;
-  transform: rotate(-40deg);
+  display: none;
 }
 
 @media (orientation: portrait) {
@@ -3777,12 +3671,6 @@ input[type="number"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex;
-  }
-
-  .swiper-button-icon {
-    width: 4rem;
-    height: 4rem;
   }
 }
 
@@ -3943,7 +3831,7 @@ input[type="number"] {
     border-radius: 3px;
   }
 }
-
+/* 
 .how-swiper-button-prev,
 .how-swiper-button-next,
 .token-swiper-button-prev,
@@ -3967,6 +3855,54 @@ input[type="number"] {
 .why-swiper-button-next:hover,
 .structure-swiper-button-next {
   transform: scale(0.9) rotate(-40deg);
+} */
+
+.custom-swiper-navigation {
+  width: fit-content;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.custom-swiper-button {
+  width: 4.9rem;
+  height: 4.9rem;
+  flex-shrink: 0;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.custom-swiper-button:hover {
+  transform: scale(0.9) !important;
+}
+
+.custom-swiper-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
+  backdrop-filter: blur(7.424997329711914px);
+  z-index: -1;
+  transition: opacity 0.3s ease-out;
+}
+
+.custom-swiper-navigation .custom-swiper-button-icon {
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.why-swiper-button-disabled::before,
+.token-swiper-button-disabled::before ,
+.how-swiper-button-disabled::before {
+  opacity: 0;
 }
 
 /* .hero, */
