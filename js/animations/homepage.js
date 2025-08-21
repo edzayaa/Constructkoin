@@ -63,7 +63,7 @@ export class HomepageAnimations {
         this.heroFade();
         this.initFlipOnScroll();
         this.lenis.start();
-        this.setUpNewsletter();
+        // this.setUpNewsletter();
         ScrollTrigger.refresh();
       });
   }

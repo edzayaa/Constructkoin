@@ -20,6 +20,9 @@ export class CustomSwiper {
       const className = el.getAttribute("data-swiper-class");
       const syncTarget = el.getAttribute("data-swiper-sync") || null;
 
+
+      const enabled = el.getAttribute("data-swiper-enabled") || false;
+      const enabledMobile = el.getAttribute("data-swiper-enabled-mobile") || false;
       const slidesPerView = el.getAttribute("data-swiper-slides-per-view");
       const slidesPerViewMobile = el.getAttribute("data-swiper-slides-per-view-mobile");
       const centered = el.getAttribute("data-swiper-centered");
@@ -61,6 +64,7 @@ export class CustomSwiper {
             spaceBetween: spaceBetweenMobile ? spaceBetweenMobile : 0,
             initialSlide: initialSlideMobile,
             direction: directionPortrait,
+            enabled: enabledMobile === "false" ? false : true,
           },
           "@1.0": {
             slidesPerView: slidesPerView,
@@ -68,6 +72,7 @@ export class CustomSwiper {
             spaceBetween: spaceBetween,
             initialSlide: initialSlide,
             direction: directionLandscape,
+            enabled: enabled === "false" ? false : true,
           },
         },
 

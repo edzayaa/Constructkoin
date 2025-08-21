@@ -9,19 +9,15 @@
   position: relative;
   isolation: isolate;
   background-color: #000102;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
-.footer {
-  padding-inline: 5rem;
- 
+  .footer {
+    padding-inline: 5rem;
+  }
 }
-
-}
-
-
 
 @media screen and (orientation: portrait) {
   .footer {
@@ -31,13 +27,11 @@
   }
 }
 
-
 @media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
   .footer {
     padding-inline: 3.5rem;
   }
 }
-
 
 .footer-blur {
   position: absolute;
@@ -79,13 +73,10 @@
 }
 
 @media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
- .footer-loop {
+  .footer-loop {
     height: 32rem;
   }
- 
-
 }
-
 
 /* heading  */
 .footer-heading {
@@ -112,7 +103,6 @@
     font-size: 5.5rem;
     width: 46.7rem;
   }
-
 }
 
 /* grid  */
@@ -282,8 +272,6 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
   margin-block: auto min(3rem, 3vh);
-  
-  
 }
 
 @media screen and (orientation: portrait) {
