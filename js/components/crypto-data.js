@@ -61,7 +61,9 @@ export class CryptoData {
     if (currentPriceElement) currentPriceElement.textContent = `$${data.price}`;
     if (heroCurrentPriceElement) heroCurrentPriceElement.textContent = `$${data.price}`;
     if (nextPriceElement) nextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
-    if (heroNextPriceElement) heroNextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
+    // if (heroNextPriceElement) heroNextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
+    // if (heroNextPriceElement) heroNextPriceElement.textContent = `$1.00!`;
+
   }
 
   setupPriceButton() {

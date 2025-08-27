@@ -231,7 +231,6 @@
 .hero-discover {
   display: flex;
   margin-top: auto;
-  display: none;
 }
 .hero-discover .hero-discover-icon {
   width: 2.3rem;
@@ -387,7 +386,7 @@
   width: 76.7rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-size: 9rem;
+  font-size: 8.5rem;
   font-weight: 300;
   line-height: 1.2;
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
@@ -409,7 +408,7 @@
 
 /* description  */
 .presale .presale-content .presale-description {
-  width: 76.8rem;
+  width: 71.5rem;
   margin-bottom: min(4.7rem, 4.7vh);
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
@@ -1088,7 +1087,7 @@
 /* ========== PROTOCOL ========== */
 /*  */
 .protocol {
-  padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
+  padding-block: 0 min(7.5rem, 7.5vh);
   width: 100%;
   position: relative;
   isolation: isolate;
@@ -1119,7 +1118,7 @@
   justify-content: flex-start;
   max-width: 64.6rem;
   will-change: transform;
-  padding-top: min(6.5rem, 6.5vh);
+  padding-top: 0;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
@@ -1171,6 +1170,12 @@
 }
 
 /* headings  */
+.protocol .protocol-tagline {
+  width: fit-content;
+  margin-bottom: min(3rem, 3vh);
+  background: linear-gradient(to right, rgba(10, 23, 40, 1) 0%, rgba(246, 246, 246, 0.02) 100%), rgba(10, 23, 40, 1);
+}
+
 .protocol .protocol-flex .protocol-content .protocol-heading {
   background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
   background-clip: text;
@@ -1206,6 +1211,10 @@
 }
 
 @media screen and (orientation: portrait) {
+  .protocol .protocol-tagline {
+    margin-bottom: 0;
+  }
+
   .protocol .protocol-flex .protocol-content .protocol-heading {
     font-size: 4rem;
     width: 29rem;
@@ -1270,6 +1279,11 @@
   line-height: 175%;
 }
 
+.protocol .protocol-flex .protocol-content .protocol-cta-button {
+  margin-top: min(6rem, 6vh);
+  width: fit-content;
+}
+
 @media screen and (orientation: portrait) {
   .protocol .protocol-flex .protocol-content .protocol-list {
     display: grid;
@@ -1290,6 +1304,10 @@
     font-size: 1.4rem;
     line-height: 1.2;
   }
+
+  .protocol .protocol-flex .protocol-content .protocol-cta-button {
+    margin-top: 0;
+  }
 }
 
 /* card  */
@@ -1299,6 +1317,7 @@
   padding: min(1.5rem, 1.5vh);
   isolation: isolate;
   will-change: transform;
+  margin-top: min(6rem, 6vh);
 }
 
 .protocol .protocol-flex .protocol-card::before {
@@ -1322,6 +1341,10 @@
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
+  .protocol .protocol-flex .protocol-card {
+    margin-top: 0;
+  }
+
   .protocol .protocol-flex .protocol-card .protocol-card__inner {
     position: relative;
     width: 100%;
@@ -1371,6 +1394,7 @@
     width: 100%;
     padding: 1rem;
     margin-right: 0;
+    margin-top: 0;
   }
 
   .protocol .protocol-flex .protocol-card::before {
@@ -3773,6 +3797,7 @@ input[type="number"] {
   position: absolute;
   inset: 0;
   z-index: -1;
+  display: none;
 }
 
 .loader .loader-inner {
@@ -3900,7 +3925,7 @@ input[type="number"] {
 }
 
 .why-swiper-button-disabled::before,
-.token-swiper-button-disabled::before ,
+.token-swiper-button-disabled::before,
 .how-swiper-button-disabled::before {
   opacity: 0;
 }
@@ -3922,3 +3947,127 @@ input[type="number"] {
 /* {
   display: none;
 } */
+
+.navbar {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ========== COUNTDOWN ========== */
+.countdown {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown .countdown-wrapp {
+  padding: min(13rem, 13vh) 21rem;
+}
+
+.countdown .countdown-wrapp .countdown-card {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border-radius: 21.089px;
+  border: 0.422px solid #cde7ff3d;
+}
+
+.countdown .countdown-wrapp .countdown-card .countdown-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 4rem 6rem;
+  position: relative;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.countdown .countdown-card .countdown-card__h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 125%;
+  width: 40rem;
+}
+
+.countdown .countdown-card .cound-down__flex {
+  display: flex;
+  padding: 2rem 4.4rem;
+  gap: 7.4rem;
+  align-items: center;
+  border: 0.696px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6.26px);
+  border-radius: 2rem;
+}
+
+.countdown .countdown-card .countdown-card__item {
+  display: grid;
+  gap: 1rem;
+}
+
+.countdown .countdown-card .countdown-card__item .countdown-card__text {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.countdown .countdown-card .countdown-card__item .countdown-card__number {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.countdown .countdown-card .countdown-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+@media screen and (orientation: portrait) {
+  .countdown .countdown-wrapp {
+    padding: 5rem 0.7rem;
+  }
+
+  .countdown .countdown-wrapp .countdown-card {
+    border-radius: 1.5rem;
+  }
+
+  .countdown .countdown-wrapp .countdown-card .countdown-card__inner {
+    gap: 2rem;
+    padding-block: 2.5rem 2.5rem;
+    border-radius: 1.2rem;
+    padding-inline: 1rem;
+  }
+
+  .countdown .countdown-card .countdown-card__h2 {
+    font-size: 2.85rem;
+    width: 90%;
+  }
+
+  .countdown .countdown-card .cound-down__flex {
+    padding: 1rem 2rem;
+    gap: 0rem;
+    border-radius: 1.2rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .countdown .countdown-card .countdown-card__item {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .countdown .countdown-card .countdown-card__item .countdown-card__text {
+    font-size: 1.28rem;
+  }
+
+  .countdown .countdown-card .countdown-card__item .countdown-card__number {
+    font-size: 2.85rem;
+  }
+}

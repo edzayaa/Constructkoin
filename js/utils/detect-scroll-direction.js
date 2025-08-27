@@ -1,7 +1,7 @@
 function initDetectScrollingDirection() {
   let lastScrollTop = 0;
-  const threshold = 0;
-  const thresholdTop = 50;
+  const threshold = 4;
+  const thresholdTop = 10;
 
   window.addEventListener("scroll", () => {
     const nowScrollTop = window.scrollY;

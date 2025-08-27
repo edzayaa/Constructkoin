@@ -8,16 +8,16 @@ import { SharedAnimations } from "../animations/shared-animations.js";
 import { Accordion } from "../components/accordion.js";
 import { Toggles } from "../components/toggles.js";
 import { CryptoData } from "../components/crypto-data.js";
-import { initDetectScrollingDirection } from "../utils/detect-scroll-direction.js";
 import { VimeoBGVideo } from "../utils/vimeo-bg-video.js";
 import { Newsletter } from "../components/newsletter.js";
 import { CryptoSwap } from "../components/crypto-swap.js";
+import { CountdownTimer } from "../components/countdown.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
   new Newsletter();
   const lenis = new LenisSmooth();
-  initDetectScrollingDirection();
   new ActiveLinks();
+  new CountdownTimer("2025-08-29T09:14:26", ".countdown", {expiredMessage: "PRESALE CLOSED"});
   new Navbar();
   new CustomSwiper();
   new HomepageAnimations(lenis);
