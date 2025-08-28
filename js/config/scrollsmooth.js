@@ -43,6 +43,8 @@ export class LenisSmooth {
     triggers.forEach((trigger) => {
       trigger.addEventListener("click", (e) => {
         let target = trigger.getAttribute("data-scrollto");
+        console.log(target);
+        
 
         if (!isNaN(target)) {
           target = parseFloat(target);

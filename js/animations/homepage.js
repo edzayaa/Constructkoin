@@ -52,7 +52,6 @@ export class HomepageAnimations {
    
       .call(() => {
         this.heroFade();
-        this.initFlipOnScroll();
         initDetectScrollingDirection();
         this.lenis.start();
         // this.setUpNewsletter();

@@ -65,6 +65,10 @@
   background: transparent;
   border: 0.825px solid rgba(0, 0, 0, 0.2);
 }
+.cta-button-1.is--clear-white {
+  background: transparent;
+  border: 0.825px solid rgba(255, 255, 255, 0.20);
+}
 .cta-button-1.is--dark {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -152,6 +156,12 @@
 .cta-button-1.is--clear .cta-button-1__icon-wrapper svg {
   filter: drop-shadow(-2.5rem 0 0px #000);
   -webkit-filter: drop-shadow(-2.5rem 0 0px #000);
+
+}
+
+.cta-button-1.is--clear-white .cta-button-1__icon-wrapper svg {
+  filter: drop-shadow(-2.5rem 0 0px #fff);
+  -webkit-filter: drop-shadow(-2.5rem 0 0px #fff);
 
 }
 .cta-button-1.is--dark .cta-button-1__icon-wrapper svg {
