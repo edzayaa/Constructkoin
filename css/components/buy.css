@@ -1,0 +1,119 @@
+/* ========== BUY ========== */
+.buy {
+  padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
+  padding-block: min(10.5rem, 10.5vh) min(7.5rem, 7.5vh);
+  padding-inline: 21rem;
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .buy {
+    padding-inline: 5rem;
+  }
+}
+
+.buy .buy-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (orientation: portrait) {
+  .buy {
+    padding-block: 10rem 2rem;
+    padding-block: 2rem 2rem;
+
+    padding-inline: 1.5rem;
+  }
+
+  .buy .buy-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
+
+/* video  */
+.buy .buy-flex .buy-media {
+  width: 62rem;
+  aspect-ratio: 1/1;
+}
+.buy .buy-flex .buy-media video {
+  mix-blend-mode: screen;
+}
+
+@media screen and (orientation: portrait) {
+  .buy .buy-flex .buy-media {
+    width: 35rem;
+  }
+}
+
+/* content  */
+.buy .buy-flex .buy-content {
+  display: flex;
+  flex-direction: column;
+  gap: min(3.5rem, 3.5vh);
+  width: 74.5rem;
+}
+
+.buy .buy-flex .buy-content .buy-heading {
+  font-size: min(8.5rem, 8.5vh);
+  font-weight: 700;
+}
+
+.buy .buy-flex .buy-content .buy-subheading {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 130%;
+}
+
+.buy .buy-flex .buy-content .buy-block {
+  display: grid;
+  gap: min(2.5rem, 2.5vh);
+  width: 56.9rem;
+}
+
+.buy .buy-flex .buy-content .buy-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.8rem;
+  line-height: 130%;
+}
+
+.buy .buy-flex .buy-content .buy-cta-button.cta-button-1 {
+  width: fit-content;
+}
+
+@media screen and (orientation: portrait) {
+  .buy .buy-flex .buy-content {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .buy .buy-flex .buy-content .buy-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .buy .buy-flex .buy-content .buy-subheading {
+    font-size: 1.6rem;
+  }
+
+  .buy .buy-flex .buy-content .buy-block {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .buy .buy-flex .buy-content .buy-description {
+    font-size: 1.4rem;
+    line-height: 126%;
+  }
+
+  .buy .buy-flex .buy-content .buy-cta-button.cta-button-1 {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .buy .buy-flex .buy-content {
+    width: 70%;
+  }
+}

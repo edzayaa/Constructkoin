@@ -1,0 +1,336 @@
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-block: min(17rem, 17vh) min(3.7rem, 3.7vh);
+  isolation: isolate;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-blurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 150vh;
+  z-index: -2;
+}
+
+@media screen and (orientation: portrait) {
+  .hero {
+    padding-block: min(13rem, 13vh) min(4.5rem, 4.5vh);
+    padding-inline: 1.5rem;
+  }
+
+  .hero-background {
+    display: none;
+  }
+
+  .hero-blurs {
+    min-height: auto;
+  }
+}
+
+/* tagline  */
+.hero-tagline {
+  margin-bottom: min(1.5rem, 1.5vh);
+  padding: 1.1rem 2.4rem 1.1rem 1.1rem;
+}
+.hero-tagline .tagline-icon {
+  width: 6.6rem;
+  height: 2.8rem;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-tagline {
+    margin-bottom: min(3rem, 3vh);
+    padding: 0.5rem 1.3rem 0.5rem 0.5rem;
+  }
+  .hero-tagline .tagline-icon {
+    width: 4.9rem;
+    height: 2.1rem;
+  }
+}
+
+/* heading  */
+.hero-heading {
+  width: min(95.7rem, 95.7vh);
+  text-align: center;
+  font-size: min(7rem, 7vh);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: min(1.9rem, 1.9vh);
+  background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-heading span {
+  font-weight: 700;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-heading {
+    width: 90%;
+    font-size: min(3.4rem, 3.4vh);
+    margin-bottom: min(1.4rem, 1.4vh);
+  }
+}
+
+/* description  */
+.hero-description {
+  width: min(60.8rem, 60.8vh);
+  color: #fff;
+  text-align: center;
+  font-size: min(2rem, 2vh);
+  font-style: normal;
+  line-height: 125%;
+}
+.hero-description span {
+  font-weight: 700;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-description {
+    width: 25.9rem;
+    font-size: min(1.4rem, 1.4vh);
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .hero-description {
+    width: 60%;
+  }
+}
+
+/* loop */
+.hero-loop {
+  flex-grow: 1;
+  aspect-ratio: 1/1;
+  display: flex;
+  margin-block: min(5rem, 5vh) min(4rem, 4vh);
+  height: 30vh;
+  max-height: min(50rem, 50vh);
+  mix-blend-mode: screen;
+  transform: translateZ(0px);
+}
+
+.hero-loop video {
+  transform: translateZ(0px);
+  mix-blend-mode: screen;
+  transform: scale(1.4);
+}
+
+/* loop  */
+@media screen and (orientation: portrait) {
+  .hero-loop {
+    margin-block: min(4rem, 4vh) min(4rem, 4vh);
+    height: 20.16vh;
+    max-height: 30vh;
+    margin-block: auto;
+  }
+  .hero-loop video {
+    transform: scale(1.4);
+  }
+}
+
+/* portrait text  */
+.hero-text.is--portrait {
+  color: #fff;
+  text-align: center;
+  font-size: min(1.4rem, 1.4vh);
+  margin-bottom: min(2.4rem, 2.4vh);
+  display: none;
+  width: 20.4rem;
+}
+.hero-text.is--portrait span {
+  font-weight: 700;
+}
+@media screen and (orientation: portrait) {
+  .hero-text.is--portrait {
+    display: block;
+  }
+}
+
+/* portrait buttons  */
+.hero-buttons.is--portrait {
+  display: none;
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: min(5.5rem, 5.5vh);
+}
+
+@media screen and (orientation: portrait) {
+  .hero-buttons.is--portrait {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .hero-buttons.is--portrait {
+    max-width: 50%;
+  }
+}
+
+.hero-buttons.is--portrait .hero-view-button {
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.3rem;
+  border-radius: 4.3rem;
+  border: 0.709px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.hero-buttons.is--portrait .hero-view-button .hero-view-button__text-wrapper .hero-view-button__text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero-buttons.is--portrait .hero-view-button .hero-view-button__icon-wrapper {
+  width: 1rem;
+  height: 1.2rem;
+}
+
+.hero-buttons.is--portrait .hero-buy-button {
+  flex-grow: 1;
+}
+
+/* scrolldown  */
+.hero-discover {
+  display: flex;
+  margin-top: auto;
+}
+
+.hero-discover .hero-discover-icon {
+  width: 2.3rem;
+  height: 7.2rem;
+  object-fit: contain;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-discover .hero-discover-icon {
+    width: 1.7rem;
+    height: 5.5rem;
+  }
+}
+
+/* left elements  */
+.hero-left {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 1.9rem;
+}
+
+.hero-left .hero-left__link {
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  width: 4.1rem;
+  height: 4.1rem;
+  transition: opacity var(--transition);
+  background: #0e0f10;
+}
+
+.hero-left .hero-left__link:nth-of-type(1) svg {
+  width: 1.6rem;
+  height: 1.7rem;
+}
+
+.hero-left .hero-left__link:nth-of-type(2) svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.hero-left .hero-left__link svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.hero-left .hero-left__link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-left {
+    display: none;
+  }
+}
+
+/* bottom elements  */
+.hero-bottom {
+  position: absolute;
+  bottom: min(3.7rem, 3.7vh);
+  left: 0;
+  width: 100%;
+  padding-inline: 5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero-bottom .hero-bottom__left {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 125%;
+  width: 29.9rem;
+}
+
+.hero-bottom .hero-bottom__left span {
+  font-weight: 700;
+}
+
+.hero-bottom .hero-bottom__right {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  width: 29.7rem;
+  height: 19rem;
+  cursor: pointer;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.hero-bottom .hero-bottom__right:hover {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.hero-bottom .hero-bottom__play {
+  position: absolute;
+  top: 50%;
+  left: 13.5rem;
+  transform: translateY(-50%);
+  width: 2.8rem;
+  height: 3.1rem;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-bottom {
+    display: none;
+  }
+}

@@ -1,0 +1,356 @@
+/* ========== STRUCTURE ========== */
+.structure {
+  width: 100%;
+  padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
+  position: relative;
+  isolation: isolate;
+}
+
+.structure-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  mask-image: linear-gradient(transparent, black 35%);
+}
+
+@media screen and (orientation: portrait) {
+  .structure {
+    height: fit-content;
+    padding-block: min(13.5rem, 13.5vh) min(7.5rem, 7.5vh);
+    padding-block: min(8.5rem, 8.5vh) min(7.5rem, 7.5vh);
+  }
+}
+
+.structure .structure-heading {
+  margin-inline: auto;
+  text-align: center;
+  font-size: min(6.2rem, 6.2vh);
+  font-weight: 400;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #030e17 0%, #f6f6f6 27.9%, #f6f6f6 82.66%, #030e17 107.46%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: min(2rem, 2vh);
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-heading {
+    font-size: 3.5rem;
+    margin-bottom: min(2rem, 2vh);
+  }
+}
+
+/* swiper  */
+.structure .structure-swiper-container {
+  width: 100%;
+  padding-block: 5px;
+  position: relative;
+}
+
+.structure .structure-swiper-wrapper {
+  display: flex;
+  transition: var(--swiper-transition) !important;
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-swiper-container {
+    padding-block: 3px;
+    padding-inline: 1.5rem;
+  }
+}
+
+/* slide  */
+.structure .structure-swiper-slide {
+  width: 44.6rem;
+  min-height: 55rem;
+  position: relative;
+  isolation: isolate;
+  transition: var(--swiper-transition);
+  flex-shrink: 0;
+}
+
+.structure .structure-swiper-slide:hover {
+  transform: translateY(-5%);
+}
+
+.structure .structure-swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 2.5rem;
+  border: 0.5px solid #cde7ff67;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-swiper-slide {
+    width: calc(100% - 3rem);
+    max-width: 34.5rem;
+    min-height: min(49.9rem, 49.9vh);
+  }
+  .structure .structure-swiper-slide:hover {
+    transform: translateY(0%);
+  }
+  .structure .structure-swiper-slide::before {
+    border-radius: 2.2rem;
+    border: 0.4px solid #cde7ff67;
+  }
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .structure .structure-swiper-slide {
+    min-width: 44.6rem;
+  }
+
+  .structure .structure-swiper-slide:hover {
+    transform: translateY(-5%);
+  }
+}
+
+.structure .structure-card__container {
+  position: relative;
+  padding: 1rem;
+  height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__container {
+    padding: 0.7rem;
+  }
+}
+
+.structure .structure-card__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 3.5rem 3.5rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(246, 246, 246, 0.12);
+  overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__inner {
+    padding: 4.5rem 2.5rem;
+    border-radius: 2.2rem;
+    border: none;
+  }
+}
+
+.structure .structure-card__layer {
+  position: absolute;
+  background: linear-gradient(181deg, #030e17 -1.34%, #000 96.4%);
+  inset: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  height: 105%;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+.structure .structure-card__pixels {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.structure .structure-card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.structure .structure-card__content .structure-card__title {
+  color: #fff;
+  font-size: min(2.8rem, 2.8vh);
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: min(0.5rem, 0.5vh);
+}
+
+.structure .structure-card__content .structure-card__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 125%;
+  margin-bottom: min(3.2rem, 3.2vh);
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__content .structure-card__title {
+    font-size: min(2.9rem, 2.9vh);
+    font-weight: 400;
+    margin-bottom: min(1rem, 1vh);
+  }
+
+  .structure .structure-card__content .structure-card__text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3rem;
+    line-height: normal;
+    margin-bottom: min(2rem, 2vh);
+    max-width: 25.2rem;
+  }
+}
+
+/* button  */
+.structure .structure-card__content .structure-card__button {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: 0.733px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  margin-bottom: min(2.7rem, 2.7vh);
+  border-radius: 5rem;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.6s ease-out;
+  display: none;
+}
+
+.structure .structure-card__content .structure-card__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: opacity var(--transition);
+  background: radial-gradient(36.92% 87.53% at 50% 0%, #39a3fe 0%, #3467d7 100%);
+  opacity: 0;
+}
+
+.structure .structure-card__content .structure-card__button:hover {
+  opacity: 0.8;
+}
+
+.structure .structure-swiper-slide:hover .structure-card__button::before,
+.structure .structure-swiper-slide:hover .structure-card__layer {
+  opacity: 1;
+}
+
+.structure .structure-card__content .structure-card__button-text {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 0.9;
+  display: flex;
+}
+
+.structure .structure-card__content .structure-card__button-icon-wrapper {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__content .structure-card__button {
+    padding: 1.2rem;
+    gap: 0.8rem;
+    border: none;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    margin-bottom: min(2.7rem, 2.7vh);
+    border-radius: 3.8rem;
+  }
+  .structure .structure-card__content .structure-card__button-text {
+    font-size: min(1.38rem, 1.38vh);
+    font-weight: 600;
+  }
+  .structure .structure-card__content .structure-card__button-icon-wrapper {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+/* features  */
+.structure .structure-card__content .structure-card__features {
+  display: flex;
+  gap: 1.6rem;
+  width: 100%;
+  align-items: center;
+  margin-bottom: min(3rem, 3vh);
+}
+.structure .structure-card__content .structure-card__features-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+}
+.structure .structure-card__content .structure-card__line:nth-of-type(1) {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #999);
+}
+.structure .structure-card__content .structure-card__line:nth-of-type(2) {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to left, transparent, #999);
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__content .structure-card__features {
+    display: flex;
+    gap: 1.3rem;
+    margin-bottom: min(2.5rem, 2.5vh);
+  }
+  .structure .structure-card__content .structure-card__features-text {
+    font-size: 1.3rem;
+    letter-spacing: 1.66px;
+  }
+}
+
+.structure .structure-card__content .structure-card__list {
+  display: grid;
+  gap: min(3rem, 3vh);
+}
+
+.structure .structure-card__content .structure-card__list-item {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+}
+
+@media screen and (orientation: portrait) {
+  .structure .structure-card__content .structure-card__list {
+    gap: min(2rem, 2vh);
+  }
+  .structure .structure-card__content .structure-card__list-item {
+    font-size: 1.38rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.structure .structure-cta-button {
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: min(4rem, 4vh);
+}
+
+.structure-swiper-navigation {
+  display: none !important;
+}
+
+@media (orientation: portrait) {
+  .structure-swiper-navigation {
+    display: flex !important;
+    position: relative;
+    z-index: 1;
+    width: 100% !important;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+}

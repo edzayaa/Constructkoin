@@ -1,0 +1,168 @@
+/* ========== PARTNERS ========== */
+.partners {
+  height: 100%;
+  width: 100%;
+}
+
+.partners .partners-wrapper {
+  padding: min(25rem, 25vh) 0;
+  display: grid;
+  justify-items: center;
+  gap: min(14.5rem, 14.5vh);
+}
+
+.partners .partners-wrapper .partners-header {
+  display: grid;
+  justify-items: center;
+  gap: 2.3rem;
+}
+
+.partners .partners-wrapper .partners-title {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: min(8rem, 8vh);
+  font-weight: 700;
+}
+
+@media (orientation: portrait) {
+  .partners {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .partners .partners-wrapper {
+    padding: min(12rem, 12vh) 0 min(8rem, 8vh);
+    gap: 8rem;
+  }
+
+  .partners .partners-wrapper .partners-header {
+    gap: 2rem;
+  }
+
+  .partners .partners-wrapper .partners-header .partners-title {
+    font-size: 3rem;
+    width: 100%;
+  }
+}
+
+/* marquee  */
+.partners .partners-marquee {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  pointer-events: none;
+  user-select: none;
+}
+
+.partners .marquee-css {
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.partners .marquee-css__list {
+  flex: none;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.partners .marquee-css__item {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 9rem;
+}
+
+.partners .marquee-css__item.is-binance {
+  width: 27rem;
+  height: 5.5rem;
+}
+
+.partners .marquee-css__item.is-usdt,
+.partners .marquee-css__item.is-btc,
+.partners .marquee-css__item.is-oa {
+  width: 21rem;
+  height: 5.5rem;
+}
+
+.partners .marquee-css__item.is-pol,
+.partners .marquee-css__item.is-eth {
+  width: 25.5rem;
+  height: 5.5rem;
+}
+
+.partners .marquee-css__item.is-sol {
+  width: 24rem;
+  height: 5.5rem;
+}
+
+.partners .marquee-css__item.is-git,
+.partners .marquee-css__item.is-pay {
+  width: 14rem;
+  height: 5.5rem;
+}
+
+.partners .marquee-css__item.is-google {
+  width: 18rem;
+  height: 5.5rem;
+}
+
+.marquee-css__item-img {
+  object-fit: contain;
+}
+
+@media (orientation: portrait) {
+  .partners .partners-marquee {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .partners .marquee-css__item {
+    margin-right: 4.5rem;
+  }
+
+  .partners .marquee-css__item.is-binance {
+    width: 25rem;
+    height: 4rem;
+  }
+
+  .partners .marquee-css__item.is-usdt,
+  .partners .marquee-css__item.is-btc,
+  .partners .marquee-css__item.is-oa {
+    width: 19rem;
+    height: 4rem;
+  }
+
+  .partners .marquee-css__item.is-pol,
+  .partners .marquee-css__item.is-eth {
+    width: 23rem;
+    height: 5.4m;
+  }
+
+  .partners .marquee-css__item.is-sol {
+    width: 22rem;
+    height: 4rem;
+  }
+
+  .partners .marquee-css__item.is-git,
+  .partners .marquee-css__item.is-pay {
+    width: 12rem;
+    height: 4rem;
+  }
+
+  .partners .marquee-css__item.is-google {
+    width: 16rem;
+    height: 4rem;
+  }
+}
+
+@keyframes translateX {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+[data-css-marquee-list] {
+  animation: translateX 20s linear;
+  animation-iteration-count: infinite;
+}

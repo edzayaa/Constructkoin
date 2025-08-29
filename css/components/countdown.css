@@ -1,0 +1,118 @@
+/* ========== COUNTDOWN ========== */
+.countdown {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown .countdown-wrapp {
+  padding: min(13rem, 13vh) 21rem;
+}
+
+.countdown .countdown-wrapp .countdown-card {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border-radius: 21.089px;
+  border: 0.422px solid #cde7ff3d;
+}
+
+.countdown .countdown-wrapp .countdown-card .countdown-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 4rem 6rem;
+  position: relative;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.countdown .countdown-card .countdown-card__h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 125%;
+  width: 40rem;
+}
+
+.countdown .countdown-card .cound-down__flex {
+  display: flex;
+  padding: 2rem 4.4rem;
+  gap: 7.4rem;
+  align-items: center;
+  border: 0.696px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6.26px);
+  border-radius: 2rem;
+}
+
+.countdown .countdown-card .countdown-card__item {
+  display: grid;
+  gap: 1rem;
+}
+
+.countdown .countdown-card .countdown-card__item .countdown-card__text {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.countdown .countdown-card .countdown-card__item .countdown-card__number {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.countdown .countdown-card .countdown-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+@media screen and (orientation: portrait) {
+  .countdown .countdown-wrapp {
+    padding: 5rem 0.7rem;
+  }
+
+  .countdown .countdown-wrapp .countdown-card {
+    border-radius: 1.5rem;
+  }
+
+  .countdown .countdown-wrapp .countdown-card .countdown-card__inner {
+    gap: 2rem;
+    padding-block: 2.5rem 2.5rem;
+    border-radius: 1.2rem;
+    padding-inline: 1rem;
+  }
+
+  .countdown .countdown-card .countdown-card__h2 {
+    font-size: 2.85rem;
+    width: 90%;
+  }
+
+  .countdown .countdown-card .cound-down__flex {
+    padding: 1rem 2rem;
+    gap: 0rem;
+    border-radius: 1.2rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .countdown .countdown-card .countdown-card__item {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .countdown .countdown-card .countdown-card__item .countdown-card__text {
+    font-size: 1.28rem;
+  }
+
+  .countdown .countdown-card .countdown-card__item .countdown-card__number {
+    font-size: 2.85rem;
+  }
+}
