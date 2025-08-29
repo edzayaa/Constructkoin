@@ -1314,7 +1314,6 @@
         data-bg-end="top 90%"
         data-nav="clear"
         data-nav-start="top 10%"
-        data-nav-end="bottom 50%"
         data-fade
       >
         <!-- background  -->
@@ -4477,8 +4476,6 @@
         data-bg-start="top 40%"
         data-bg-end="top top"
         data-nav="clear"
-        data-nav-start="top 40%"
-        data-nav-end="bottom 50%"
         data-fade
       >
         <div
@@ -4742,13 +4739,33 @@
             <p class="faq-left__p">Find quick answers to your questions about Construct Koin. Learn about our building process and how we can help.</p>
 
             <div class="faq-left__selectors">
-              <button class="faq-left__selector is--active" data-accordion-trigger="general">General</button>
+              <button
+                class="faq-left__selector is--active"
+                data-accordion-trigger="general"
+              >
+                General
+              </button>
 
-              <button class="faq-left__selector" data-accordion-trigger="presale">Pre-sale</button>
+              <button
+                class="faq-left__selector"
+                data-accordion-trigger="presale"
+              >
+                Pre-sale
+              </button>
 
-              <button class="faq-left__selector" data-accordion-trigger="dashboard">Dashboard</button>
+              <button
+                class="faq-left__selector"
+                data-accordion-trigger="dashboard"
+              >
+                Dashboard
+              </button>
 
-              <button class="faq-left__selector" data-accordion-trigger="others">Others</button>
+              <button
+                class="faq-left__selector"
+                data-accordion-trigger="others"
+              >
+                Others
+              </button>
             </div>
           </div>
 
@@ -5951,7 +5968,7 @@
       </footer>
 
       <!-- MODALS  -->
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" >
         <div class="modal-layer"></div>
 
         <!-- newsletter  -->
@@ -6063,6 +6080,128 @@
             </div>
           </div>
         </div>
+
+           <!-- forbidden country  -->
+           <div class="modal-forbidden">
+            <div class="modal-forbidden__inner">
+              <picture>
+                <source
+                  srcset="/assets/images/newsletter-bg-portrait.webp"
+                  media="(orientation: portrait)"
+                />
+  
+                <img
+                  src="/assets/images/newsletter-bg.webp"
+                  alt="blur layer"
+                  class="modal-newsletter__layer"
+                  type="image/webp"
+                />
+              </picture>
+  
+              <div class="modal-forbidden__content">
+                <div
+                  class="modal-forbidden__close"
+                  data-close-modal
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31 1L1 31"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M1 1L31 31"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+  
+                <div class="modal-forbidden__loop">
+                  <img
+                    src="/assets/images/symbol.webp"
+                    alt="constructkoin symbol"
+                  />
+                </div>
+  
+                <h3 class="modal-forbidden__heading highlight">Forbidden Country</h3>
+
+                <p class="modal-forbidden__text">
+                  This site is not accessible to users from the UK. Please leave if 
+you are accessing it from within the United Kingdom.
+                </p>
+  
+              
+
+                <div class="forbidden-buttons">
+
+                  <button
+                  id="leave-site-btn"
+                  class="forbidden-cta-button cta-button-1 is--clear-white"
+                >
+                  <div class="cta-button-1__text-wrapper">
+                    <span class="cta-button-1__text is--leave" data-text-l="Leave the site" data-text-p="Leave"></span>
+                  </div>
+
+                  <div class="cta-button-1__icon-wrapper">
+                    <svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
+                        stroke="white"
+                        stroke-width="1.125"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+
+                  <button
+                  data-close-modal
+                    class="forbidden-cta-button cta-button-1"
+                  >
+                    <div class="cta-button-1__text-wrapper">
+                      <span class="cta-button-1__text  is--continue" data-text-l="Continue to site" data-text-p="Continue"></span>
+                    </div>
+  
+                    <div class="cta-button-1__icon-wrapper">
+                      <svg
+                        width="15"
+                        height="12"
+                        viewBox="0 0 15 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
+                          stroke="white"
+                          stroke-width="1.125"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+  
+              
+                </div>
+
+              </div>
+            </div>
+          </div>
 
         <!-- video  -->
         <div class="modal-video">

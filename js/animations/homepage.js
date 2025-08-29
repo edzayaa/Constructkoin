@@ -1,6 +1,5 @@
 import { initDetectScrollingDirection } from "../utils/detect-scroll-direction.js";
 
-
 export class HomepageAnimations {
   constructor(lenis) {
     this.lenis = lenis.getLenisInstance();
@@ -33,11 +32,9 @@ export class HomepageAnimations {
   }
 
   loader() {
-    this.lenis.stop();
-
     const heroElements = document.querySelector(".hero-content").children;
 
-    gsap.set([ heroElements], { willChange: "transform" });
+    gsap.set([heroElements], { willChange: "transform" });
 
     gsap
       .timeline({
@@ -45,16 +42,15 @@ export class HomepageAnimations {
           ease: "CTK-ease",
         },
       })
-      .to(".navbar", { autoAlpha: 1,  duration: 0.8,  })
+      .to(".navbar", { autoAlpha: 1, duration: 0.8 })
       .fromTo(".hero-left", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 1.5, delay: 0.1, clearProps: "transform" }, "<")
       .fromTo(".hero-bottom", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.5, delay: 0.1, clearProps: "transform," }, "<")
       .fromTo([".hero-tagline", ".hero-heading", ".hero-description", ".hero-loop", ".hero-text.is--portrait", ".hero-buttons.is--portrait", ".hero-discover"], { autoAlpha: 0, y: 20 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
-   
+
       .call(() => {
         this.heroFade();
         initDetectScrollingDirection();
-        this.lenis.start();
-        // this.setUpNewsletter();
+        this.setupForbiddenPopup();
         ScrollTrigger.refresh();
       });
   }
@@ -64,8 +60,8 @@ export class HomepageAnimations {
 
     document.querySelectorAll("[data-nav]").forEach((element) => {
       const theme = element.dataset.nav;
-      const start = element.dataset.navStart || "top 20%";
-      const end = element.dataset.navEnd || "bottom top";
+      const start = element.dataset.navStart || "top 5%";
+      const end = element.dataset.navEnd || "bottom 5%";
 
       ScrollTrigger.create({
         trigger: element,
@@ -169,12 +165,22 @@ export class HomepageAnimations {
     );
   }
 
-  setUpNewsletter() {
+  setUpPopup(target) {
     const modalWrapper = document.querySelector(".modal-wrapper");
-    setTimeout(() => {
-      modalWrapper.setAttribute("data-modal-open", "newsletter");
-      this.lenis.stop();
-    }, 700);
+    modalWrapper.setAttribute("data-modal-open", target);
+    this.lenis.stop();
+  }
+
+  setupForbiddenPopup() {
+    this.setUpPopup("forbidden");
+
+    const leaveSiteButton = document.getElementById("leave-site-btn");
+
+    if (leaveSiteButton) {
+      leaveSiteButton.addEventListener("click", function () {
+        history.back();
+      });
+    }
   }
 
   updateVideoSource() {

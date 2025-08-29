@@ -29,11 +29,18 @@
   opacity: 1;
   visibility: visible;
   transform: scale(1) rotateX(0deg);
+  display: block;
+}
+
+.modal-wrapper[data-modal-open="forbidden"] .modal-forbidden {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) rotateX(0deg);
+  display: block;
 }
 
 .modal-layer {
   position: absolute;
-
   z-index: -1;
   inset: 0;
 }
@@ -45,7 +52,8 @@
 }
 
 /* ========== NEWSLETTER ========== */
-.modal-newsletter {
+.modal-newsletter,
+.modal-forbidden {
   position: relative;
   padding: 1.2rem;
   opacity: 0;
@@ -53,9 +61,11 @@
   transform: scale(0.5) rotateX(50deg);
   transition: 0.5s var(--ease);
   margin-top: min(10rem, 10vh);
+  display: none;
 }
 
-.modal-newsletter::before {
+.modal-newsletter::before,
+.modal-forbidden::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -65,7 +75,8 @@
   -webkit-filter: blur(1px);
 }
 
-.modal-newsletter .modal-newsletter__inner {
+.modal-newsletter .modal-newsletter__inner,
+.modal-forbidden .modal-forbidden__inner {
   position: relative;
   padding: min(7rem, 7vh) 9.4rem min(4.5rem, 4.5vh);
   border-radius: 2.5rem;
@@ -75,10 +86,10 @@
   isolation: isolate;
 }
 
-
-
 .modal-newsletter__layer,
-.modal-newsletter__pixels {
+.modal-newsletter__pixels,
+.modal-forbidden__layer,
+.modal-forbidden__pixels {
   position: absolute;
   width: 105%;
   height: 105%;
@@ -88,43 +99,51 @@
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-.modal-newsletter__pixels {
+.modal-newsletter__pixels,
+.modal-forbidden__pixels {
   z-index: 0;
 }
 
 @media screen and (orientation: portrait) {
-  .modal-newsletter {
+  .modal-newsletter,
+  .modal-forbidden {
     border-radius: 1rem;
     padding: 0.8rem;
     width: calc(100% - 3rem);
-    margin-top: auto;
-    margin-bottom: 8%;
     max-height: calc(100% - 15rem);
     height: 100%;
   }
 
-  .modal-newsletter::before {
+  .modal-newsletter::before,
+  .modal-forbidden::before {
     border-radius: 1rem;
   }
 
-  .modal-newsletter .modal-newsletter__inner {
+  .modal-newsletter .modal-newsletter__inner,
+  .modal-forbidden .modal-forbidden__inner {
     padding: min(2rem, 2rem) 3rem min(9rem, 9vh);
     border-radius: 0.8rem;
     border: 0.416px solid rgba(246, 246, 246, 0.12);
     background: linear-gradient(181deg, #030e17 -1.34%, #000 96.4%);
     height: 100%;
   }
+
+  .modal-forbidden .modal-forbidden__inner {
+    padding: min(2rem, 2rem) 1.5rem min(9rem, 9vh);
+  }
 }
 
 @media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
-  .modal-newsletter {
+  .modal-newsletter,
+  .modal-forbidden {
     max-height: 70rem;
     max-width: 60%;
     margin-block: auto;
   }
 }
 
-.modal-newsletter .modal-newsletter__close {
+.modal-newsletter .modal-newsletter__close,
+.modal-forbidden .modal-forbidden__close {
   position: absolute;
   top: 0;
   right: 0;
@@ -136,24 +155,26 @@
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
-  .modal-newsletter .modal-newsletter__inner {
+  .modal-newsletter .modal-newsletter__inner,
+  .modal-forbidden .modal-forbidden__inner {
     padding: min(4.5rem, 4.5vh) 9.4rem;
   }
 
-  .modal-newsletter .modal-newsletter__close {
-  top: 1.5rem;
-  right: -2rem;
-
+  .modal-newsletter .modal-newsletter__close,
+  .modal-forbidden .modal-forbidden__close {
+    top: 1.5rem;
+    right: -2rem;
+  }
 }
 
-}
-
-.modal-newsletter .modal-newsletter__close:hover {
+.modal-newsletter .modal-newsletter__close:hover,
+.modal-forbidden .modal-forbidden__close:hover {
   transform: translate(100%, -50%) rotate(-90deg) scale(0.8);
 }
 
 @media screen and (orientation: portrait) {
-  .modal-newsletter .modal-newsletter__close {
+  .modal-newsletter .modal-newsletter__close,
+  .modal-forbidden .modal-forbidden__close {
     position: absolute;
     top: 0rem;
     right: -1rem;
@@ -162,12 +183,19 @@
     transform: translate(0%, 0%);
   }
 
-  .modal-newsletter .modal-newsletter__close:hover {
+  .modal-forbidden .modal-forbidden__close {
+    top: 0rem;
+    right: 0rem;
+  }
+
+  .modal-newsletter .modal-newsletter__close:hover,
+  .modal-forbidden .modal-forbidden__close:hover {
     transform: translate(0%, 0%) rotate(0deg) scale(1);
   }
 }
 
-.modal-newsletter .modal-newsletter__content {
+.modal-newsletter .modal-newsletter__content,
+.modal-forbidden .modal-forbidden__content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -176,19 +204,48 @@
   color: #fff;
 }
 
-.modal-newsletter .modal-newsletter__loop {
-  height: min(18.9rem, 18.9vh);
+.modal-newsletter .modal-newsletter__loop,
+.modal-forbidden .modal-forbidden__loop {
+  height: min(16rem, 16vh);
   aspect-ratio: 1/1;
 }
 
-.modal-newsletter .modal-newsletter__heading {
+.modal-newsletter .modal-newsletter__heading,
+.modal-forbidden .modal-forbidden__heading {
   text-align: center;
   font-size: min(5rem, 5vh);
-  font-weight: 400;
+  font-weight: 700;
+}
+
+.modal-forbidden .modal-forbidden__text {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: min(2rem, 2vh);
+  width: 52.5rem;
+}
+
+.modal-forbidden .forbidden-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: min(3rem, 3vh);
+  width: 100%;
+}
+
+.modal-forbidden .forbidden-buttons .forbidden-cta-button {
+  flex-grow: 1;
+}
+
+.cta-button-1__text.is--leave::after{
+  content: attr(data-text-l);
+}
+
+.cta-button-1__text.is--continue::after{
+  content: attr(data-text-l);
 }
 
 @media screen and (orientation: portrait) {
-  .modal-newsletter .modal-newsletter__content {
+  .modal-newsletter .modal-newsletter__content,
+  .modal-forbidden .modal-forbidden__content {
     gap: 0;
     height: 100%;
     display: flex;
@@ -196,18 +253,42 @@
     justify-content: center;
   }
 
-  .modal-newsletter .modal-newsletter__loop {
+  .modal-newsletter .modal-newsletter__loop,
+  .modal-forbidden .modal-forbidden__loop {
     height: min(15rem, 15vh);
     margin-bottom: min(2.5rem, 2.5vh);
     margin-top: min(7rem, 7vh);
     object-fit: contain;
   }
 
-  .modal-newsletter .modal-newsletter__heading {
+  .modal-newsletter .modal-newsletter__heading,
+  .modal-forbidden .modal-forbidden__heading {
     font-size: min(3.5rem, 3.5vh);
     width: 26.7rem;
     line-height: 1;
-    margin-bottom: min(7rem, 7vh);
+    margin-bottom: min(1rem, 1vh);
+  }
+
+  .modal-forbidden .modal-forbidden__text {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .modal-forbidden .forbidden-buttons {
+    gap: 1.5rem;
+    flex-direction: row-reverse;
+  }
+
+  .modal-forbidden .forbidden-buttons .forbidden-cta-button {
+    flex-grow: 1;
+  }
+
+  .cta-button-1__text.is--leave::after{
+    content: attr(data-text-p);
+  }
+
+  .cta-button-1__text.is--continue::after{
+    content: attr(data-text-p);
   }
 }
 
@@ -468,9 +549,11 @@
 @media screen and (orientation: portrait) {
   .modal-video {
     padding: 1.5rem;
+    align-items: center;
   }
   .modal-video .modal-video__inner {
     border-radius: 0.5rem;
+    height: 20rem;
   }
   .modal-video .modal-video__close {
     position: absolute;
