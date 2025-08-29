@@ -15,6 +15,11 @@
   box-shadow: 0 4px 72.4px 0 rgba(15, 17, 16, 0.1);
   backdrop-filter: blur(96px);
   -webkit-backdrop-filter: blur(96px);
+
+  background: rgba(255, 255, 255, 0.05);
+  width: fit-content;
+
+
 }
 
 .tagline .tagline-icon {
@@ -26,7 +31,7 @@
 }
 .tagline .tagline-text {
   font-size: 1.5rem;
-  line-height: 120%;
+  line-height: 0.9;
 }
 
 @media screen and (orientation: portrait) {

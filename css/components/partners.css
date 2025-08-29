@@ -1,7 +1,23 @@
 /* ========== PARTNERS ========== */
 .partners {
+  position: relative;
   height: 100%;
   width: 100%;
+  /* background: linear-gradient(to bottom, #0B3964 0%, #0b396400 30%); */
+}
+
+.partners .partners-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(11, 57, 100, 1) 0%, rgba(11, 57, 100, 1) 0%, rgba(255, 255, 255, 0) 60%);
+  width: 100%;
+  height: 120vh;
+  transform: translateY(-50%);
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
 }
 
 .partners .partners-wrapper {
@@ -27,6 +43,10 @@
   .partners {
     height: fit-content;
     width: 100%;
+  }
+
+  .partners .partners-gradient {
+    height: 100vh;
   }
 
   .partners .partners-wrapper {

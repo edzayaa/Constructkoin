@@ -1,7 +1,26 @@
 /* ========== AI ========== */
+.ai {
+  position: relative;
+}
+
 .ai .ai-wrapper {
   display: flex;
   padding: 13.5rem 39rem;
+  position: relative;
+}
+
+.ai .loan-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 150vh;
+  transform: translateY(15%);
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(11, 57, 100, 0.514) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .ai .ai-wrapper .ai-card {
@@ -96,7 +115,4 @@
   .ai .ai-wrapper {
     padding: 13.5rem 19rem;
   }
-  
-  
 }
-
