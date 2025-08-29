@@ -1,2 +1,194 @@
 /* ========== ROADMAP ========== */
+.roadmap {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 
+.roadmap .roadmap-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(11, 57, 100, 0.666) 0%, rgba(11, 57, 100, 1) 0%, rgba(255, 255, 255, 0) 50%);
+  width: 100%;
+  height: 120vh;
+  transform: translateY(60%);
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.roadmap .roadmap-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: min(7.5rem, 7.5vh);
+  padding-block: min(15rem, 15vh) min(10rem, 10vh);
+}
+
+.roadmap .roadmap-header__h2 {
+  color: #fff;
+  text-align: center;
+  font-size: min(8rem, 8vh);
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.roadmap .roadmap-content {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 27rem 13rem;
+}
+
+.roadmap .roadmap-content .roadmap-block {
+  display: grid;
+  grid-template-columns: min(44rem, 44vh) 1fr min(53.5rem, 53.5vh);
+  gap: auto;
+}
+
+.roadmap .roadmap-content .roadmap-block__l {
+  display: flex;
+  flex-direction: column;
+  gap: min(2rem, 2vh);
+  padding-top: min(5rem, 5vh);
+}
+
+.roadmap .roadmap-content .roadmap-block__l .roadmap-block__h3 {
+  color: #fff;
+  font-size: min(3.8rem, 3.8vh);
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.roadmap .roadmap-content .roadmap-block:not(.is--active) {
+  opacity: 0.1;
+}
+
+.roadmap .roadmap-content .roadmap-block__l .roadmap-block__p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: min(1.8rem, 1.8vh);
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.roadmap-cta-button {
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.roadmap .roadmap-content .roadmap-block__c {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.roadmap .roadmap-content .roadmap-block__c svg {
+  width: min(26rem, 26vh);
+  height: auto;
+}
+
+.roadmap .roadmap-content .roadmap-block__r {
+  display: grid;
+  gap: min(2rem, 2vh);
+  padding-top: min(5rem, 5vh);
+
+}
+
+.roadmap .roadmap-content .roadmap-block__r .roadmap-block__h4,
+.roadmap .roadmap-content .roadmap-block__r .roadmap-block__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: min(1.6rem, 1.6vh);
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.roadmap .roadmap-content .roadmap-block__r .roadmap-block__section {
+}
+
+.roadmap .roadmap-content .roadmap-block__r .roadmap-block__text {
+  font: 500;
+}
+
+@media (orientation: portrait) {
+  .roadmap {
+    height: fit-content;
+  }
+
+  .roadmap .roadmap-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(11, 57, 100, 0.666) 0%, rgba(11, 57, 100, 1) 0%, rgba(255, 255, 255, 0) 60%);
+    width: 100%;
+    height: 120vh;
+    transform: translateY(60%);
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .roadmap .roadmap-wrapper {
+    gap: 4.5rem;
+    padding-block: min(12rem, 12vh) min(10rem, 10vh);
+  }
+
+  .roadmap .roadmap-header__h2 {
+    font-size: 3rem;
+  }
+
+  .roadmap .roadmap-content {
+    padding-inline: 1.5rem;
+    gap: 4rem;
+  }
+
+  .roadmap .roadmap-content .roadmap-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 4rem;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__l {
+    grid-row: 2;
+    gap: 1rem;
+  padding-top: 0;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__l .roadmap-block__h3 {
+    font-size: 3rem;
+  }
+
+  .roadmap .roadmap-content .roadmap-block:not(.is--active) {
+    opacity: 1;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__l .roadmap-block__p {
+    font-size: 1.55rem;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__c {
+    grid-row: 1;
+    width: 20rem;
+    margin-inline: auto;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__r {
+    grid-row: 3;
+    gap: 2rem;
+    padding-top: 0;
+  
+  }
+
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__h4,
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__text {
+    font-size: 1.4rem;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__section {
+  }
+
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__text {
+    font: 400;
+  }
+}

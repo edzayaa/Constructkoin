@@ -11,10 +11,11 @@ export class HomepageAnimations {
   }
 
   init() {
-    this.updateNavbarColors();
     this.loader();
     this.updateVideoSource();
     this.setOrientation();
+    this.roadmap();
+    this.updateNavbarColors();
   }
 
   setOrientation() {
@@ -50,7 +51,7 @@ export class HomepageAnimations {
       .call(() => {
         this.heroFade();
         initDetectScrollingDirection();
-        this.setupForbiddenPopup();
+        // this.setupForbiddenPopup();
         ScrollTrigger.refresh();
       });
   }
@@ -195,5 +196,64 @@ export class HomepageAnimations {
 
     window.addEventListener("orientationchange", updatePresaleVideoSource);
     window.addEventListener("resize", updatePresaleVideoSource);
+  }
+
+  roadmap() {
+    this.mm.add(
+      {
+        isDesktop: "(min-width: 992px)",
+        isMobile: "(max-width: 991px)",
+        isLandscape: "(orientation: landscape)",
+        isPortrait: "(orientation: portrait)",
+      },
+      (context) => {
+        const { isLandscape } = context.conditions;
+
+
+        const blocks = document.querySelectorAll(".roadmap-block");
+        gsap.set(blocks, { clearProps: "all" });
+        if (!isLandscape) return;
+
+
+        let timeline = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".roadmap",
+              start: "top top",
+              end: "bottom+=50% top",
+              scrub: 1.3,
+              pin: true,
+              markers: true,
+              onUpdate: () => {
+                console.log(timeline.progress() * 10);
+              },
+            },
+          })
+          .to({}, { duration: 10 })
+
+          .to(blocks[0], { autoAlpha: 0, yPercent: -30, scale: 0.8, duration: 2 }, 1)
+          .to(blocks[1], { autoAlpha: 1, yPercent: -65, duration: 2 }, 1.2)
+          .to(blocks[2], { yPercent: -100, duration: 2 }, 1.4)
+
+          .fromTo(
+            blocks[1],
+            {
+              autoAlpha: 1,
+              yPercent: -65,
+              scale: 1,
+            },
+            { autoAlpha: 0, yPercent: -83, scale: 0.8, duration: 2, immediateRender: false },
+            5.1
+          )
+          .fromTo(
+            blocks[2],
+            {
+              yPercent: -100,
+            },
+            { autoAlpha: 1, yPercent: -270, duration: 2, immediateRender: false },
+            5.2
+          );
+      }
+    );
   }
 }
