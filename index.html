@@ -251,6 +251,14 @@
     />
     <link
       rel="stylesheet"
+      href="/css/components/roadmap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/components/htb.css"
+    />
+    <link
+      rel="stylesheet"
       href="/css/components/partners.css"
     />
     <link
@@ -260,6 +268,10 @@
     <link
       rel="stylesheet"
       href="/css/components/real.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/components/faq.css"
     />
     <link
       rel="stylesheet"
@@ -2375,8 +2387,79 @@
       </section>
 
       <!-- ROADMAP  -->
+      <section class="roadmap"></section>
+
       <!-- HTB  -->
-      <section class="htb"></section>
+      <section
+        class="htb"
+        data-nav="clear"
+      >
+        <div class="htb-wrapper">
+          <div class="htb-header">
+            <h2 class="htb-header__h2">How to Buy</h2>
+
+            <p class="htb-header__p">Embarking on your investment journey with Construck Koin is a breeze. Just follow these three simple steps to secure your presale tokens and become a part of our dynamic and growing community.</p>
+
+            <a
+              href="https://dashboard.constructkoin.com/"
+              target="_blank"
+              class="htb-buy-button cta-button-1"
+            >
+              <div class="cta-button-1__text-wrapper">
+                <span class="cta-button-1__text">Buy (CTK)</span>
+              </div>
+
+              <div class="cta-button-1__icon-wrapper">
+                <svg
+                  width="15"
+                  height="12"
+                  viewBox="0 0 15 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
+                    stroke="white"
+                    stroke-width="1.125"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="htb-flex">
+            <div class="htb-card">
+              <img
+                src="/assets/images/symbol-small.webp"
+                alt="CTK symbol"
+                class="htb-card__img"
+              />
+              <h3 class="htb-card__h3">Sign-Up</h3>
+              <p class="htb-card__p">Open your preferred web browser and visit our official website: https://cosntructkoin.com, click Pay with card or “connect wallet & pay” button and ensure you select your preferred token network.</p>
+            </div>
+
+            <div class="htb-card">
+              <img
+                src="/assets/images/symbol-small.webp"
+                alt="CTK symbol"
+                class="htb-card__img"
+              />
+              <h3 class="htb-card__h3">Select Currency</h3>
+              <p class="htb-card__p">Via the ConstructKoin web3 dApp, select which cryptocurrency you want to use to make your purchase. If you do not have crypto you can use your card.</p>
+            </div>
+
+            <div class="htb-card">
+              <img
+                src="/assets/images/symbol-small.webp"
+                alt="CTK symbol"
+                class="htb-card__img"
+              />
+              <h3 class="htb-card__h3">Buy & Claim</h3>
+              <p class="htb-card__p">Pay with a card to get a confirmation by email. If you pay with crypto, confirm the transaction in your wallet, and your tokens will be sent to your dashboard in 5-10 minutes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- PARTNERS  -->
       <div class="partners">
@@ -4016,6 +4099,17 @@
         class="cards"
         data-fade
       >
+        <!-- background  -->
+        <picture>
+          <img
+            src="/assets/images/cards-landscape.avif"
+            alt="cards landscape background"
+            type="image/avif"
+            loading="lazy"
+            class="cards-blur"
+          />
+        </picture>
+
         <div
           class="cards-content"
           data-fade-out
@@ -4091,16 +4185,13 @@
           </div>
         </div>
 
-        <!-- background  -->
-        <picture>
+        <div class="cards-discover">
           <img
-            src="/assets/images/cards-landscape.avif"
-            alt="cards landscape background"
-            type="image/avif"
-            loading="lazy"
-            class="cards-blur"
+            src="/assets/images/scrolldown.png"
+            alt="scroll down icon"
+            class="cards-discover-icon"
           />
-        </picture>
+        </div>
       </section>
 
       <!-- ESTATE  -->
@@ -4114,378 +4205,267 @@
           data-fade-alpha="0"
           data-fade-y="50"
         >
-          <h2 class="estate-heading">
-            <span>ConstructKoin Protocol: </span> <br />
-            AI Across Real Estate
-          </h2>
+          <div class="estate-header">
+            <h2 class="estate-heading">
+              <span>ConstructKoin Protocol: </span> <br />
+              AI Across Real Estate
+            </h2>
 
-          <!-- accordion  -->
-          <div
-            data-accordion-close-siblings="true"
-            data-accordion-css-init=""
-            class="accordion-css"
-          >
-            <ul class="accordion-css__list">
-              <li
-                data-accordion-status="not-active"
-                class="accordion-css__item"
+            <div class="estate-header__buttons">
+              <button
+                data-scrollto=".htb"
+                class="about-cta-button cta-button-1"
               >
-                <!-- top  -->
-                <div
-                  data-hover=""
-                  data-accordion-toggle=""
-                  class="accordion-css__item-top"
-                >
-                  <!-- heading  -->
-                  <div class="accordion-css__item-headings">
-                    <h3 class="accordion-css__item-h3">AI-Powered Lending</h3>
-                    <h2 class="accordion-css__item-h2">Minutes, Not Weeks</h2>
-                  </div>
-
-                  <!-- description  -->
-                  <div class="accordion-css__item-description">
-                    <div class="accordion-css__item-description-wrap">
-                      <div class="accordion-css__item-description-content">Proprietary AI analyzes development proposals, building specifications, and market data through advanced machine learning. Integration with BIM systems enables instant access to architectural plans for immediate underwriting decisions. Smart contracts automate documentation and disbursement.</div>
-                    </div>
-                  </div>
-
-                  <!-- icon  -->
-                  <div class="accordion-css__item-icon">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 90 90"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
-                        stroke="white"
-                        stroke-width="2.5"
-                      />
-                      <circle
-                        cx="45"
-                        cy="45"
-                        r="44.5"
-                        stroke="white"
-                        stroke-opacity="0.2"
-                      />
-                    </svg>
-                  </div>
-
-                  <!-- image  -->
-                  <img
-                    src="/assets/images/acc-1.webp"
-                    loading="lazy"
-                    alt="accordion image"
-                    class="accordion-css__item-image"
-                  />
+                <div class="cta-button-1__text-wrapper">
+                  <span class="cta-button-1__text">How to Buy</span>
                 </div>
 
-                <!-- bottom  -->
-                <div class="accordion-css__item-bottom">
-                  <div class="accordion-css__item-bottom-wrap">
-                    <div class="accordion-css__item-bottom-content">
-                      <div class="accordion-css__item-bottom__spacer">
-                        <span class="accordion-css__item-span">AI-Powered Lending</span>
-                      </div>
-
-                      <div class="accordion-css__item-bottom__buttons">
-                        <a
-                          href="https://dashboard.constructkoin.com/"
-                          target="_blank"
-                          class="about-cta-button cta-button-1"
-                        >
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Buy (CTK)</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-
-                        <button class="about-cta-button cta-button-1 is--dark">
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Our Tokens</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="cta-button-1__icon-wrapper">
+                  <svg
+                    width="15"
+                    height="12"
+                    viewBox="0 0 15 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
+                      stroke="white"
+                      stroke-width="1.125"
+                    />
+                  </svg>
                 </div>
-              </li>
+              </button>
 
-              <li
-                data-accordion-status="not-active"
-                class="accordion-css__item"
+              <a
+                href="https://constructkoin.gitbook.io/docs/"
+                target="_blank"
+                class="about-cta-button cta-button-1 is--clear-white"
               >
-                <!-- top  -->
-                <div
-                  data-hover=""
-                  data-accordion-toggle=""
-                  class="accordion-css__item-top"
+                <div class="cta-button-1__text-wrapper">
+                  <span class="cta-button-1__text">Whitepaper</span>
+                </div>
+
+                <div class="cta-button-1__icon-wrapper">
+                  <svg
+                    width="15"
+                    height="12"
+                    viewBox="0 0 15 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
+                      stroke="white"
+                      stroke-width="1.125"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="estate-bottom">
+            <!-- accordion  -->
+            <div
+              data-accordion-close-siblings="true"
+              data-accordion-css-init=""
+              class="accordion-css"
+            >
+              <ul class="accordion-css__list">
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
                 >
-                  <!-- heading  -->
-                  <div class="accordion-css__item-headings">
-                    <h3 class="accordion-css__item-h3">AI in Sales & Letting Agency</h3>
-                    <h2 class="accordion-css__item-h2">Voice-Activated Intelligence</h2>
-                  </div>
+                  <!-- top  -->
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <!-- heading  -->
+                    <div class="accordion-css__item-headings">
+                      <h3 class="accordion-css__item-h3">AI-Powered Lending</h3>
+                      <h2 class="accordion-css__item-h2">Minutes, Not Weeks</h2>
+                    </div>
 
-                  <!-- description  -->
-                  <div class="accordion-css__item-description">
-                    <div class="accordion-css__item-description-wrap">
-                      <div class="accordion-css__item-description-content">
-                        Natural language AI assistants match properties with buyer requirements and lifestyle preferences. Intelligent coordination between agents, solicitors, and finance providers eliminates bottlenecks. Predictive algorithms prevent broken sales chains while AI-powered systems manage all documentation automatically. A point of contact for buyers, sellers, landlords and tenants. Always in the loop, always with an answer. More efficiency throughout the process and a seamless
-                        experience for the user.
-                      </div>
+                    <!-- icon  -->
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
                     </div>
                   </div>
 
-                  <!-- icon  -->
-                  <div class="accordion-css__item-icon">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 90 90"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
-                        stroke="white"
-                        stroke-width="2.5"
-                      />
-                      <circle
-                        cx="45"
-                        cy="45"
-                        r="44.5"
-                        stroke="white"
-                        stroke-opacity="0.2"
-                      />
-                    </svg>
-                  </div>
-
-                  <!-- image  -->
-                  <img
-                    src="/assets/images/acc-2.webp"
-                    loading="lazy"
-                    alt="accordion image"
-                    class="accordion-css__item-image"
-                  />
-                </div>
-
-                <!-- bottom  -->
-                <div class="accordion-css__item-bottom">
-                  <div class="accordion-css__item-bottom-wrap">
-                    <div class="accordion-css__item-bottom-content">
-                      <div class="accordion-css__item-bottom__spacer">
-                        <span class="accordion-css__item-span">AI in Sales & Letting Agency</span>
-                      </div>
-
-                      <div class="accordion-css__item-bottom__buttons">
-                        <a
-                          href="https://dashboard.constructkoin.com/"
-                          target="_blank"
-                          class="about-cta-button cta-button-1"
-                        >
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Buy (CTK)</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-
-                        <button class="about-cta-button cta-button-1 is--dark">
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Our Tokens</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </button>
+                  <!-- bottom  -->
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <div class="accordion-css__item-description-content">Proprietary AI analyzes development proposals, building specifications, and market data through advanced machine learning. Integration with BIM systems enables instant access to architectural plans for immediate underwriting decisions. Smart contracts automate documentation and disbursement.</div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              <li
-                data-accordion-status="not-active"
-                class="accordion-css__item"
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <!-- top  -->
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <!-- heading  -->
+                    <div class="accordion-css__item-headings">
+                      <h3 class="accordion-css__item-h3">AI for Real Estate Intermediaries</h3>
+                      <h2 class="accordion-css__item-h2">Voice-Activated Intelligence</h2>
+                    </div>
+
+                    <!-- icon  -->
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- bottom  -->
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <div class="accordion-css__item-description-content">
+                          Natural language AI assistants match properties with buyer requirements and lifestyle preferences. Intelligent coordination between agents, solicitors, and finance providers eliminates bottlenecks. Predictive algorithms prevent broken sales chains while AI-powered systems manage all documentation automatically. A point of contact for buyers, sellers, landlords and tenants. Always in the loop, always with an answer. More efficiency throughout the process and a seamless
+                          experience for the user.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <!-- top  -->
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <!-- heading  -->
+                    <div class="accordion-css__item-headings">
+                      <h3 class="accordion-css__item-h3">AI in New Homes</h3>
+                      <h2 class="accordion-css__item-h2">Your Personal Voice-Activated assistant</h2>
+                    </div>
+
+                    <!-- icon  -->
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- bottom  -->
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <div class="accordion-css__item-description-content">
+                          Through developer partnerships, new homes feature AI assistants that understand natural conversation and manage your entire lifestyle. "Order groceries for tonight's dinner" or "I need batteries delivered" - your AI butler handles shopping, scheduling deliveries straight to your door, and coordinating services. These concepts are brought to life in actual developments, transforming new homes into intelligent living ecosystems where residents simply speak their needs and
+                          AI makes it happen.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="estate-video">
+              <div
+                data-vimeo-playing="false"
+                class="vimeo-bg"
+                data-vimeo-activated="false"
+                data-vimeo-bg-init=""
+                data-vimeo-paused-by-user="false"
+                data-vimeo-autoplay="true"
+                data-vimeo-loaded="false"
+                data-vimeo-update-size="true"
+                data-vimeo-video-id="1112103865"
               >
-                <!-- top  -->
-                <div
-                  data-hover=""
-                  data-accordion-toggle=""
-                  class="accordion-css__item-top"
-                >
-                  <!-- heading  -->
-                  <div class="accordion-css__item-headings">
-                    <h3 class="accordion-css__item-h3">AI in New Homes</h3>
-                    <h2 class="accordion-css__item-h2">Your Personal Voice-Activated assistant</h2>
-                  </div>
-
-                  <!-- description  -->
-                  <div class="accordion-css__item-description">
-                    <div class="accordion-css__item-description-wrap">
-                      <div class="accordion-css__item-description-content">
-                        Through developer partnerships, new homes feature AI assistants that understand natural conversation and manage your entire lifestyle. "Order groceries for tonight's dinner" or "I need batteries delivered" - your AI butler handles shopping, scheduling deliveries straight to your door, and coordinating services. These concepts are brought to life in actual developments, transforming new homes into intelligent living ecosystems where residents simply speak their needs and
-                        AI makes it happen.
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- icon  -->
-                  <div class="accordion-css__item-icon">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 90 90"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
-                        stroke="white"
-                        stroke-width="2.5"
-                      />
-                      <circle
-                        cx="45"
-                        cy="45"
-                        r="44.5"
-                        stroke="white"
-                        stroke-opacity="0.2"
-                      />
-                    </svg>
-                  </div>
-
-                  <!-- image  -->
-                  <img
-                    src="/assets/images/acc-3.webp"
-                    loading="lazy"
-                    alt="accordion image"
-                    class="accordion-css__item-image"
-                  />
+                <div class="vimeo-bg__iframe-wrapper">
+                  <div class="vimeo-bg__before"></div>
+                  <iframe
+                    src=""
+                    width="640"
+                    height="360"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; encrypted-media"
+                    class="vimeo-bg__iframe"
+                  ></iframe>
                 </div>
-
-                <!-- bottom  -->
-                <div class="accordion-css__item-bottom">
-                  <div class="accordion-css__item-bottom-wrap">
-                    <div class="accordion-css__item-bottom-content">
-                      <div class="accordion-css__item-bottom__spacer">
-                        <span class="accordion-css__item-span">AI in New Homes</span>
-                      </div>
-
-                      <div class="accordion-css__item-bottom__buttons">
-                        <a
-                          href="https://dashboard.constructkoin.com/"
-                          target="_blank"
-                          class="about-cta-button cta-button-1"
-                        >
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Buy (CTK)</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-
-                        <button class="about-cta-button cta-button-1 is--dark">
-                          <div class="cta-button-1__text-wrapper">
-                            <span class="cta-button-1__text">Our Tokens</span>
-                          </div>
-
-                          <div class="cta-button-1__icon-wrapper">
-                            <svg
-                              width="15"
-                              height="12"
-                              viewBox="0 0 15 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8.27567 11.3823C8.27567 10.7923 8.84426 9.91128 9.41983 9.17178C10.1598 8.21759 11.0441 7.38506 12.058 6.74973C12.8182 6.27343 13.7397 5.81621 14.4812 5.81621M14.4812 5.81621C13.7397 5.81621 12.8174 5.359 12.058 4.8827C11.0441 4.24657 10.1598 3.41404 9.41983 2.46144C8.84426 1.72115 8.27567 0.838523 8.27567 0.250105M14.4812 5.81621L0.957031 5.81621"
-                                stroke="white"
-                                stroke-width="1.125"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
+                <img
+                  src="/assets/images/final-poster.avif"
+                  alt="final poster"
+                  loading="lazy"
+                  class="vimeo-bg__placeholder"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -4649,80 +4629,1032 @@
               </div>
             </div>
 
-            <div class="how-swiper-navigation custom-swiper-navigation">
-              <button class="how-swiper-button-prev custom-swiper-button custom-swiper-button-prev">
-                <!-- icon  -->
-                <div class="custom-swiper-button-icon">
-                  <svg
-                    width="49"
-                    height="49"
-                    viewBox="0 0 49 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <foreignObject
-                      x="-14.85"
-                      y="-14.85"
-                      width="78.7"
-                      height="78.7"
-                      ><div
-                        xmlns="http://www.w3.org/1999/xhtml"
-                        style="backdrop-filter: blur(7.42px); height: 100%; width: 100%"
-                      ></div
-                    ></foreignObject>
-                    <path
-                      data-figma-bg-blur-radius="14.85"
-                      d="M24.5 0.5C11.2452 0.500001 0.5 11.2452 0.5 24.5C0.5 37.7548 11.2452 48.5 24.5 48.5C37.7548 48.5 48.5 37.7548 48.5 24.5C48.5 11.2452 37.7548 0.5 24.5 0.5Z"
-                      stroke="white"
-                      stroke-opacity="0.2"
-                    />
-                    <path
-                      d="M24.4239 19C24.4239 19.583 23.8353 20.4536 23.2395 21.1843C22.4734 22.1271 21.558 22.9498 20.5085 23.5776C19.7216 24.0482 18.7677 24.5 18 24.5M18 24.5C18.7677 24.5 19.7224 24.9518 20.5085 25.4224C21.558 26.051 22.4734 26.8736 23.2395 27.8149C23.8353 28.5464 24.4239 29.4186 24.4239 30M18 24.5H32"
-                      stroke="white"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </div>
-              </button>
+            <div class="how-bottom">
+              <div class="how-swiper-percent">
+                <div class="how-swiper-percent__bar"></div>
+              </div>
 
-              <button class="how-swiper-button-next custom-swiper-button custom-swiper-button-next">
-                <!-- icon  -->
-                <div class="custom-swiper-button-icon">
-                  <svg
-                    width="49"
-                    height="49"
-                    viewBox="0 0 49 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <foreignObject
-                      x="-14.85"
-                      y="-14.85"
-                      width="78.7"
-                      height="78.7"
-                      ><div
-                        xmlns="http://www.w3.org/1999/xhtml"
-                        style="backdrop-filter: blur(7.42px); height: 100%; width: 100%"
-                      ></div
-                    ></foreignObject>
-                    <path
-                      data-figma-bg-blur-radius="14.85"
-                      d="M24.5 48.5C37.7548 48.5 48.5 37.7548 48.5 24.5C48.5 11.2452 37.7548 0.500001 24.5 0.5C11.2452 0.5 0.5 11.2452 0.5 24.5C0.5 37.7548 11.2452 48.5 24.5 48.5Z"
-                      stroke="white"
-                      stroke-opacity="0.2"
-                    />
-                    <path
-                      d="M24.5761 30C24.5761 29.417 25.1647 28.5464 25.7605 27.8157C26.5266 26.8729 27.442 26.0502 28.4915 25.4224C29.2784 24.9518 30.2323 24.5 31 24.5M31 24.5C30.2323 24.5 29.2776 24.0482 28.4915 23.5776C27.442 22.949 26.5266 22.1264 25.7605 21.1851C25.1647 20.4536 24.5761 19.5814 24.5761 19M31 24.5L17 24.5"
-                      stroke="white"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </div>
-              </button>
+              <div class="how-swiper-navigation custom-swiper-navigation">
+                <button class="how-swiper-button-prev custom-swiper-button custom-swiper-button-prev">
+                  <!-- icon  -->
+                  <div class="custom-swiper-button-icon">
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <foreignObject
+                        x="-14.85"
+                        y="-14.85"
+                        width="78.7"
+                        height="78.7"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="backdrop-filter: blur(7.42px); height: 100%; width: 100%"
+                        ></div
+                      ></foreignObject>
+                      <path
+                        data-figma-bg-blur-radius="14.85"
+                        d="M24.5 0.5C11.2452 0.500001 0.5 11.2452 0.5 24.5C0.5 37.7548 11.2452 48.5 24.5 48.5C37.7548 48.5 48.5 37.7548 48.5 24.5C48.5 11.2452 37.7548 0.5 24.5 0.5Z"
+                        stroke="white"
+                        stroke-opacity="0.2"
+                      />
+                      <path
+                        d="M24.4239 19C24.4239 19.583 23.8353 20.4536 23.2395 21.1843C22.4734 22.1271 21.558 22.9498 20.5085 23.5776C19.7216 24.0482 18.7677 24.5 18 24.5M18 24.5C18.7677 24.5 19.7224 24.9518 20.5085 25.4224C21.558 26.051 22.4734 26.8736 23.2395 27.8149C23.8353 28.5464 24.4239 29.4186 24.4239 30M18 24.5H32"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <button class="how-swiper-button-next custom-swiper-button custom-swiper-button-next">
+                  <!-- icon  -->
+                  <div class="custom-swiper-button-icon">
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <foreignObject
+                        x="-14.85"
+                        y="-14.85"
+                        width="78.7"
+                        height="78.7"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="backdrop-filter: blur(7.42px); height: 100%; width: 100%"
+                        ></div
+                      ></foreignObject>
+                      <path
+                        data-figma-bg-blur-radius="14.85"
+                        d="M24.5 48.5C37.7548 48.5 48.5 37.7548 48.5 24.5C48.5 11.2452 37.7548 0.500001 24.5 0.5C11.2452 0.5 0.5 11.2452 0.5 24.5C0.5 37.7548 11.2452 48.5 24.5 48.5Z"
+                        stroke="white"
+                        stroke-opacity="0.2"
+                      />
+                      <path
+                        d="M24.5761 30C24.5761 29.417 25.1647 28.5464 25.7605 27.8157C26.5266 26.8729 27.442 26.0502 28.4915 25.4224C29.2784 24.9518 30.2323 24.5 31 24.5M31 24.5C30.2323 24.5 29.2776 24.0482 28.4915 23.5776C27.442 22.949 26.5266 22.1264 25.7605 21.1851C25.1647 20.4536 24.5761 19.5814 24.5761 19M31 24.5L17 24.5"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ  -->
+      <section class="faq">
+        <div class="faq-wrapper">
+          <!-- left  -->
+          <div class="faq-left">
+            <div class="faq-tagline tagline">
+              <div class="tagline-icon">
+                <svg
+                  width="100%"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.44695 2.44534C4.53664 1.59783 5.25371 0.9375 6.125 0.9375H9.875C10.7463 0.9375 11.4634 1.59783 11.5531 2.44534C12.1254 2.45699 12.6202 2.4866 13.0427 2.56421C13.6112 2.66863 14.095 2.86756 14.4887 3.26126C14.9402 3.7127 15.1343 4.28111 15.2251 4.95619C15.3125 5.60641 15.3125 6.43315 15.3125 7.45885V12.0412C15.3125 13.0668 15.3125 13.8936 15.2251 14.5438C15.1343 15.2189 14.9402 15.7873 14.4887 16.2387C14.0373 16.6902 13.4689 16.8843 12.7938 16.9751C12.1436 17.0625 11.3168 17.0625 10.2912 17.0625H5.70885C4.68316 17.0625 3.85641 17.0625 3.20619 16.9751C2.53111 16.8843 1.9627 16.6902 1.51126 16.2387C1.05983 15.7873 0.865655 15.2189 0.774893 14.5438C0.687472 13.8936 0.687485 13.0668 0.6875 12.0412V7.45884C0.687485 6.43315 0.687472 5.60641 0.774893 4.95619C0.865655 4.28111 1.05983 3.7127 1.51126 3.26126C1.90496 2.86756 2.38877 2.66863 2.95726 2.56421C3.37979 2.4866 3.87464 2.45699 4.44695 2.44534ZM4.44872 3.57065C3.91009 3.58215 3.49502 3.60925 3.16051 3.6707C2.7354 3.74878 2.48935 3.87417 2.30676 4.05676C2.09919 4.26433 1.96385 4.55576 1.88986 5.10609C1.8137 5.6726 1.8125 6.42344 1.8125 7.5V12C1.8125 13.0766 1.8137 13.8274 1.88986 14.3939C1.96385 14.9442 2.09919 15.2357 2.30676 15.4432C2.51433 15.6508 2.80576 15.7861 3.35609 15.8601C3.9226 15.9363 4.67344 15.9375 5.75 15.9375H10.25C11.3266 15.9375 12.0774 15.9363 12.6439 15.8601C13.1942 15.7861 13.4857 15.6508 13.6932 15.4432C13.9008 15.2357 14.0361 14.9442 14.1101 14.3939C14.1863 13.8274 14.1875 13.0766 14.1875 12V7.5C14.1875 6.42344 14.1863 5.6726 14.1101 5.10609C14.0361 4.55576 13.9008 4.26433 13.6932 4.05676C13.5107 3.87417 13.2646 3.74878 12.8395 3.6707C12.505 3.60925 12.0899 3.58215 11.5513 3.57065C11.4543 4.41046 10.7408 5.0625 9.875 5.0625H6.125C5.2592 5.0625 4.54568 4.41046 4.44872 3.57065ZM6.125 2.0625C5.81434 2.0625 5.5625 2.31434 5.5625 2.625V3.375C5.5625 3.68566 5.81434 3.9375 6.125 3.9375H9.875C10.1857 3.9375 10.4375 3.68566 10.4375 3.375V2.625C10.4375 2.31434 10.1857 2.0625 9.875 2.0625H6.125ZM3.6875 7.875C3.6875 7.56434 3.93934 7.3125 4.25 7.3125H4.625C4.93566 7.3125 5.1875 7.56434 5.1875 7.875C5.1875 8.18566 4.93566 8.4375 4.625 8.4375H4.25C3.93934 8.4375 3.6875 8.18566 3.6875 7.875ZM6.3125 7.875C6.3125 7.56434 6.56434 7.3125 6.875 7.3125H11.75C12.0607 7.3125 12.3125 7.56434 12.3125 7.875C12.3125 8.18566 12.0607 8.4375 11.75 8.4375H6.875C6.56434 8.4375 6.3125 8.18566 6.3125 7.875ZM3.6875 10.5C3.6875 10.1893 3.93934 9.9375 4.25 9.9375H4.625C4.93566 9.9375 5.1875 10.1893 5.1875 10.5C5.1875 10.8107 4.93566 11.0625 4.625 11.0625H4.25C3.93934 11.0625 3.6875 10.8107 3.6875 10.5ZM6.3125 10.5C6.3125 10.1893 6.56434 9.9375 6.875 9.9375H11.75C12.0607 9.9375 12.3125 10.1893 12.3125 10.5C12.3125 10.8107 12.0607 11.0625 11.75 11.0625H6.875C6.56434 11.0625 6.3125 10.8107 6.3125 10.5ZM3.6875 13.125C3.6875 12.8143 3.93934 12.5625 4.25 12.5625H4.625C4.93566 12.5625 5.1875 12.8143 5.1875 13.125C5.1875 13.4357 4.93566 13.6875 4.625 13.6875H4.25C3.93934 13.6875 3.6875 13.4357 3.6875 13.125ZM6.3125 13.125C6.3125 12.8143 6.56434 12.5625 6.875 12.5625H11.75C12.0607 12.5625 12.3125 12.8143 12.3125 13.125C12.3125 13.4357 12.0607 13.6875 11.75 13.6875H6.875C6.56434 13.6875 6.3125 13.4357 6.3125 13.125Z"
+                    fill="#2699FE"
+                  />
+                </svg>
+              </div>
+              <div class="tagline-text">FAQ</div>
             </div>
 
-            <div class="how-swiper-percent">
-              <div class="how-swiper-percent__bar"></div>
+            <h2 class="faq-left__h2 highlight">
+              Frequently
+              <span> Asked Questions </span>
+            </h2>
+
+            <p class="faq-left__p">Find quick answers to your questions about Construct Koin. Learn about our building process and how we can help.</p>
+
+            <div class="faq-left__selectors">
+              <button class="faq-left__selector is--active" data-accordion-trigger="general">General</button>
+
+              <button class="faq-left__selector" data-accordion-trigger="presale">Pre-sale</button>
+
+              <button class="faq-left__selector" data-accordion-trigger="dashboard">Dashboard</button>
+
+              <button class="faq-left__selector" data-accordion-trigger="others">Others</button>
+            </div>
+          </div>
+
+          <!-- right  -->
+          <div
+            class="faq-right"
+            data-current-accordion="general"
+          >
+            <div
+              data-accordion-close-siblings="true"
+              data-accordion-css-init=""
+              class="accordion-css"
+              data-accordion="general"
+            >
+              <ul class="accordion-css__list">
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">What is Construct Koin?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">ConstructKoin is the world's first AI-powered real estate finance platform combining three revolutionary AI pillars: development finance, real estate agency disruption, and intelligent living ecosystems. CTK is the utility token providing access to our global property development finance ecosystem backed by real estate assets.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How do the three AI pillars work together?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">Our AI pillars create a synergistic ecosystem where development finance data improves property valuation algorithms, transaction data enhances market predictions, and smart home data optimizes property management. This creates a comprehensive AI-powered real estate transformation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How does the 100-phase presale work?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">The presale consists of 100 phases with prices increasing linearly from $0.01 to $1.00. Each phase has a different token allocation based on an exponential decay curve, ensuring early participants receive maximum benefits while maintaining the target $100M raise.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">What backs the CTK token value?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">CTK tokens are backed by a £100M AI-enhanced UK development finance loan book generating 9% annual returns, strategic AI investments across our three pillars, and operational revenue from the global platform.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">When will the stablecoin launch?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">A transition to USDT-pegged operations is planned for Year 2 based on our business plan, but this is subject to business developments, UK regulatory frameworks for digital currency, and successful completion of our development milestones. The immediate focus is on building our AI-powered lending platform and generating rental income from developments.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              data-accordion-close-siblings="true"
+              data-accordion-css-init=""
+              class="accordion-css"
+              data-accordion="presale"
+            >
+              <ul class="accordion-css__list">
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">PRESALE</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">ConstructKoin is the world's first AI-powered real estate finance platform combining three revolutionary AI pillars: development finance, real estate agency disruption, and intelligent living ecosystems. CTK is the utility token providing access to our global property development finance ecosystem backed by real estate assets.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How do the three AI pillars work together?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">Our AI pillars create a synergistic ecosystem where development finance data improves property valuation algorithms, transaction data enhances market predictions, and smart home data optimizes property management. This creates a comprehensive AI-powered real estate transformation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How does the 100-phase presale work?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">The presale consists of 100 phases with prices increasing linearly from $0.01 to $1.00. Each phase has a different token allocation based on an exponential decay curve, ensuring early participants receive maximum benefits while maintaining the target $100M raise.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">What backs the CTK token value?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">CTK tokens are backed by a £100M AI-enhanced UK development finance loan book generating 9% annual returns, strategic AI investments across our three pillars, and operational revenue from the global platform.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">When will the stablecoin launch?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">A transition to USDT-pegged operations is planned for Year 2 based on our business plan, but this is subject to business developments, UK regulatory frameworks for digital currency, and successful completion of our development milestones. The immediate focus is on building our AI-powered lending platform and generating rental income from developments.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              data-accordion-close-siblings="true"
+              data-accordion-css-init=""
+              class="accordion-css"
+              data-accordion="dashboard"
+            >
+              <ul class="accordion-css__list">
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">DASHBOARD</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">ConstructKoin is the world's first AI-powered real estate finance platform combining three revolutionary AI pillars: development finance, real estate agency disruption, and intelligent living ecosystems. CTK is the utility token providing access to our global property development finance ecosystem backed by real estate assets.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How do the three AI pillars work together?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">Our AI pillars create a synergistic ecosystem where development finance data improves property valuation algorithms, transaction data enhances market predictions, and smart home data optimizes property management. This creates a comprehensive AI-powered real estate transformation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How does the 100-phase presale work?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">The presale consists of 100 phases with prices increasing linearly from $0.01 to $1.00. Each phase has a different token allocation based on an exponential decay curve, ensuring early participants receive maximum benefits while maintaining the target $100M raise.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">What backs the CTK token value?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">CTK tokens are backed by a £100M AI-enhanced UK development finance loan book generating 9% annual returns, strategic AI investments across our three pillars, and operational revenue from the global platform.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">When will the stablecoin launch?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">A transition to USDT-pegged operations is planned for Year 2 based on our business plan, but this is subject to business developments, UK regulatory frameworks for digital currency, and successful completion of our development milestones. The immediate focus is on building our AI-powered lending platform and generating rental income from developments.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              data-accordion-close-siblings="true"
+              data-accordion-css-init=""
+              class="accordion-css"
+              data-accordion="others"
+            >
+              <ul class="accordion-css__list">
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">OTHERS</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">ConstructKoin is the world's first AI-powered real estate finance platform combining three revolutionary AI pillars: development finance, real estate agency disruption, and intelligent living ecosystems. CTK is the utility token providing access to our global property development finance ecosystem backed by real estate assets.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How do the three AI pillars work together?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">Our AI pillars create a synergistic ecosystem where development finance data improves property valuation algorithms, transaction data enhances market predictions, and smart home data optimizes property management. This creates a comprehensive AI-powered real estate transformation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">How does the 100-phase presale work?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">The presale consists of 100 phases with prices increasing linearly from $0.01 to $1.00. Each phase has a different token allocation based on an exponential decay curve, ensuring early participants receive maximum benefits while maintaining the target $100M raise.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">What backs the CTK token value?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">CTK tokens are backed by a £100M AI-enhanced UK development finance loan book generating 9% annual returns, strategic AI investments across our three pillars, and operational revenue from the global platform.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  data-accordion-status="not-active"
+                  class="accordion-css__item"
+                >
+                  <div
+                    data-hover=""
+                    data-accordion-toggle=""
+                    class="accordion-css__item-top"
+                  >
+                    <h3 class="accordion-css__item-h3">When will the stablecoin launch?</h3>
+
+                    <div class="accordion-css__item-icon">
+                      <svg
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.5394 54.2039C40.2548 53.3513 42.1283 52.7538 43.84 52.369C46.045 51.8695 48.3067 51.7171 50.5127 52.0037C52.1667 52.2186 54.0261 52.6529 55.0762 53.534M55.0762 53.534C54.0261 52.6529 53.2744 50.8963 52.7766 49.3057C52.1123 47.1817 51.8696 44.9279 51.9768 42.6721C52.0594 40.9184 52.3245 38.9673 53.038 38.117M55.0762 53.534L35.9251 37.4643"
+                          stroke="white"
+                          stroke-width="2.5"
+                        />
+                        <circle
+                          cx="45"
+                          cy="45"
+                          r="44.5"
+                          stroke="white"
+                          stroke-opacity="0.2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="accordion-css__item-bottom">
+                    <div class="accordion-css__item-bottom-wrap">
+                      <div class="accordion-css__item-bottom-content">
+                        <p class="accordion-css__item-p">A transition to USDT-pegged operations is planned for Year 2 based on our business plan, but this is subject to business developments, UK regulatory frameworks for digital currency, and successful completion of our development milestones. The immediate focus is on building our AI-powered lending platform and generating rental income from developments.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -4802,18 +5734,24 @@
                 />
               </div>
 
-              <p class="footer-disclaimer__text">Disclaimer: ConstructKoin is a high-risk asset offering access to participate in real estate-backed digital finance. Always do your own research (DYOR). This is not financial advice.</p>
+              <p class="footer-disclaimer__text">Disclaimer: Digital currencies may be unregulated in your jurisdiction. The value of digital currencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction DYOR. The content of this website is not financial advice.</p>
             </div>
 
-            <div class="footer-column">
+            <div class="footer-column is--quicklink">
               <h4 class="footer-column__heading">Quicklink</h4>
 
               <ul class="footer-column__list">
-                <li><a href="">How to Buy</a></li>
-                <li><a href="">PressKit</a></li>
-                <li><a href="">Whitepaper</a></li>
-                <li><a href="">Tokenomics</a></li>
-                <li><a href="">ConstructKoin Wiki</a></li>
+                <li><a href="/index.html">Homepage</a></li>
+                <li data-scrollto=".tokenomics">Tokenomics</li>
+                <li data-scrollto=".roadmap">Roadmap</li>
+                <li data-scrollto=".faq">FAQ</li>
+                <li>
+                  <a
+                    href="https://constructkoin.gitbook.io/docs/"
+                    target="_blank"
+                    >Whitepaper</a
+                  >
+                </li>
               </ul>
             </div>
 
@@ -4821,11 +5759,11 @@
               <h4 class="footer-column__heading">Company</h4>
 
               <ul class="footer-column__list">
-                <li><a href="">Referral Program</a></li>
-                <li><a href="">1M Giveaway</a></li>
-                <li><a href="">Terms and Conditions</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Private Clients</a></li>
+                <li><a>Referral Program</a></li>
+                <li><a>1M Giveaway</a></li>
+                <li><a>Terms and Conditions</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Private Clients</a></li>
               </ul>
             </div>
 
@@ -4851,7 +5789,7 @@
 
                 <div class="footer-socials">
                   <a
-                    href="https://t.me/constructkoin"
+                    href="https://t.me/ConstructKoin"
                     target="_blank"
                     aria-label="telegram link"
                     class="footer-socials__link"
@@ -4920,6 +5858,59 @@
                       />
                     </svg>
                   </a>
+
+                  <a
+                    href="https://www.tiktok.com/@constructkoin2?_t=ZM-8yuDMTbdefo&_r=1"
+                    target="_blank"
+                    aria-label="tiktok link"
+                    class="footer-socials__link"
+                  >
+                    <svg
+                      width="15"
+                      height="17"
+                      viewBox="0 0 15 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.6082 1.07031C10.6042 3.15246 12.385 4.91187 14.4697 4.8755V7.35593C13.0686 7.35536 11.7263 6.88493 10.6084 6.05934C10.6149 7.59551 10.5991 9.13281 10.6068 10.6693C10.6132 11.9785 10.6547 12.8402 9.94324 14.0057C8.24866 16.7824 4.21488 17.0927 2.15275 14.5568C-0.523572 11.2657 2.10765 6.55881 6.28096 6.87704C6.36721 6.88352 6.51688 6.8993 6.5772 6.94722V9.44173C4.62471 8.79908 2.86333 10.9032 3.91582 12.7091C5.06329 14.6774 8.07926 13.8504 8.12859 11.5991L8.12746 1.07031H10.6079H10.6082Z"
+                        stroke="white"
+                        stroke-width="0.66"
+                        stroke-miterlimit="10"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/@constructkoinofficial"
+                    target="_blank"
+                    aria-label="instagram link"
+                    class="footer-socials__link"
+                  >
+                    <svg
+                      width="19"
+                      height="14"
+                      viewBox="0 0 19 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.8459 3.08246C17.7519 2.70674 17.5604 2.3625 17.2907 2.08449C17.021 1.80648 16.6828 1.60456 16.3101 1.49913C14.9484 1.16663 9.50176 1.16663 9.50176 1.16663C9.50176 1.16663 4.05509 1.16663 2.69342 1.53079C2.32074 1.63623 1.98249 1.83815 1.71282 2.11616C1.44315 2.39416 1.25163 2.73841 1.15759 3.11413C0.908383 4.49602 0.786483 5.89787 0.793421 7.30204C0.784538 8.71679 0.906446 10.1293 1.15759 11.5216C1.26126 11.8857 1.45708 12.2168 1.72612 12.4831C1.99516 12.7494 2.32832 12.9417 2.69342 13.0416C4.05509 13.4058 9.50176 13.4058 9.50176 13.4058C9.50176 13.4058 14.9484 13.4058 16.3101 13.0416C16.6828 12.9362 17.021 12.7343 17.2907 12.4563C17.5604 12.1783 17.7519 11.834 17.8459 11.4583C18.0932 10.0868 18.2151 8.69564 18.2101 7.30204C18.219 5.8873 18.0971 4.47476 17.8459 3.08246Z"
+                        stroke="white"
+                        stroke-width="0.66"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.72051 9.89079L12.2726 7.30204L7.72051 4.71329V9.89079Z"
+                        stroke="white"
+                        stroke-width="0.66"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -4938,7 +5929,7 @@
             data-fade-alpha="0"
             data-fade-y="10"
           >
-            <span>©</span> ConstructKoin. Owned and operated by Global Real World Land Assets Ltd a BVI company. All Rights Reserved.
+            <span>©</span>All Rights reserved by Constructkoin - 2025
           </p>
         </div>
 

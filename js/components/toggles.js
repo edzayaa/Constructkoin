@@ -24,6 +24,7 @@ export class Toggles {
   init() {
     this.setupCloseToggles();
     this.setupMenuToggle();
+    this.setupAccordionToggle();
   }
 
   setupCloseToggles() {
@@ -46,6 +47,31 @@ export class Toggles {
         } else {
           this.lenis.stop();
         }
+      });
+    });
+  }
+
+  setupAccordionToggle() {
+
+
+    const triggers  = document.querySelectorAll("[data-accordion-trigger]");
+    const accordionWrapper = document.querySelector("[data-current-accordion]");
+    
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+      
+        const target = trigger.getAttribute("data-accordion-trigger");
+
+        triggers.forEach((trigger) => {
+          trigger.classList.remove("is--active");
+        });
+
+        trigger.classList.add("is--active");
+      
+
+        accordionWrapper.setAttribute("data-current-accordion", target);
+        
+
       });
     });
   }

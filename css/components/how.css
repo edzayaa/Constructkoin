@@ -39,6 +39,8 @@
     margin-bottom: 3.5rem;
     width: 34.5rem;
     text-align: center;
+  font-weight: 700;
+
   }
 }
 
@@ -198,7 +200,6 @@
   height: 5px;
   border-radius: 10rem;
   background: rgba(0, 0, 0, 0.05);
-  margin-inline: auto;
   overflow: hidden;
 }
 
@@ -242,26 +243,23 @@
   }
 }
 
-/* navigation  */
-.how-swiper-navigation {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  display: none;
+.how-bottom {
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-swiper-button-disabled {
+  border: 1px solid rgba(102, 102, 102, 0.2);
+}
+
+.how-swiper-button-disabled path {
+  stroke: rgba(102, 102, 102, 0.2);
 }
 
 @media (orientation: portrait) {
-  .how-swiper-navigation {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 1;
-    transform: translateY(-50%);
-    width: 100%;
-    padding-inline: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .how-bottom {
+    gap: 2.5rem;
   }
 }

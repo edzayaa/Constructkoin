@@ -1,63 +1,71 @@
-
 /* ========== SHOWREEL 3 ========== */
 .showreel-3 {
-    width: 100%;
-    height: 100vh;
-    padding: min(15rem, 15vh) 19rem 6.5rem;
+  width: 100%;
+  padding: min(15rem, 15vh) 19rem 6.5rem;
+}
+.showreel-3 .showreel-3-content {
+  width: 100%;
+  height: min(86rem, 86vh);
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.vimeo-bg {
+  pointer-events: auto;
+  isolation: isolate;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transform: translateX(0);
+}
+
+.vimeo-bg__iframe-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.vimeo-bg__before {
+  padding-top: 62.5%;
+}
+
+.vimeo-bg__iframe {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.vimeo-bg__placeholder {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s linear;
+  display: block;
+  position: absolute;
+}
+
+.vimeo-bg[data-vimeo-activated="true"][data-vimeo-loaded="true"] .vimeo-bg__placeholder {
+  opacity: 0;
+  transition-delay: 0.2s;
+  pointer-events: none;
+}
+
+@media (orientation: portrait) {
+  .showreel-3 {
+    padding: 2rem 1.5rem;
   }
   .showreel-3 .showreel-3-content {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 1.5rem;
-    overflow: hidden;
+    height: 20rem;
+    border-radius: 0.5rem;
   }
-  
-  .vimeo-bg {
-    pointer-events: auto;
-    isolation: isolate;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transform: translateX(0);
-  }
-  
-  .vimeo-bg__iframe-wrapper {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    position: absolute;
-  }
-  
-  .vimeo-bg__before {
-    padding-top: 62.5%;
-  }
-  
-  .vimeo-bg__iframe {
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-  
-  .vimeo-bg__placeholder {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s linear;
-    display: block;
-    position: absolute;
-  }
-  
-  .vimeo-bg[data-vimeo-activated="true"][data-vimeo-loaded="true"] .vimeo-bg__placeholder {
-    opacity: 0;
-    transition-delay: 0.2s;
-    pointer-events: none;
-  }
+}

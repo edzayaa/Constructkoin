@@ -55,7 +55,7 @@
 @media screen and (orientation: portrait) {
   .ai .ai-wrapper {
     display: flex;
-    padding: 13rem 1.5rem 5rem;
+    padding: 10rem 1.5rem 5rem;
   }
 
   .ai .ai-wrapper .ai-card {

@@ -49,14 +49,13 @@
     padding-inline: 1.5rem;
     padding-block: 10rem 5rem;
     padding-block: 3rem 5rem;
-
     height: fit-content;
     min-height: fit-content;
   }
 
   .protocol .protocol-flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 4.5rem;
     overflow: visible;
     padding: 0;

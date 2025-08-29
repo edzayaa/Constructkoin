@@ -4,6 +4,10 @@
   padding-inline: 5rem;
   position: relative;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(7rem, 7vh);
 }
 
 .cards-blur {
@@ -14,6 +18,8 @@
   height: auto;
   z-index: -1;
   mask-image: linear-gradient(black 60%, transparent);
+  pointer-events: none;
+  user-select: none;
 }
 
 .cards .cards-content {
@@ -27,6 +33,8 @@
   .cards {
     padding-block: 10rem 2rem;
     padding-inline: 1.5rem;
+  gap: 0;
+
   }
 
   .cards .cards-content {
@@ -136,5 +144,28 @@
   .cards .cards-content .cards-item .cards-item__container {
     height: 25%;
     width: 100%;
+  }
+}
+
+.cards-discover {
+  display: flex;
+  margin-top: auto;
+  margin-inline: auto;
+}
+
+.cards-discover .cards-discover-icon {
+  width: 2.3rem;
+  height: 7.2rem;
+  object-fit: contain;
+}
+
+@media screen and (orientation: portrait) {
+  .cards-discover {
+    display: none;
+  }
+
+  .cards-discover .cards-discover-icon {
+    width: 1.7rem;
+    height: 5.5rem;
   }
 }

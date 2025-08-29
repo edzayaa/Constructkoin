@@ -76,7 +76,7 @@
 
 @media screen and (orientation: portrait) {
   .countdown .countdown-wrapp {
-    padding: 5rem 0.7rem;
+    padding: 5rem 0.7rem 0;
   }
 
   .countdown .countdown-wrapp .countdown-card {

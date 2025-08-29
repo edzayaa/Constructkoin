@@ -7,8 +7,7 @@
 @media screen and (orientation: portrait) {
   .why {
     height: fit-content;
-    padding-block: min(13.7rem, 13.7vh) min(10rem, 10vh);
-    padding-block: min(5.7rem, 5.7vh) min(10rem, 10vh);
+    padding-block: min(5.7rem, 5.7vh) min(12rem, 12vh);
   }
 }
 
@@ -206,7 +205,7 @@
   top: -11rem;
   right: 5rem;
   z-index: 1;
-  width: 100%;
+  width: fit-content;
   padding-inline: 2rem;
   display: flex;
   align-items: center;
@@ -220,7 +219,6 @@
     left: 50%;
     z-index: 1;
     transform: translate(-50%, 0%);
-    width: 100%;
     padding-inline: 1rem;
     display: flex;
     align-items: center;

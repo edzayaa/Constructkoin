@@ -1,0 +1,122 @@
+/* ========== HTB ========== */
+.htb {
+  background: #fff;
+  height: fit-content;
+}
+
+.htb .htb-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24.5rem;
+  padding: min(23rem, 23vh) 5rem min(17rem, 17vh);
+}
+
+.htb .htb-wrapper .htb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.htb .htb-wrapper .htb-header .htb-header__h2 {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.htb .htb-wrapper .htb-header .htb-header__p {
+  font-size: 2rem;
+  line-height: 125%;
+  width: 54.8rem;
+}
+
+.htb .htb-wrapper .htb-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.htb .htb-wrapper .htb-flex .htb-card {
+  display: flex;
+  flex-direction: column;
+  width: 45.8rem;
+}
+
+.htb .htb-wrapper .htb-flex .htb-card__img {
+  height: 9.5rem;
+  width: 9.5rem;
+  object-fit: contain;
+  margin-bottom: min(4rem, 4vh);
+}
+
+.htb .htb-wrapper .htb-flex .htb-card__h3 {
+  color: #000102;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: min(2rem, 2vh);
+}
+
+.htb .htb-wrapper .htb-flex .htb-card__p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.htb .htb-wrapper .htb-buy-button {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  .htb .htb-wrapper {
+    gap: 6.5rem;
+    padding: min(10vh, 10rem) 1.5rem min(5rem, 5vh);
+  }
+
+  .htb .htb-wrapper .htb-header {
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .htb .htb-wrapper .htb-header .htb-header__h2 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+  }
+
+  .htb .htb-wrapper .htb-header .htb-header__p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .htb .htb-wrapper .htb-flex {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5.5rem;
+  }
+
+  .htb .htb-wrapper .htb-flex .htb-card {
+    width: 100%;
+  }
+
+  .htb .htb-wrapper .htb-flex .htb-card__img {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin-bottom: min(1.5rem, 1.5vh);
+  }
+
+  .htb .htb-wrapper .htb-flex .htb-card__h3 {
+    font-size: 2.9rem;
+    margin-bottom: min(1.4rem, 1.4vh);
+  }
+
+  .htb .htb-wrapper .htb-flex .htb-card__p {
+    font-size: 1.4rem;
+    width: 95%;
+  }
+
+  .htb .htb-wrapper .htb-buy-button {
+    display: flex;
+  }
+}
