@@ -1,6 +1,6 @@
 export class CountdownTimer {
-  constructor(targetDate, containerSelector, options = {}) {
-    this.targetDate = new Date(targetDate).getTime();
+  constructor(timeRemaining, containerSelector, options = {}) {
+    this.timeRemaining = Number(timeRemaining); // viene en segundos
     this.container = document.querySelector(containerSelector);
     this.options = {
       daysText: options.daysText || "Days",
@@ -28,24 +28,23 @@ export class CountdownTimer {
     this.updateCountdown();
 
     this.interval = setInterval(() => {
+      this.timeRemaining--;
+
+      if (this.timeRemaining < 0) {
+        clearInterval(this.interval);
+        this.showExpired();
+        return;
+      }
+
       this.updateCountdown();
     }, 1000);
   }
 
   updateCountdown() {
-    const now = new Date().getTime();
-    const distance = this.targetDate - now;
-
-    if (distance < 0) {
-      clearInterval(this.interval);
-      this.showExpired();
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(this.timeRemaining / (60 * 60 * 24));
+    const hours = Math.floor((this.timeRemaining % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((this.timeRemaining % (60 * 60)) / 60);
+    const seconds = Math.floor(this.timeRemaining % 60);
 
     this.updateDisplay(days, hours, minutes, seconds);
   }
@@ -75,12 +74,12 @@ export class CountdownTimer {
   showExpired() {
     const countdownNumbers = this.container.querySelector(".cound-down__flex");
     if (countdownNumbers) {
-      countdownNumbers.style.display = "none";
+      // countdownNumbers.style.display = "none";
     }
 
     const titleElement = this.container.querySelector(".countdown-card__h2");
     if (titleElement) {
-      titleElement.textContent = this.options.expiredMessage;
+      // titleElement.textContent = this.options.expiredMessage;
     }
   }
 
@@ -94,8 +93,8 @@ export class CountdownTimer {
     }
   }
 
-  updateTargetDate(newDate) {
-    this.targetDate = new Date(newDate).getTime();
+  updateTimeRemaining(newTimeRemaining) {
+    this.timeRemaining = Number(newTimeRemaining);
     this.stop();
 
     const countdownNumbers = this.container.querySelector(".cound-down__flex");

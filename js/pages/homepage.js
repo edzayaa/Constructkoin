@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   new Newsletter();
   const lenis = new LenisSmooth();
   new ActiveLinks();
-  new CountdownTimer("2025-08-29T09:14:26", ".countdown", {expiredMessage: "PRESALE CLOSED"});
   new Navbar();
   new CustomSwiper();
   new HomepageAnimations(lenis);
@@ -27,4 +26,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   new VimeoBGVideo(lenis);
   const cryptoData = await new CryptoData().init();
   new CryptoSwap(cryptoData);
+  new CountdownTimer(cryptoData.timeRemaining, ".countdown", {expiredMessage: "PRESALE CLOSED"});
+
+  
 });
