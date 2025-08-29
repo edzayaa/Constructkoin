@@ -114,6 +114,8 @@
   overflow: hidden;
 }
 
+
+
 .models .models-media__container .models-media__wrapper {
   position: absolute;
   inset: 0;
@@ -124,4 +126,13 @@
     height: 20rem;
     border-radius: 0.5rem;
   }
+}
+
+
+@media (max-width: 950px) and (orientation: landscape) {
+  .models .models-media__container {
+    height: min(86rem, 86vh);
+  }
+  
+  
 }

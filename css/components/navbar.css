@@ -495,7 +495,7 @@ body[data-scrolling-direction="up"] .navbar {
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
   .menu-inner {
-    padding: 2.5rem 10rem;
+    padding: 2.5rem 20rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -638,7 +638,7 @@ body[data-scrolling-direction="up"] .navbar {
   font-weight: 300;
   line-height: 133.333%;
   text-align: center;
-  width: 90%;
+  width: 100%;
 }
 
 .menu-copyright span {

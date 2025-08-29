@@ -119,3 +119,12 @@
     border-radius: 0.5rem;
   }
 }
+
+@media (max-width: 950px) and (orientation: landscape) {
+  .presale .presale-media__container {
+    height: min(86rem, 86vh);
+  }
+  
+  
+}
+
