@@ -333,7 +333,12 @@
 
           <div class="navbar-center">
             <ul class="navbar-center-list">
-              <li class="navbar-center-list-item is--active">Home</li>
+              <li
+                class="navbar-center-list-item is--active"
+                data-scrollto=".hero"
+              >
+                Home
+              </li>
               <li
                 class="navbar-center-list-item"
                 data-scrollto=".tokenomics"
@@ -458,27 +463,46 @@
         <div class="menu-inner">
           <div class="menu-nav">
             <ul class="menu-list">
-              <li class="menu-list-item is--active">Home</li>
+              <li
+                class="menu-list-item "
+                data-scrollto=".hero"
+                data-toggle-menu
+              >
+                Home
+              </li>
               <li
                 class="menu-list-item"
                 data-scrollto=".tokenomics"
+                data-toggle-menu
               >
                 Tokenomics
               </li>
               <li
                 class="menu-list-item"
                 data-scrollto=".roadmap"
+                data-toggle-menu
               >
                 Roadmap
               </li>
               <li
                 class="menu-list-item"
                 data-scrollto=".faq"
+                data-toggle-menu
               >
                 FAQ
               </li>
-              <li class="menu-list-item">Giveaway</li>
-              <li class="menu-list-item">Login</li>
+              <!-- <li class="menu-list-item"           data-toggle-menu>Giveaway</li> -->
+              <li
+                class="menu-list-item"
+                data-toggle-menu
+              >
+                <a
+                  href="https://dashboard.constructkoin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Login</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -586,6 +610,7 @@
       <section
         class="hero"
         data-bg="dark"
+        data-active="0"
       >
         <div class="hero-content">
           <div class="hero-tagline tagline">
@@ -764,7 +789,7 @@
           >
             >
             <img
-              src="/assets/images/video-placeholder-medium.webp"
+              src="/assets/images/hero-video-poster.webp"
               alt="ConstructKoin video"
             />
 
@@ -815,7 +840,7 @@
         <div class="countdown-wrapp">
           <div class="countdown-card">
             <div class="countdown-card__inner">
-              <h2 class="countdown-card__h2">Last Change To Buy At The Current Price</h2>
+              <h2 class="countdown-card__h2">Last Chance To Buy At The Current Price</h2>
 
               <div class="cound-down__flex">
                 <div class="countdown-card__item is-days">
@@ -1436,7 +1461,7 @@
             >
               <div class="selector__video">
                 <img
-                  src="/assets/images/video-placeholder-small.png"
+                  src="/assets/images/hiw-poster-small.png"
                   alt="video placeholder"
                 />
               </div>
@@ -1470,7 +1495,7 @@
             >
               <div class="selector__video">
                 <img
-                  src="/assets/images/video-placeholder-small.png"
+                  src="/assets/images/security-poster-small.png"
                   alt="video placeholder"
                 />
               </div>
@@ -1500,7 +1525,7 @@
             >
               <div class="selector__video">
                 <img
-                  src="/assets/images/video-placeholder-small.png"
+                  src="/assets/images/ceo-video-poster-small.png"
                   alt="video placeholder"
                 />
               </div>
@@ -2042,7 +2067,6 @@
       <div class="ai">
         <div class="loan-gradient"></div>
 
-
         <div class="ai-wrapper">
           <div class="ai-card">
             <div class="ai-content">
@@ -2112,7 +2136,10 @@
       </div>
 
       <!-- TOKENOMICS  -->
-      <section class="tokenomics">
+      <section class="tokenomics"
+        data-active="1"
+      
+      >
         <div class="tokenomics-flex">
           <div class="tokenomics-left">
             <h2 class="tokenomics-h2 highlight">Tokenomics</h2>
@@ -2420,14 +2447,16 @@
       </section>
 
       <!-- ROADMAP  -->
-      <section class="roadmap">
-
+      <section class="roadmap"
+        data-active="2"
+      >
         <div class="roadmap-gradient"></div>
 
         <div class="roadmap-wrapper">
           <h2 class="roadmap-header__h2 highlight">Roadmap</h2>
 
           <div class="roadmap-content">
+            <!-- block 1  -->
             <div class="roadmap-block is--active">
               <div class="roadmap-block__l">
                 <h3 class="roadmap-block__h3">Year One - AI Foundation & Development</h3>
@@ -2461,30 +2490,95 @@
               </div>
 
               <div class="roadmap-block__c">
-                <svg width="215" height="309" viewBox="0 0 215 309" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M101.818 95.5682L107.9 93.6271H110.682V116.436H106.735V97.6711L102.659 98.8035L101.818 95.5682Z" fill="#2699FE"/>
-                  <circle cx="107.524" cy="107.524" r="63.5495" fill="url(#paint0_radial_3866_2457)" fill-opacity="0.2"/>
+                <svg
+                  width="215"
+                  height="309"
+                  viewBox="0 0 215 309"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M101.818 95.5682L107.9 93.6271H110.682V116.436H106.735V97.6711L102.659 98.8035L101.818 95.5682Z"
+                    fill="#2699FE"
+                  />
+                  <circle
+                    cx="107.524"
+                    cy="107.524"
+                    r="63.5495"
+                    fill="url(#paint0_radial_3866_2457)"
+                    fill-opacity="0.2"
+                  />
                   <g filter="url(#filter0_f_3866_2457)">
-                  <circle cx="107.524" cy="107.524" r="100.139" stroke="#2699FE" stroke-width="0.770297"/>
+                    <circle
+                      cx="107.524"
+                      cy="107.524"
+                      r="100.139"
+                      stroke="#2699FE"
+                      stroke-width="0.770297"
+                    />
                   </g>
-                  <path d="M107.139 214.209L107.139 308.955" stroke="url(#paint1_linear_3866_2457)" stroke-width="0.770297" stroke-dasharray="4.09 4.09"/>
+                  <path
+                    d="M107.139 214.209L107.139 308.955"
+                    stroke="url(#paint1_linear_3866_2457)"
+                    stroke-width="0.770297"
+                    stroke-dasharray="4.09 4.09"
+                  />
                   <defs>
-                  <filter id="filter0_f_3866_2457" x="0.452479" y="0.452479" width="214.142" height="214.142" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="3.27376" result="effect1_foregroundBlur_3866_2457"/>
-                  </filter>
-                  <radialGradient id="paint0_radial_3866_2457" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)">
-                  <stop stop-color="#2699FE"/>
-                  <stop offset="1" stop-opacity="0"/>
-                  </radialGradient>
-                  <linearGradient id="paint1_linear_3866_2457" x1="107.139" y1="202.229" x2="101.784" y2="308.686" gradientUnits="userSpaceOnUse">
-                  <stop/>
-                  <stop offset="0.5" stop-color="#2699FE"/>
-                  <stop offset="1"/>
-                  </linearGradient>
+                    <filter
+                      id="filter0_f_3866_2457"
+                      x="0.452479"
+                      y="0.452479"
+                      width="214.142"
+                      height="214.142"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood
+                        flood-opacity="0"
+                        result="BackgroundImageFix"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="3.27376"
+                        result="effect1_foregroundBlur_3866_2457"
+                      />
+                    </filter>
+                    <radialGradient
+                      id="paint0_radial_3866_2457"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)"
+                    >
+                      <stop stop-color="#2699FE" />
+                      <stop
+                        offset="1"
+                        stop-opacity="0"
+                      />
+                    </radialGradient>
+                    <linearGradient
+                      id="paint1_linear_3866_2457"
+                      x1="107.139"
+                      y1="202.229"
+                      x2="101.784"
+                      y2="308.686"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop />
+                      <stop
+                        offset="0.5"
+                        stop-color="#2699FE"
+                      />
+                      <stop offset="1" />
+                    </linearGradient>
                   </defs>
-                  </svg>
+                </svg>
               </div>
 
               <div class="roadmap-block__r">
@@ -2512,6 +2606,7 @@
               </div>
             </div>
 
+            <!-- block 2  -->
             <div class="roadmap-block">
               <div class="roadmap-block__l">
                 <h3 class="roadmap-block__h3">Year Two - AI Market Preparation & Expansion</h3>
@@ -2545,57 +2640,128 @@
               </div>
 
               <div class="roadmap-block__c">
-                <svg width="215" height="309" viewBox="0 0 215 309" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="107.524" cy="107.524" r="63.5495" fill="url(#paint0_radial_3866_2466)" fill-opacity="0.2"/>
+                <svg
+                  width="215"
+                  height="309"
+                  viewBox="0 0 215 309"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="107.524"
+                    cy="107.524"
+                    r="63.5495"
+                    fill="url(#paint0_radial_3866_2466)"
+                    fill-opacity="0.2"
+                  />
                   <g filter="url(#filter0_f_3866_2466)">
-                  <circle cx="107.524" cy="107.524" r="100.139" stroke="#2699FE" stroke-width="0.770297"/>
+                    <circle
+                      cx="107.524"
+                      cy="107.524"
+                      r="100.139"
+                      stroke="#2699FE"
+                      stroke-width="0.770297"
+                    />
                   </g>
-                  <path d="M107.139 214.209L107.139 308.955" stroke="url(#paint1_linear_3866_2466)" stroke-width="0.770297" stroke-dasharray="4.09 4.09"/>
-                  <path d="M100.436 119V116.932L108.202 108.43C109.113 107.435 109.864 106.569 110.454 105.834C111.044 105.091 111.48 104.394 111.764 103.743C112.055 103.084 112.2 102.395 112.2 101.675C112.2 100.848 112.001 100.132 111.603 99.5265C111.212 98.9214 110.676 98.4542 109.994 98.1249C109.313 97.7955 108.547 97.6308 107.697 97.6308C106.793 97.6308 106.004 97.8185 105.33 98.1938C104.664 98.5614 104.147 99.0784 103.779 99.7448C103.419 100.411 103.239 101.192 103.239 102.088H100.528C100.528 100.71 100.845 99.4997 101.481 98.458C102.117 97.4164 102.982 96.6045 104.078 96.0224C105.18 95.4403 106.417 95.1493 107.788 95.1493C109.167 95.1493 110.389 95.4403 111.453 96.0224C112.518 96.6045 113.353 97.3896 113.958 98.3776C114.563 99.3656 114.866 100.465 114.866 101.675C114.866 102.54 114.709 103.387 114.395 104.214C114.088 105.033 113.552 105.949 112.786 106.96C112.028 107.963 110.975 109.189 109.627 110.636L104.342 116.289V116.472H115.279V119H100.436Z" fill="#2699FE"/>
+                  <path
+                    d="M107.139 214.209L107.139 308.955"
+                    stroke="url(#paint1_linear_3866_2466)"
+                    stroke-width="0.770297"
+                    stroke-dasharray="4.09 4.09"
+                  />
+                  <path
+                    d="M100.436 119V116.932L108.202 108.43C109.113 107.435 109.864 106.569 110.454 105.834C111.044 105.091 111.48 104.394 111.764 103.743C112.055 103.084 112.2 102.395 112.2 101.675C112.2 100.848 112.001 100.132 111.603 99.5265C111.212 98.9214 110.676 98.4542 109.994 98.1249C109.313 97.7955 108.547 97.6308 107.697 97.6308C106.793 97.6308 106.004 97.8185 105.33 98.1938C104.664 98.5614 104.147 99.0784 103.779 99.7448C103.419 100.411 103.239 101.192 103.239 102.088H100.528C100.528 100.71 100.845 99.4997 101.481 98.458C102.117 97.4164 102.982 96.6045 104.078 96.0224C105.18 95.4403 106.417 95.1493 107.788 95.1493C109.167 95.1493 110.389 95.4403 111.453 96.0224C112.518 96.6045 113.353 97.3896 113.958 98.3776C114.563 99.3656 114.866 100.465 114.866 101.675C114.866 102.54 114.709 103.387 114.395 104.214C114.088 105.033 113.552 105.949 112.786 106.96C112.028 107.963 110.975 109.189 109.627 110.636L104.342 116.289V116.472H115.279V119H100.436Z"
+                    fill="#2699FE"
+                  />
                   <defs>
-                  <filter id="filter0_f_3866_2466" x="0.452479" y="0.452479" width="214.142" height="214.142" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="3.27376" result="effect1_foregroundBlur_3866_2466"/>
-                  </filter>
-                  <radialGradient id="paint0_radial_3866_2466" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)">
-                  <stop stop-color="#2699FE"/>
-                  <stop offset="1" stop-opacity="0"/>
-                  </radialGradient>
-                  <linearGradient id="paint1_linear_3866_2466" x1="107.139" y1="202.229" x2="101.784" y2="308.686" gradientUnits="userSpaceOnUse">
-                  <stop/>
-                  <stop offset="0.5" stop-color="#2699FE"/>
-                  <stop offset="1"/>
-                  </linearGradient>
+                    <filter
+                      id="filter0_f_3866_2466"
+                      x="0.452479"
+                      y="0.452479"
+                      width="214.142"
+                      height="214.142"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood
+                        flood-opacity="0"
+                        result="BackgroundImageFix"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="3.27376"
+                        result="effect1_foregroundBlur_3866_2466"
+                      />
+                    </filter>
+                    <radialGradient
+                      id="paint0_radial_3866_2466"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)"
+                    >
+                      <stop stop-color="#2699FE" />
+                      <stop
+                        offset="1"
+                        stop-opacity="0"
+                      />
+                    </radialGradient>
+                    <linearGradient
+                      id="paint1_linear_3866_2466"
+                      x1="107.139"
+                      y1="202.229"
+                      x2="101.784"
+                      y2="308.686"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop />
+                      <stop
+                        offset="0.5"
+                        stop-color="#2699FE"
+                      />
+                      <stop offset="1" />
+                    </linearGradient>
                   </defs>
-                  </svg>
-                  
-                  
+                </svg>
               </div>
 
               <div class="roadmap-block__r">
-                <h4 class="roadmap-block__h4">Q1 2026: AI Market Preparation</h4>
+                <div class="roadmap-block__top">
+                  <h4 class="roadmap-block__h4">Q1 2026: AI Market Preparation</h4>
 
-                <div class="roadmap-block__section">
-                  <p class="roadmap-block__text">Scale AI-optimized loan book to £20M deployed</p>
-                  <p class="roadmap-block__text">Prepare shared ownership sales launch with AI market analysis</p>
-                  <p class="roadmap-block__text">Begin licensing AI butler technology to external developers</p>
-                  <p class="roadmap-block__text">Launch CTK Wallet with AI-enhanced security and analytics</p>
-                  <p class="roadmap-block__text">Establish international partnerships for AI technology deployment</p>
+                  <div class="roadmap-block__section">
+                    <p class="roadmap-block__text">Scale AI-optimized loan book to £20M deployed</p>
+                    <p class="roadmap-block__text">Prepare shared ownership sales launch with AI market analysis</p>
+                    <p class="roadmap-block__text">Begin licensing AI butler technology to external developers</p>
+                    <p class="roadmap-block__text">Launch CTK Wallet with AI-enhanced security and analytics</p>
+                    <p class="roadmap-block__text">Establish international partnerships for AI technology deployment</p>
+                  </div>
+
+                  <h4 class="roadmap-block__h4">Q2 2026: AI Expansion & Sales Launch</h4>
+
+                  <div class="roadmap-block__section">
+                    <p class="roadmap-block__text">Launch previously secured additional site bringing total security to £60M with AI management</p>
+                    <p class="roadmap-block__text">Launch shared ownership sales (40% of flagship units) with AI-powered marketing</p>
+                    <p class="roadmap-block__text">Begin rental income generation from completed units and developments</p>
+                    <p class="roadmap-block__text">License AI butler concept to external developers with recurring revenue</p>
+                  </div>
                 </div>
 
-                <h4 class="roadmap-block__h4">Q2 2026: AI Expansion & Sales Launch</h4>
 
-                <div class="roadmap-block__section">
-                  <p class="roadmap-block__text">Launch previously secured additional site bringing total security to £60M with AI management</p>
-                  <p class="roadmap-block__text">Launch shared ownership sales (40% of flagship units) with AI-powered marketing</p>
-                  <p class="roadmap-block__text">Begin rental income generation from completed units and developments</p>
-                  <p class="roadmap-block__text">License AI butler concept to external developers with recurring revenue</p>
-                </div>
+                
+                
 
-                <h4 class="roadmap-block__h4">Q3 2026: AI Development Completion</h4>
 
-                <div class="roadmap-block__section">
+                <div class="roadmap-block__bottom">
+                  
+                  <h4 class="roadmap-block__h4">Q3 2026: AI Development Completion</h4>
+                  <div class="roadmap-block__section">
                   <p class="roadmap-block__text">Complete flagship development with full AI butler integration</p>
                   <p class="roadmap-block__text">Generate significant rental income from shared ownership units and completed developments</p>
                   <p class="roadmap-block__text">Launch international operations (£25M deployed) with AI risk management</p>
@@ -2610,9 +2776,12 @@
                   <p class="roadmap-block__text">Scale AI butler licensing revenue to multiple international markets</p>
                   <p class="roadmap-block__text">Expand shared ownership across portfolio with AI-powered management</p>
                 </div>
+
+                </div>
               </div>
             </div>
 
+            <!-- block 3  -->
             <div class="roadmap-block">
               <div class="roadmap-block__l">
                 <h3 class="roadmap-block__h3">Year One - AI Foundation & Development</h3>
@@ -2646,31 +2815,95 @@
               </div>
 
               <div class="roadmap-block__c">
-                <svg width="215" height="309" viewBox="0 0 215 309" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M107.386 120.322C105.869 120.322 104.518 120.061 103.33 119.54C102.151 119.02 101.213 118.296 100.516 117.369C99.8262 116.435 99.4509 115.351 99.3897 114.118H102.285C102.346 114.876 102.607 115.531 103.066 116.082C103.526 116.626 104.127 117.047 104.87 117.346C105.613 117.645 106.436 117.794 107.34 117.794C108.351 117.794 109.247 117.618 110.028 117.266C110.81 116.913 111.422 116.423 111.867 115.795C112.311 115.167 112.533 114.439 112.533 113.612C112.533 112.747 112.318 111.985 111.889 111.326C111.461 110.66 110.833 110.139 110.005 109.763C109.178 109.388 108.167 109.201 106.972 109.201H105.088V106.673H106.972C107.907 106.673 108.726 106.504 109.431 106.167C110.143 105.83 110.698 105.356 111.097 104.743C111.503 104.13 111.706 103.41 111.706 102.583C111.706 101.786 111.53 101.093 111.177 100.504C110.825 99.9138 110.327 99.4542 109.684 99.1249C109.048 98.7955 108.297 98.6308 107.432 98.6308C106.62 98.6308 105.854 98.7802 105.134 99.0789C104.422 99.3699 103.84 99.795 103.388 100.354C102.936 100.906 102.691 101.572 102.652 102.353H99.8952C99.9411 101.12 100.313 100.04 101.01 99.1134C101.707 98.1789 102.618 97.4513 103.744 96.9305C104.877 96.4097 106.122 96.1493 107.478 96.1493C108.933 96.1493 110.181 96.4441 111.223 97.0339C112.265 97.616 113.065 98.3857 113.624 99.3431C114.183 100.301 114.463 101.335 114.463 102.445C114.463 103.77 114.114 104.9 113.417 105.834C112.728 106.769 111.79 107.416 110.603 107.776V107.96C112.089 108.205 113.249 108.837 114.084 109.855C114.919 110.866 115.336 112.119 115.336 113.612C115.336 114.891 114.988 116.04 114.291 117.059C113.601 118.07 112.659 118.866 111.464 119.449C110.27 120.031 108.91 120.322 107.386 120.322Z" fill="#2699FE"/>
-                  <circle cx="107.524" cy="107.524" r="63.5495" fill="url(#paint0_radial_3866_2474)" fill-opacity="0.2"/>
+                <svg
+                  width="215"
+                  height="309"
+                  viewBox="0 0 215 309"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M107.386 120.322C105.869 120.322 104.518 120.061 103.33 119.54C102.151 119.02 101.213 118.296 100.516 117.369C99.8262 116.435 99.4509 115.351 99.3897 114.118H102.285C102.346 114.876 102.607 115.531 103.066 116.082C103.526 116.626 104.127 117.047 104.87 117.346C105.613 117.645 106.436 117.794 107.34 117.794C108.351 117.794 109.247 117.618 110.028 117.266C110.81 116.913 111.422 116.423 111.867 115.795C112.311 115.167 112.533 114.439 112.533 113.612C112.533 112.747 112.318 111.985 111.889 111.326C111.461 110.66 110.833 110.139 110.005 109.763C109.178 109.388 108.167 109.201 106.972 109.201H105.088V106.673H106.972C107.907 106.673 108.726 106.504 109.431 106.167C110.143 105.83 110.698 105.356 111.097 104.743C111.503 104.13 111.706 103.41 111.706 102.583C111.706 101.786 111.53 101.093 111.177 100.504C110.825 99.9138 110.327 99.4542 109.684 99.1249C109.048 98.7955 108.297 98.6308 107.432 98.6308C106.62 98.6308 105.854 98.7802 105.134 99.0789C104.422 99.3699 103.84 99.795 103.388 100.354C102.936 100.906 102.691 101.572 102.652 102.353H99.8952C99.9411 101.12 100.313 100.04 101.01 99.1134C101.707 98.1789 102.618 97.4513 103.744 96.9305C104.877 96.4097 106.122 96.1493 107.478 96.1493C108.933 96.1493 110.181 96.4441 111.223 97.0339C112.265 97.616 113.065 98.3857 113.624 99.3431C114.183 100.301 114.463 101.335 114.463 102.445C114.463 103.77 114.114 104.9 113.417 105.834C112.728 106.769 111.79 107.416 110.603 107.776V107.96C112.089 108.205 113.249 108.837 114.084 109.855C114.919 110.866 115.336 112.119 115.336 113.612C115.336 114.891 114.988 116.04 114.291 117.059C113.601 118.07 112.659 118.866 111.464 119.449C110.27 120.031 108.91 120.322 107.386 120.322Z"
+                    fill="#2699FE"
+                  />
+                  <circle
+                    cx="107.524"
+                    cy="107.524"
+                    r="63.5495"
+                    fill="url(#paint0_radial_3866_2474)"
+                    fill-opacity="0.2"
+                  />
                   <g filter="url(#filter0_f_3866_2474)">
-                  <circle cx="107.524" cy="107.524" r="100.139" stroke="#2699FE" stroke-width="0.770297"/>
+                    <circle
+                      cx="107.524"
+                      cy="107.524"
+                      r="100.139"
+                      stroke="#2699FE"
+                      stroke-width="0.770297"
+                    />
                   </g>
-                  <path d="M107.139 214.209L107.139 308.955" stroke="url(#paint1_linear_3866_2474)" stroke-width="0.770297" stroke-dasharray="4.09 4.09"/>
+                  <path
+                    d="M107.139 214.209L107.139 308.955"
+                    stroke="url(#paint1_linear_3866_2474)"
+                    stroke-width="0.770297"
+                    stroke-dasharray="4.09 4.09"
+                  />
                   <defs>
-                  <filter id="filter0_f_3866_2474" x="0.452479" y="0.452479" width="214.142" height="214.142" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="3.27376" result="effect1_foregroundBlur_3866_2474"/>
-                  </filter>
-                  <radialGradient id="paint0_radial_3866_2474" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)">
-                  <stop stop-color="#2699FE"/>
-                  <stop offset="1" stop-opacity="0"/>
-                  </radialGradient>
-                  <linearGradient id="paint1_linear_3866_2474" x1="107.139" y1="202.229" x2="101.784" y2="308.686" gradientUnits="userSpaceOnUse">
-                  <stop/>
-                  <stop offset="0.5" stop-color="#2699FE"/>
-                  <stop offset="1"/>
-                  </linearGradient>
+                    <filter
+                      id="filter0_f_3866_2474"
+                      x="0.452479"
+                      y="0.452479"
+                      width="214.142"
+                      height="214.142"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood
+                        flood-opacity="0"
+                        result="BackgroundImageFix"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="3.27376"
+                        result="effect1_foregroundBlur_3866_2474"
+                      />
+                    </filter>
+                    <radialGradient
+                      id="paint0_radial_3866_2474"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(107.524 108.876) rotate(90) scale(114.93)"
+                    >
+                      <stop stop-color="#2699FE" />
+                      <stop
+                        offset="1"
+                        stop-opacity="0"
+                      />
+                    </radialGradient>
+                    <linearGradient
+                      id="paint1_linear_3866_2474"
+                      x1="107.139"
+                      y1="202.229"
+                      x2="101.784"
+                      y2="308.686"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop />
+                      <stop
+                        offset="0.5"
+                        stop-color="#2699FE"
+                      />
+                      <stop offset="1" />
+                    </linearGradient>
                   </defs>
-                  </svg>
-                  
+                </svg>
               </div>
 
               <div class="roadmap-block__r">
@@ -2775,7 +3008,6 @@
 
       <!-- PARTNERS  -->
       <div class="partners">
-
         <div class="partners-gradient"></div>
 
         <div class="partners-wrapper">
@@ -5024,8 +5256,9 @@
       </section>
 
       <!-- FAQ  -->
-      <section class="faq">
-
+      <section class="faq"
+        data-active="3"
+      >
         <div class="faq-gradient"></div>
 
         <div class="faq-wrapper">
@@ -5058,37 +5291,36 @@
             <p class="faq-left__p">Find quick answers to your questions about Construct Koin. Learn about our building process and how we can help.</p>
 
             <div class="faq-left__selectors-scroll">
-            <div class="faq-left__selectors">
+              <div class="faq-left__selectors">
+                <button
+                  class="faq-left__selector is--active"
+                  data-accordion-trigger="general"
+                >
+                  General
+                </button>
 
-              <button
-                class="faq-left__selector is--active"
-                data-accordion-trigger="general"
-              >
-                General
-              </button>
+                <button
+                  class="faq-left__selector"
+                  data-accordion-trigger="presale"
+                >
+                  Pre-sale
+                </button>
 
-              <button
-                class="faq-left__selector"
-                data-accordion-trigger="presale"
-              >
-                Pre-sale
-              </button>
+                <button
+                  class="faq-left__selector"
+                  data-accordion-trigger="dashboard"
+                >
+                  Dashboard
+                </button>
 
-              <button
-                class="faq-left__selector"
-                data-accordion-trigger="dashboard"
-              >
-                Dashboard
-              </button>
-
-              <button
-                class="faq-left__selector"
-                data-accordion-trigger="others"
-              >
-                Others
-              </button>
+                <button
+                  class="faq-left__selector"
+                  data-accordion-trigger="others"
+                >
+                  Others
+                </button>
+              </div>
             </div>
-          </div>
           </div>
 
           <!-- right  -->
@@ -6080,7 +6312,7 @@
               <h4 class="footer-column__heading">Quicklink</h4>
 
               <ul class="footer-column__list">
-                <li><a href="/index.html">Homepage</a></li>
+                <li data-scrollto=".hero">Homepage</li>
                 <li data-scrollto=".tokenomics">Tokenomics</li>
                 <li data-scrollto=".roadmap">Roadmap</li>
                 <li data-scrollto=".faq">FAQ</li>
@@ -6872,6 +7104,28 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="modal-video__rotation">
+            <svg
+              width="100%"
+              viewBox="0 0 43 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.7373 2.18471C17.8697 3.30641 16.2475 4.89841 15.161 5.834C14.1349 6.71928 13.6319 7.01102 12.6183 5.86418C12.3341 5.54477 11.5293 4.24954 11.2225 4.17912C10.7471 4.07097 10.2819 4.41301 9.89204 4.6444C5.76238 7.0915 2.75191 11.9178 2.29166 16.7114C2.2137 17.4986 2.48532 19.0982 1.37368 19.2516C0.727324 19.3396 0.1036 19.0403 0.0281496 18.3462C-0.0900561 17.2245 0.186595 15.4665 0.438097 14.3524C2.09801 6.92551 9.15011 0.459412 16.8435 0.0343745C17.5603 -0.00335073 18.5361 -0.126586 19.019 0.524802C19.4742 1.14098 19.1397 1.66159 18.7373 2.18471Z"
+                fill="white"
+              />
+              <path
+                d="M38.2359 11.0827C36.2918 9.06814 34.1616 7.23469 32.1421 5.30064C30.4696 3.69858 29.3076 1.60609 26.6996 1.92046C25.94 2.01101 25.2057 2.45365 24.6071 2.90635L2.91508 24.6311C1.91662 25.8383 1.51925 27.3674 2.15303 28.8563C2.65352 30.0333 4.82397 31.7963 5.80735 32.8048C7.66594 34.7112 9.39879 36.7534 11.3303 38.5919C13.4656 40.6265 15.4675 42.4424 18.3623 40.1638C25.7414 32.6866 33.309 25.4132 40.5246 17.7776C42.1896 15.0136 40.0266 12.9387 38.2359 11.0827ZM36.1611 19.1911C31.3197 24.0048 26.516 28.8638 21.657 33.6524L18.0882 37.1709L5.87274 24.8297L25.4245 5.16986C25.8545 4.76998 26.4254 4.54614 27.014 4.49835C27.5899 4.45308 28.1382 4.7398 28.5959 5.07681L37.9216 14.4151C39.4708 16.588 37.5267 17.833 36.1611 19.1911Z"
+                fill="white"
+              />
+              <path
+                d="M41.8276 30.9666C39.8483 36.2155 35.9224 40.0458 30.6836 42.0025C29.0287 42.6187 26.4307 43.2575 24.6777 43.0186C23.6491 42.8777 23.5736 41.9019 24.049 41.1424C24.6551 40.1791 27.2405 37.6465 28.1887 36.9272C29.1897 36.1677 29.6323 36.4393 30.3868 37.302C30.6559 37.6088 31.4582 38.8764 31.7701 38.9367C32.0442 38.9895 32.2932 38.8738 32.5321 38.7607C36.8504 36.6908 40.1727 31.1377 40.6506 26.4547C40.7135 25.8435 40.6078 24.752 40.9121 24.2666C41.053 24.0403 41.3774 23.8391 41.639 23.7988C42.3583 23.6831 42.8864 24.2792 42.9669 24.9532C43.1656 26.6106 42.4212 29.3947 41.8276 30.9666Z"
+                fill="white"
+              />
+            </svg>
           </div>
         </div>
       </div>
