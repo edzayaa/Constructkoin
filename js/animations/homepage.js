@@ -58,6 +58,8 @@ export class HomepageAnimations {
 
   updateNavbarColors() {
     const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu");
+
 
     document.querySelectorAll("[data-nav]").forEach((element) => {
       const theme = element.dataset.nav;
@@ -70,15 +72,20 @@ export class HomepageAnimations {
         end: end,
         onEnter: () => {
           navbar.setAttribute("data-navbar-theme", theme);
+          menu.setAttribute("data-menu-theme", theme);
         },
         onEnterBack: () => {
           navbar.setAttribute("data-navbar-theme", theme);
+          menu.setAttribute("data-menu-theme", theme);
+
         },
         onLeave: () => {
           navbar.removeAttribute("data-navbar-theme");
+          menu.removeAttribute("data-menu-theme");
         },
         onLeaveBack: () => {
           navbar.removeAttribute("data-navbar-theme");
+          menu.removeAttribute("data-menu-theme");
         },
       });
     });
