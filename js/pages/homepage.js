@@ -17,10 +17,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   new Newsletter();
   const lenis = new LenisSmooth();
   new ActiveLinks();
-  new Navbar();
   new CustomSwiper();
   new HomepageAnimations(lenis);
   new SharedAnimations();
+  new Navbar();
   new Accordion();
   new Toggles(lenis);
   new VimeoBGVideo(lenis);
