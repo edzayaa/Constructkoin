@@ -41,12 +41,6 @@ export class Toggles {
       toggle.addEventListener("click", () => {
         document.querySelector(".menu").toggleAttribute("data-menu-active");
         document.querySelector(".navbar").toggleAttribute("data-menu-active");
-
-        if (this.lenis.isStopped) {
-          this.lenis.start();
-        } else {
-          this.lenis.stop();
-        }
       });
     });
   }

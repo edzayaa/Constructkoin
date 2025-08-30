@@ -12,22 +12,27 @@
 }
 
 .htb .htb-wrapper .htb-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .htb .htb-wrapper .htb-header .htb-header__h2 {
   font-size: 8rem;
   font-weight: 700;
   line-height: 100%;
+  grid-column: 1;
 }
 
 .htb .htb-wrapper .htb-header .htb-header__p {
   font-size: 2rem;
   line-height: 125%;
   width: 54.8rem;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+
 }
 
 .htb .htb-wrapper .htb-flex {
@@ -64,7 +69,8 @@
 }
 
 .htb .htb-wrapper .htb-buy-button {
-  display: none;
+  width: fit-content;
+  margin-top: 2rem;
 }
 
 @media screen and (orientation: portrait) {
@@ -75,19 +81,23 @@
 
   .htb .htb-wrapper .htb-header {
     gap: 2rem;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+
   }
 
   .htb .htb-wrapper .htb-header .htb-header__h2 {
     font-size: 3.5rem;
     line-height: 0.9;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .htb .htb-wrapper .htb-header .htb-header__p {
     font-size: 1.4rem;
     width: 100%;
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .htb .htb-wrapper .htb-flex {
@@ -118,5 +128,8 @@
 
   .htb .htb-wrapper .htb-buy-button {
     display: flex;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0rem;
   }
 }

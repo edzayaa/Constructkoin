@@ -209,11 +209,13 @@ export class HomepageAnimations {
       (context) => {
         const { isLandscape } = context.conditions;
 
-
         const blocks = document.querySelectorAll(".roadmap-block");
-        gsap.set(blocks, { clearProps: "all" });
-        if (!isLandscape) return;
+        const blockTop = blocks[1].querySelector(".roadmap-block__top");
+        const blockBotttom = blocks[1].querySelector(".roadmap-block__bottom");
 
+        gsap.set(blocks, { clearProps: "all" });
+
+        if (!isLandscape) return;
 
         let timeline = gsap
           .timeline({
@@ -223,36 +225,19 @@ export class HomepageAnimations {
               end: "bottom+=50% top",
               scrub: 1.3,
               pin: true,
-              markers: true,
-              onUpdate: () => {
-                console.log(timeline.progress() * 10);
-              },
             },
           })
           .to({}, { duration: 10 })
 
           .to(blocks[0], { autoAlpha: 0, yPercent: -30, scale: 0.8, duration: 2 }, 1)
-          .to(blocks[1], { autoAlpha: 1, yPercent: -65, duration: 2 }, 1.2)
-          .to(blocks[2], { yPercent: -100, duration: 2 }, 1.4)
+          .fromTo(blocks[1], { autoAlpha: 0.1, yPercent: 100, scale: 0.8 }, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 2 }, 1.1)
+          .fromTo(blocks[2], { autoAlpha: 0, yPercent: 200 }, { autoAlpha: 0.1, yPercent: 100, scale: 0.8, duration: 2 }, 1.2)
 
-          .fromTo(
-            blocks[1],
-            {
-              autoAlpha: 1,
-              yPercent: -65,
-              scale: 1,
-            },
-            { autoAlpha: 0, yPercent: -83, scale: 0.8, duration: 2, immediateRender: false },
-            5.1
-          )
-          .fromTo(
-            blocks[2],
-            {
-              yPercent: -100,
-            },
-            { autoAlpha: 1, yPercent: -270, duration: 2, immediateRender: false },
-            5.2
-          );
+          .fromTo(blockTop, { autoAlpha: 1, y: 0 }, { autoAlpha: 0, y: -10, duration: 1 }, 4)
+          .fromTo(blockBotttom, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 2 }, 4)
+
+          .to(blocks[1], { autoAlpha: 0, yPercent: -30, scale: 0.8, duration: 2 }, 6.9)
+          .fromTo(blocks[2], { autoAlpha: 0.1, yPercent: 100, scale: 0.8 }, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 2, immediateRender: false }, 7);
       }
     );
   }

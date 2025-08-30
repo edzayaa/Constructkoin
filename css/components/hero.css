@@ -312,10 +312,18 @@
   width: 29.7rem;
   height: 19rem;
   cursor: pointer;
-  transition: transform var(--transition), opacity var(--transition);
 }
 
-.hero-bottom .hero-bottom__right:hover {
+.hero-bottom .hero-bottom__right img {
+  border-radius: 0.5rem;
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+  transition: transform var(--transition), opacity var(--transition);
+
+}
+
+.hero-bottom .hero-bottom__right:hover img {
   opacity: 0.8;
   transform: scale(0.98);
 }
