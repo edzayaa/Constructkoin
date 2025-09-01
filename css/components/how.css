@@ -39,8 +39,7 @@
     margin-bottom: 3.5rem;
     width: 34.5rem;
     text-align: center;
-  font-weight: 700;
-
+    font-weight: 700;
   }
 }
 
@@ -147,6 +146,13 @@
 .how .how-card__list-item {
   list-style: disc;
   margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .how .how-card__text,
+  .how .how-card__list-item {
+    font-size: 1.7rem;
+  }
 }
 
 @media screen and (orientation: portrait) {

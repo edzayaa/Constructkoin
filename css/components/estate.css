@@ -223,7 +223,7 @@
 @media screen and (max-width: 950px) and (orientation: landscape) {
   .accordion-css__item-description-content {
     width: 45rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 

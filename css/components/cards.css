@@ -85,18 +85,22 @@
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
+
+  .cards {
+    padding-inline: 15rem;
+  }
   .cards .cards-content {
     gap: 3rem;
   }
   .cards .cards-content .cards-item {
-    height: auto;
+    height: 40rem;
     padding: 10.5rem 2.5rem 6.5rem;
     min-height: fit-content;
   }
 
   .cards .cards-content .cards-item .cards-item__container {
     margin-top: auto;
-    height: 90%;
+    height: 60%;
     width: 40rem;
   }
 

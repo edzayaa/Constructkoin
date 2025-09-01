@@ -97,7 +97,6 @@
   gap: min(2rem, 2vh);
   padding-top: min(5rem, 5vh);
   height: fit-content;
-
 }
 
 .roadmap .roadmap-content .roadmap-block__r .roadmap-block__bottom,
@@ -106,13 +105,11 @@
   gap: min(2rem, 2vh);
   height: fit-content;
   grid-area: stack;
-
 }
 
 .roadmap .roadmap-content .roadmap-block:nth-last-of-type(2) .roadmap-block__r {
   grid-template-areas: "stack";
 }
-
 
 .roadmap .roadmap-content .roadmap-block__r .roadmap-block__h4,
 .roadmap .roadmap-content .roadmap-block__r .roadmap-block__text {
@@ -165,13 +162,20 @@
   .roadmap .roadmap-content .roadmap-block {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    gap: 4rem;
+    gap: 2rem;
+    grid-area: auto;
+  }
+
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__bottom,
+  .roadmap .roadmap-content .roadmap-block__r .roadmap-block__top {
+    gap: 2rem;
+    grid-area: auto;
   }
 
   .roadmap .roadmap-content .roadmap-block__l {
     grid-row: 2;
     gap: 1rem;
-  padding-top: 0;
+    padding-top: 0;
   }
 
   .roadmap .roadmap-content .roadmap-block__l .roadmap-block__h3 {
@@ -196,7 +200,6 @@
     grid-row: 3;
     gap: 2rem;
     padding-top: 0;
-  
   }
 
   .roadmap .roadmap-content .roadmap-block__r .roadmap-block__h4,
