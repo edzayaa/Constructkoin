@@ -24,10 +24,13 @@ export class CryptoData {
   }
 
   updateNavbarPrice(price) {
+    if (!price) return;
     this.navbarPriceElement.textContent = `$${price}`;
   }
 
   updateCardData(data) {
+    if (!data) return;
+
     const tokensSold = parseFloat(data.tokensSold);
     const totalTokens = parseFloat(data.totalTokens);
     const percentageSold = ((tokensSold / totalTokens) * 100).toFixed(2);

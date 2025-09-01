@@ -8,6 +8,7 @@ export class CryptoSwap {
     const swaps = document.querySelectorAll("[data-crypto-swap]");
 
     if (!swaps.length) return;
+    if (!this.price) return;
 
     swaps.forEach((swap) => {
       const swapButton = swap.querySelectorAll("[data-crypto-swap-btn]");
