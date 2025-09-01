@@ -51,7 +51,6 @@ export class HomepageAnimations {
       .call(() => {
         this.heroFade();
         initDetectScrollingDirection();
-        // this.setupForbiddenPopup();
         ScrollTrigger.refresh();
       });
   }
@@ -59,7 +58,6 @@ export class HomepageAnimations {
   updateNavbarColors() {
     const navbar = document.querySelector(".navbar");
     const menu = document.querySelector(".menu");
-
 
     document.querySelectorAll("[data-nav]").forEach((element) => {
       const theme = element.dataset.nav;
@@ -77,7 +75,6 @@ export class HomepageAnimations {
         onEnterBack: () => {
           navbar.setAttribute("data-navbar-theme", theme);
           menu.setAttribute("data-menu-theme", theme);
-
         },
         onLeave: () => {
           navbar.removeAttribute("data-navbar-theme");
@@ -171,24 +168,6 @@ export class HomepageAnimations {
         fadeTimeline.fromTo(target, { autoAlpha: 1 }, { autoAlpha: 0 }, 0);
       }
     );
-  }
-
-  setUpPopup(target) {
-    const modalWrapper = document.querySelector(".modal-wrapper");
-    modalWrapper.setAttribute("data-modal-open", target);
-    this.lenis.stop();
-  }
-
-  setupForbiddenPopup() {
-    this.setUpPopup("forbidden");
-
-    const leaveSiteButton = document.getElementById("leave-site-btn");
-
-    if (leaveSiteButton) {
-      leaveSiteButton.addEventListener("click", function () {
-        history.back();
-      });
-    }
   }
 
   updateVideoSource() {

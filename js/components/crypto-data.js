@@ -1,16 +1,19 @@
 export class CryptoData {
-  constructor() {
+  constructor(cryptoService) {
     this.isFetching = false;
     this.navbarPriceElement = document.querySelector(".navbar-price__text span");
-    this.currentPrice = 0
-    this.timeRemaining = 0
+    this.currentPrice = 0;
+    this.timeRemaining = 0;
+    this.cryptoService = cryptoService;
   }
 
   async init() {
-    const data = await this.fetchCryptoData();
+    this.isFetching = true;
+    const data = await this.cryptoService.getCryptoData();
+    this.isFetching = false;
+
     if (data) {
       this.currentPrice = data.price;
-      
       this.updateNavbarPrice(data.price);
       this.updateCardData(data);
     }
@@ -18,25 +21,6 @@ export class CryptoData {
     this.setupPriceButton();
 
     return this;
-  }
-
-  async fetchCryptoData() {
-    try {
-      this.isFetching = true;
-
-      document.documentElement.setAttribute("data-price-loading", "");
-      const response = await fetch("https://apidashboard.constructkoin.com/api/wallet/data");
-      this.isFetching = false;
-
-      document.documentElement.removeAttribute("data-price-loading");
-      if (!response.ok) throw new Error("Error al obtener datos");
-
-      return await response.json();
-    } catch (error) {
-      this.isFetching = false;
-      console.error("Error fetching crypto data:", error);
-      return null;
-    }
   }
 
   updateNavbarPrice(price) {
@@ -48,7 +32,7 @@ export class CryptoData {
     const totalTokens = parseFloat(data.totalTokens);
     const percentageSold = ((tokensSold / totalTokens) * 100).toFixed(2);
     const nextPrice = parseFloat(data.price) + 0.01;
-    
+
     const tokenSoldPercentageElement = document.querySelector(".protocol-card__loader-text");
     const tokenSoldElement = document.querySelector(".protocol-card__token-sold strong");
     const tokenSoldLineElement = document.querySelector(".protocol-card__loader-line");
@@ -65,13 +49,14 @@ export class CryptoData {
     if (nextPriceElement) nextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
     // if (heroNextPriceElement) heroNextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
     // if (heroNextPriceElement) heroNextPriceElement.textContent = `$1.00!`;
-
   }
 
   setupPriceButton() {
     this.navbarPriceElement.addEventListener("click", async () => {
       if (!this.isFetching) {
-        const data = await this.fetchCryptoData();
+        this.isFetching = true;
+        const data = await this.cryptoService.getCryptoData();
+        this.isFetching = false;
         if (data) {
           this.updateNavbarPrice(data.price);
           this.updateCardData(data);

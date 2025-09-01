@@ -12,9 +12,11 @@ import { VimeoBGVideo } from "../utils/vimeo-bg-video.js";
 import { Newsletter } from "../components/newsletter.js";
 import { CryptoSwap } from "../components/crypto-swap.js";
 import { CountdownTimer } from "../components/countdown.js";
+import { IPservice } from "../services/ip-service.js";
+import { CryptoService } from "../services/crypto-service.js";
+import { PopUpHandler } from "../components/pop-up-handler.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
-  new Newsletter();
   const lenis = new LenisSmooth();
   new ActiveLinks();
   new CustomSwiper();
@@ -24,9 +26,15 @@ window.addEventListener("DOMContentLoaded", async () => {
   new Accordion();
   new Toggles(lenis);
   new VimeoBGVideo(lenis);
-  const cryptoData = await new CryptoData().init();
-  new CryptoSwap(cryptoData);
-  new CountdownTimer(cryptoData.timeRemaining, ".countdown", {expiredMessage: "PRESALE CLOSED"});
 
-  
+  const ipService = new IPservice("https://ipapi.co/json");
+  new PopUpHandler(ipService, lenis);
+
+  // for newsletter form handler
+  // new Newsletter();
+
+  const cryptoService = new CryptoService("https://apidashboard.constructkoin.com/api/wallet/data");
+  const cryptoData = await new CryptoData(cryptoService).init();
+  new CryptoSwap(cryptoData);
+  new CountdownTimer(cryptoData.timeRemaining, ".countdown", { expiredMessage: "" });
 });
