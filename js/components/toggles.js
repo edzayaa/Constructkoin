@@ -49,6 +49,7 @@ export class Toggles {
 
 
     const triggers  = document.querySelectorAll("[data-accordion-trigger]");
+    const accordionStatus = document.querySelectorAll("[data-accordion-status]");
     const accordionWrapper = document.querySelector("[data-current-accordion]");
     
     triggers.forEach((trigger) => {
@@ -60,10 +61,15 @@ export class Toggles {
           trigger.classList.remove("is--active");
         });
 
+        accordionStatus.forEach((accordionStatus) => {
+          accordionStatus.setAttribute("data-accordion-status", "not-active");
+        });
+
         trigger.classList.add("is--active");
       
 
         accordionWrapper.setAttribute("data-current-accordion", target);
+        ScrollTrigger.refresh();
         
 
       });
