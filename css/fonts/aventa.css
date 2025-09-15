@@ -1,0 +1,150 @@
+/* Black */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Black.woff2") format("woff2"), url("/assets/fonts/Aventa-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-BlackItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Bold.woff2") format("woff2"), url("/assets/fonts/Aventa-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-BoldItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-ExtraBold.woff2") format("woff2"), url("/assets/fonts/Aventa-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-ExtraBoldItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* ExtraLight */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-ExtraLight.woff2") format("woff2"), url("/assets/fonts/Aventa-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-ExtraLightItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Italic (Regular Italic) */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Italic.woff2") format("woff2"), url("/assets/fonts/Aventa-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Light.woff2") format("woff2"), url("/assets/fonts/Aventa-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-LightItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Medium.woff2") format("woff2"), url("/assets/fonts/Aventa-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-MediumItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Regular.woff2") format("woff2"), url("/assets/fonts/Aventa-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-SemiBold.woff2") format("woff2"), url("/assets/fonts/Aventa-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-SemiBoldItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Thin */
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-Thin.woff2") format("woff2"), url("/assets/fonts/Aventa-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("/assets/fonts/Aventa-ThinItalic.woff2") format("woff2"), url("/assets/fonts/Aventa-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Variable */
+@font-face {
+  font-family: "Aventa Variable";
+  src: url("/assets/fonts/AventaVariable.woff2") format("woff2"), url("/assets/fonts/AventaVariable.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa Variable";
+  src: url("/assets/fonts/AventaItalicVariable.woff2") format("woff2"), url("/assets/fonts/AventaItalicVariable.woff") format("woff");
+  font-weight: 100 900;
+  font-style: italic;
+}

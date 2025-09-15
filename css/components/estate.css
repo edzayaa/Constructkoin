@@ -1,7 +1,7 @@
 /* ========== ESTATE  ========== */
 .estate {
-  padding-block: min(10rem, 10vh) min(7.5rem, 7.5vh);
-  padding-inline: 14rem;
+  padding-block: min(10rem, 10vh) 0;
+  padding-inline: 5rem;
   position: relative;
 }
 
@@ -14,17 +14,21 @@
 .estate .estate-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: min(7.5rem, 7.5vh);
 }
 
 @media screen and (orientation: portrait) {
   .estate {
-    padding-block: 9.5rem 5rem;
+    padding-block: 9.5rem 6rem;
     padding-inline: 1.5rem;
   }
 
   .estate .estate-content {
     gap: 4rem;
+  }
+
+  .estate-header__buttons  .estate-cta-button{
+    padding: 1rem 1.5rem;
   }
 }
 
@@ -47,14 +51,11 @@
 
 /* headings  */
 .estate .estate-content .estate-heading {
-  font-size: min(6.5rem, 6.5vh);
+  color: #fff;
+  font-size: 6.5rem;
   font-weight: 300;
   line-height: 1.2;
-  background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: min(71.6rem, 71.6vh);
+  width: 77rem;
 }
 .estate .estate-content .estate-heading span {
   font-weight: 700;
@@ -62,9 +63,13 @@
 
 @media screen and (orientation: portrait) {
   .estate .estate-content .estate-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     width: 100%;
-    font-weight: 700;
+    font-weight: 400;
+  }
+
+  .estate .estate-content .estate-heading span {
+    font-weight: 400;
   }
 
   .estate .estate-header {
@@ -83,7 +88,7 @@
 }
 
 .estate .estate-bottom .estate-video {
-  width: 47%;
+  width: 90rem;
   height: 49.7rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -93,7 +98,7 @@
 /* accordion  */
 .estate .accordion-css {
   position: relative;
-  width: fit-content;
+  width: 75rem;
 }
 
 .estate .accordion-css__list {
@@ -103,27 +108,39 @@
   padding-left: 0;
   display: flex;
   position: static;
+  gap: 2rem;
 }
 
 .estate .accordion-css__item {
   list-style: none;
+  border-radius: 1.5rem;
+  border: 1px solid #ffffff05;
+  background: rgba(250, 250, 250, 0.04);
+  box-shadow: 0 0 47.5px 0 rgba(102, 102, 102, 0.04);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  padding-inline: 4.5rem 2.5rem;
 }
 
 .estate .accordion-css__item-top {
   cursor: pointer;
   align-items: flex-start;
-  padding: 5rem 0 2rem;
+  padding: 2.5rem 0 2.5rem;
   display: flex;
   gap: 3rem;
-  width: fit-content;
+  justify-content: space-between;
+  width: auto;
   position: relative;
 }
 
 @media screen and (orientation: portrait) {
+  .estate .accordion-css {
+    width: 100%;
+  }
+
   .estate .accordion-css__item-top {
     align-items: flex-start;
     padding: 3rem 0 0;
-    flex-direction: column;
     gap: 0rem;
   }
 
@@ -138,6 +155,7 @@
     width: 100%;
     height: 20rem;
     border-radius: 0.5rem;
+    display: none;
   }
 }
 
@@ -182,16 +200,13 @@
 }
 
 .estate .accordion-css__item-h3 {
+  color: #fff;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
@@ -207,15 +222,17 @@
 }
 
 .estate .accordion-css__item-h2 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   font-size: 1.6rem;
-  line-height: normal;
+line-height: normal;
+  font-weight: 300;
 }
 
 .accordion-css__item-description-content {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 130%;
+  font-weight: 300;
   overflow: hidden;
   width: 60rem;
 }
@@ -269,9 +286,13 @@
     display: none;
   }
 
+   .estate .accordion-css__item {
+    padding-inline: 2rem 1.2rem;
+   }
+
   .estate .accordion-css__item-h3,
   .accordion-css__item-span {
-    font-size: 3rem;
+    font-size: 1.4rem;
     min-width: 100%;
     margin-bottom: 1rem;
   }
@@ -281,7 +302,7 @@
   }
 
   .estate .accordion-css__item-h2 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .accordion-css__item-description-content {
@@ -292,7 +313,8 @@
   }
 
   .estate .accordion-css__item-icon {
-    display: none;
+    width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -300,4 +322,18 @@
   .accordion-css__item-description-content {
     width: 70%;
   }
+}
+
+.hero
+.cards,
+.token,
+.countdown,
+.why,
+.ai,
+.roadmap,
+.partners,
+.htb,
+.real,
+.models{
+  display: none !important;
 }

@@ -33,7 +33,7 @@ export class HomepageAnimations {
   }
 
   loader() {
-    const heroElements = document.querySelector(".hero-content").children;
+    const heroElements = document.querySelector(".protocol-flex").children;
 
     gsap.set([heroElements], { willChange: "transform" });
 
@@ -44,12 +44,9 @@ export class HomepageAnimations {
         },
       })
       .to(".navbar", { autoAlpha: 1, duration: 0.8 })
-      .fromTo(".hero-left", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 1.5, delay: 0.1, clearProps: "transform" }, "<")
-      .fromTo(".hero-bottom", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.5, delay: 0.1, clearProps: "transform," }, "<")
-      .fromTo([".hero-tagline", ".hero-heading", ".hero-description", ".hero-loop", ".hero-text.is--portrait", ".hero-buttons.is--portrait", ".hero-discover"], { autoAlpha: 0, y: 20 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
+      .fromTo(heroElements, { autoAlpha: 0, y: 0 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
 
       .call(() => {
-        this.heroFade();
         initDetectScrollingDirection();
         ScrollTrigger.refresh();
       });

@@ -1,8 +1,7 @@
 /* ========== BUY ========== */
 .buy {
-  padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
-  padding-block: min(10.5rem, 10.5vh) min(7.5rem, 7.5vh);
-  padding-inline: 21rem;
+  padding-block: min(5rem, 5vh) min(0rem, 0vh);
+  padding-inline: 5rem;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
@@ -13,21 +12,20 @@
 
 .buy .buy-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10rem;
 }
 
 @media screen and (orientation: portrait) {
   .buy {
-    padding-block: 10rem 2rem;
-    padding-block: 2rem 2rem;
-
+    padding-block: 5rem 0rem;
     padding-inline: 1.5rem;
   }
 
   .buy .buy-flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 0rem;
   }
 }
@@ -51,30 +49,26 @@
 .buy .buy-flex .buy-content {
   display: flex;
   flex-direction: column;
-  gap: min(3.5rem, 3.5vh);
-  width: 74.5rem;
+  gap: 1.5rem;
+  width: 82rem;
 }
 
 .buy .buy-flex .buy-content .buy-heading {
-  font-size: min(8.5rem, 8.5vh);
-  font-weight: 700;
-}
-
-.buy .buy-flex .buy-content .buy-subheading {
   color: #fff;
-  font-size: 3rem;
-  line-height: 130%;
+  font-size: 6.5rem;
+  font-weight: 700;
+  line-height: 105%;
 }
 
 .buy .buy-flex .buy-content .buy-block {
-  display: grid;
-  gap: min(2.5rem, 2.5vh);
-  width: 56.9rem;
+  width: 67rem;
 }
 
 .buy .buy-flex .buy-content .buy-description {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.8rem;
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
   line-height: 130%;
 }
 
@@ -86,25 +80,25 @@
   .buy .buy-flex .buy-content {
     gap: 2rem;
     width: 100%;
+    align-items: center;
   }
 
   .buy .buy-flex .buy-content .buy-heading {
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
-
-  .buy .buy-flex .buy-content .buy-subheading {
-    font-size: 1.6rem;
+    font-size: 3rem;
+    width: 31rem;
+    text-align: center;
   }
 
   .buy .buy-flex .buy-content .buy-block {
-    gap: 2rem;
     width: 100%;
   }
 
   .buy .buy-flex .buy-content .buy-description {
     font-size: 1.4rem;
     line-height: 126%;
+    width: 100%;
+    text-align: center;
+
   }
 
   .buy .buy-flex .buy-content .buy-cta-button.cta-button-1 {

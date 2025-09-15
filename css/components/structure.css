@@ -1,7 +1,7 @@
 /* ========== STRUCTURE ========== */
 .structure {
   width: 100%;
-  padding-block: min(17.5rem, 17.5vh) min(7.5rem, 7.5vh);
+  padding-block: min(10rem, 10vh) min(5rem, 5vh);
   position: relative;
   isolation: isolate;
 }
@@ -24,20 +24,17 @@
 .structure .structure-heading {
   margin-inline: auto;
   text-align: center;
-  font-size: min(6.2rem, 6.2vh);
-  font-weight: 400;
+  font-size: min(6.5rem, 6.5vh);
+  font-weight: 600;
   line-height: 1.2;
-  background: linear-gradient(90deg, #030e17 0%, #f6f6f6 27.9%, #f6f6f6 82.66%, #030e17 107.46%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: min(2rem, 2vh);
+  color: #fff;
+  margin-bottom: 9rem;
 }
 
 @media screen and (orientation: portrait) {
   .structure .structure-heading {
-    font-size: 3.5rem;
-    margin-bottom: min(2rem, 2vh);
+    font-size: 3rem;
+    margin-bottom: min(4rem, 4vh);
   }
 }
 
@@ -97,6 +94,7 @@
     border-radius: 2.2rem;
     border: 0.4px solid #cde7ff67;
   }
+
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
@@ -135,7 +133,7 @@
 
 @media screen and (orientation: portrait) {
   .structure .structure-card__inner {
-    padding: 4.5rem 2.5rem;
+    padding: 4.5rem 1.5rem;
     border-radius: 2.2rem;
     border: none;
   }
@@ -195,6 +193,11 @@
     margin-bottom: min(2rem, 2vh);
     max-width: 25.2rem;
   }
+
+    .structure .structure-swiper-slide.swiper-slide-active .structure-card__layer,
+      .structure .structure-swiper-slide.swiper-slide-active .structure-card__button::before {
+      opacity: 1;
+  }
 }
 
 /* button  */
@@ -213,7 +216,6 @@
   position: relative;
   overflow: hidden;
   transition: opacity 0.6s ease-out;
-  display: none;
 }
 
 .structure .structure-card__content .structure-card__button::before {

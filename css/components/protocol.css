@@ -1,9 +1,12 @@
 /* ========== PROTOCOL ========== */
 .protocol {
-  padding-block: 0 min(7.5rem, 7.5vh);
+  padding-block: min(19.4rem, 19.4vh) min(5rem, 5vh);
   width: 100%;
   position: relative;
   isolation: isolate;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .protocol-background {
@@ -21,17 +24,60 @@
   justify-content: space-between;
   perspective: 1000px;
   overflow: hidden;
-  padding-inline: 20rem;
-  padding-block: 1rem;
+  padding-inline: 5rem;
+  width: 100%;
 }
 
 .protocol .protocol-flex .protocol-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  max-width: 64.6rem;
+  justify-content: center;
+  max-width: 93rem;
   will-change: transform;
   padding-top: 0;
+}
+
+.protocol-content .protocol-content__h1 {
+  color: #fff;
+  font-size: min(6.5rem, 6.5vh);
+  font-style: normal;
+  line-height: 105%;
+    font-weight: 700;
+
+}
+
+.protocol-content .protocol-content__h2 {
+  color: #2699fe;
+  font-size: min(6.5rem, 6.5vh);
+  font-style: normal;
+  line-height: 105%;
+    font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.protocol-content .protocol-content__p,
+.protocol-content .protocol-content__h3 {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 130%;
+  margin-bottom: min(3.7rem, 3.7vh);
+  width: 66rem;
+}
+
+.protocol-content .protocol-content__h3 {
+  font-weight: 600;
+}
+
+.protocol-content .protocol-content__socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.protocol-content .protocol-content__socials .protocol-socials__link {
+  width: 5.5rem;
+  height: 5.5rem;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
@@ -47,16 +93,15 @@
 @media screen and (orientation: portrait) {
   .protocol {
     padding-inline: 1.5rem;
-    padding-block: 10rem 5rem;
-    padding-block: 3rem 5rem;
+    padding-block: 14rem 5rem;
     height: fit-content;
     min-height: fit-content;
   }
 
   .protocol .protocol-flex {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 4.5rem;
+    flex-direction: column;
+    gap: 4rem;
     overflow: visible;
     padding: 0;
   }
@@ -64,13 +109,39 @@
   .protocol .protocol-flex .protocol-content {
     justify-content: flex-start;
     max-width: 100%;
-    gap: 2rem;
+    gap: 0rem;
     margin-left: 0;
+    align-items: center;
     padding-top: 0;
   }
 
   .protocol-background {
     display: none;
+  }
+
+  .protocol-content .protocol-content__h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .protocol-content .protocol-content__h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+  }
+
+  .protocol-content .protocol-content__p,
+  .protocol-content .protocol-content__h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2;
+    width: 30.5rem;
+    text-align: center;
+  }
+
+  .protocol-content .protocol-content__socials .protocol-socials__link {
+    width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -229,7 +300,6 @@
   padding: min(1.5rem, 1.5vh);
   isolation: isolate;
   will-change: transform;
-  margin-top: min(6rem, 6vh);
 }
 
 .protocol .protocol-flex .protocol-card::before {

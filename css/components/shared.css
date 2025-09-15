@@ -170,7 +170,8 @@
 
 .why-swiper-button-disabled::before,
 .token-swiper-button-disabled::before,
-.how-swiper-button-disabled::before {
+.how-swiper-button-disabled::before,
+.structure-swiper-button-disabled::before {
   opacity: 0;
 }
 
