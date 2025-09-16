@@ -138,7 +138,6 @@
 
 /* icon wrapper  */
 .cta-button-1 .cta-button-1__icon-wrapper {
-  height: -webkit-fill-available;
   width: 1.35rem;
   overflow: hidden;
   display: flex;
