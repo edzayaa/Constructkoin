@@ -523,7 +523,6 @@
   justify-content: center;
   color: #fff;
   transition: 0.3s var(--ease);
-  max-height: min(4.7rem, 4.7vh);
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
