@@ -30,7 +30,6 @@ export class SharedAnimations {
               trigger: el,
               start: isLandscape ? "top 80%" : "top bottom",
               end: isLandscape ? "top 20%" : "top 30%",
-              scrub: scrub,
               id: "fade-in-trigger",
             },
           });
@@ -58,7 +57,7 @@ export class SharedAnimations {
 
             gsap.set(el, { willChange: "transform" });
 
-            fadeTimeline.fromTo(el, { ...fromConfig }, { ...toConfig, duration: 1 }, i * 0.1);
+            fadeTimeline.fromTo(el, { ...fromConfig }, { ...toConfig, duration: 1, ease:"CTK-ease" }, i * 0.1);
           });
         });
       }

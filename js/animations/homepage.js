@@ -14,8 +14,13 @@ export class HomepageAnimations {
     this.loader();
     this.updateVideoSource();
     this.setOrientation();
-    this.roadmap();
     this.updateNavbarColors();
+
+    document.querySelectorAll("[data-clipboard]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        this.copyToClipboard();
+      });
+    });
   }
 
   setOrientation() {
@@ -44,7 +49,7 @@ export class HomepageAnimations {
         },
       })
       .to(".navbar", { autoAlpha: 1, duration: 0.8 })
-      .fromTo(heroElements, { autoAlpha: 0, y: 0 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
+      .fromTo(heroElements, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, duration: 1, y: 0, delay: 0.1, stagger: 0.08, clearProps: "willChange" }, "<")
 
       .call(() => {
         initDetectScrollingDirection();
@@ -181,47 +186,36 @@ export class HomepageAnimations {
     window.addEventListener("resize", updatePresaleVideoSource);
   }
 
-  roadmap() {
-    this.mm.add(
-      {
-        isDesktop: "(min-width: 992px)",
-        isMobile: "(max-width: 991px)",
-        isLandscape: "(orientation: landscape)",
-        isPortrait: "(orientation: portrait)",
-      },
-      (context) => {
-        const { isLandscape } = context.conditions;
+  copyToClipboard() {
+    const textToCopy = "0x4B34baAf17Fc2b09f407";
 
-        const blocks = document.querySelectorAll(".roadmap-block");
-        const blockTop = blocks[1].querySelector(".roadmap-block__top");
-        const blockBotttom = blocks[1].querySelector(".roadmap-block__bottom");
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        this.showCopiedMessage("Contract Address copied!");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
-        gsap.set(blocks, { clearProps: "all" });
+  showCopiedMessage(message) {
+    const mainWrapper = document.querySelector(".overflow-wrapper");
+    const msgEl = document.createElement("div");
 
-        if (!isLandscape) return;
+    msgEl.classList.add("clipboard-feedback");
+    msgEl.textContent = message;
 
-        let timeline = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".roadmap",
-              start: "top top",
-              end: "bottom+=50% top",
-              scrub: 1.3,
-              pin: true,
-            },
-          })
-          .to({}, { duration: 10 })
+    mainWrapper.appendChild(msgEl);
 
-          .to(blocks[0], { autoAlpha: 0, yPercent: -30, scale: 0.8, duration: 2 }, 1)
-          .fromTo(blocks[1], { autoAlpha: 0.1, yPercent: 100, scale: 0.8 }, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 2 }, 1.1)
-          .fromTo(blocks[2], { autoAlpha: 0, yPercent: 200 }, { autoAlpha: 0.1, yPercent: 100, scale: 0.8, duration: 2 }, 1.2)
+    setTimeout(() => {
+      msgEl.classList.add("fade-in");
+    }, 100);
 
-          .fromTo(blockTop, { autoAlpha: 1, y: 0 }, { autoAlpha: 0, y: -10, duration: 1 }, 4)
-          .fromTo(blockBotttom, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 2 }, 4)
-
-          .to(blocks[1], { autoAlpha: 0, yPercent: -30, scale: 0.8, duration: 2 }, 6.9)
-          .fromTo(blocks[2], { autoAlpha: 0.1, yPercent: 100, scale: 0.8 }, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 2, immediateRender: false }, 7);
-      }
-    );
+    setTimeout(() => {
+      msgEl.classList.remove("fade-in");
+      msgEl.classList.add("fade-out");
+      msgEl.addEventListener("transitionend", () => msgEl.remove());
+    }, 2000);
   }
 }

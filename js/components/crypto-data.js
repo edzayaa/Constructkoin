@@ -34,7 +34,9 @@ export class CryptoData {
     const tokensSold = parseFloat(data.tokensSold);
     const totalTokens = parseFloat(data.totalTokens);
     const percentageSold = ((tokensSold / totalTokens) * 100).toFixed(2);
-    const nextPrice = parseFloat(data.price) + 0.01;
+    const nextPrice = 1.00;
+    // const nextPrice = parseFloat(data.price) + 0.01;
+
 
     const tokenSoldPercentageElement = document.querySelector(".protocol-card__loader-text");
     const tokenSoldElement = document.querySelector(".protocol-card__token-sold strong");
