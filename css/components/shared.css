@@ -168,6 +168,7 @@
   flex-shrink: 0;
 }
 
+.roadmap-swiper-button-disabled::before,
 .why-swiper-button-disabled::before,
 .token-swiper-button-disabled::before,
 .how-swiper-button-disabled::before,

@@ -111,7 +111,6 @@
     padding: 0.8rem;
     width: calc(100% - 3rem);
     max-height: calc(100% - 15rem);
-    height: 100%;
   }
 
   .modal-newsletter::before,
@@ -129,7 +128,7 @@
   }
 
   .modal-forbidden .modal-forbidden__inner {
-    padding: min(2rem, 2rem) 1.5rem min(9rem, 9vh);
+    padding: min(2rem, 2rem) 1.5rem min(4rem, 4vh);
   }
 }
 
@@ -206,7 +205,7 @@
 
 .modal-newsletter .modal-newsletter__loop,
 .modal-forbidden .modal-forbidden__loop {
-  height: min(16rem, 16vh);
+  height: min(17rem, 17vh);
   aspect-ratio: 1/1;
 }
 
@@ -221,7 +220,7 @@
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
   font-size: min(2rem, 2vh);
-  width: 52.5rem;
+  width: min(58rem, 58vh);
 }
 
 .modal-forbidden .forbidden-buttons {
@@ -233,6 +232,7 @@
 
 .modal-forbidden .forbidden-buttons .forbidden-cta-button {
   flex-grow: 1;
+  height: auto;
 }
 
 .cta-button-1__text.is--leave::after {
@@ -257,21 +257,21 @@
   .modal-forbidden .modal-forbidden__loop {
     height: min(15rem, 15vh);
     margin-bottom: min(2.5rem, 2.5vh);
-    margin-top: min(7rem, 7vh);
+    margin-top: min(2rem, 2vh);
     object-fit: contain;
   }
 
   .modal-newsletter .modal-newsletter__heading,
   .modal-forbidden .modal-forbidden__heading {
-    font-size: min(3.5rem, 3.5vh);
-    width: 26.7rem;
+    font-size: min(2.5rem, 2.5vh);
+    width: 100%;
     line-height: 1;
     margin-bottom: min(1rem, 1vh);
   }
 
   .modal-forbidden .modal-forbidden__text {
-    font-size: 1.4rem;
-    width: 100%;
+    font-size: 1rem;
+    width: 90%;
   }
 
   .modal-forbidden .forbidden-buttons {
@@ -281,6 +281,13 @@
 
   .modal-forbidden .forbidden-buttons .forbidden-cta-button {
     flex-grow: 1;
+    padding: 1rem 1.4rem;
+    height: 3rem;
+    gap: 0.6rem;
+  }
+
+  .modal-forbidden .forbidden-buttons .forbidden-cta-button .cta-button-1__text {
+    font-size: 1.2rem;
   }
 
   .cta-button-1__text.is--leave::after {

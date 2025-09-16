@@ -1,6 +1,6 @@
 /* ========== PRESALE ========== */
 .presale {
-  padding: 10rem 5rem 10rem;
+  padding: 5rem 5rem 10rem;
   display: flex;
   gap: 10rem;
 }
@@ -19,6 +19,13 @@
   line-height: 105%;
   margin-bottom: 0.8rem;
 }
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .presale-content .presale-heading {
+    font-size: 5.5rem;
+  }
+}
+
 
 .presale-content .presale-description,
 .presale-content .presale-subheading {
@@ -119,5 +126,13 @@
 @media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
   .presale .presale-content .presale-description {
     width: 70%;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
+  .presale .presale-media__container {
+    aspect-ratio: 1.7;
+    height: auto;
+   
   }
 }

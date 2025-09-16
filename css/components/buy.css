@@ -60,6 +60,13 @@
   line-height: 105%;
 }
 
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .buy .buy-flex .buy-content .buy-heading {
+    font-size: 5.5rem;
+  }
+}
+
+
 .buy .buy-flex .buy-content .buy-block {
   width: 67rem;
 }

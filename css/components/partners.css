@@ -21,22 +21,21 @@
 }
 
 .partners .partners-wrapper {
-  padding: min(25rem, 25vh) 0;
+  padding: min(10rem, 10vh) 0;
   display: grid;
   justify-items: center;
-  gap: min(14.5rem, 14.5vh);
+  gap: min(8rem, 8vh);
 }
 
 .partners .partners-wrapper .partners-header {
   display: grid;
   justify-items: center;
-  gap: 2.3rem;
 }
 
 .partners .partners-wrapper .partners-title {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: min(8rem, 8vh);
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 6.5rem;
+  font-weight: 600;
 }
 
 @media (orientation: portrait) {
@@ -50,12 +49,8 @@
   }
 
   .partners .partners-wrapper {
-    padding: min(8rem, 8vh) 0 min(8rem, 8vh);
-    gap: 8rem;
-  }
-
-  .partners .partners-wrapper .partners-header {
-    gap: 2rem;
+    padding: 5rem 0;
+    gap: 4.5rem;
   }
 
   .partners .partners-wrapper .partners-header .partners-title {

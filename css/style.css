@@ -65,7 +65,13 @@ body {
 
 /* RESPONSIVE */
 html {
-  font-size: clamp(6px, calc(10 * (calc(100vw + 2.1rem) / 1920)), 19px);
+  font-size: clamp(5px, calc(10 * (calc(100vw + 2.1rem) / 1920)), 19px);
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  html {
+    font-size: clamp(3px, calc(10 * (calc(100vw + 2.1rem) / 1920)), 19px);
+  }
 }
 
 /* === MOBILE PORTRAIT === */
@@ -171,9 +177,44 @@ html.lenis body {
   z-index: -1;
 }
 
-.highlight {
-  background: linear-gradient(90deg, #999 5.77%, #fff 53.26%, #999 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* CLIPBOARD  */
+.clipboard-feedback {
+  position: fixed;
+  bottom: 5rem;
+  left: 5rem;
+  width: fit-content;
+  border-radius: 1rem;
+  background: rgba(222, 222, 222, 0.22);
+  backdrop-filter: blur(51px);
+  -webkit-backdrop-filter: blur(51px);
+  padding: 2rem 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.6px;
+  margin-bottom: 1.7rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s var(--ease);
+  border: 1px solid #cde7ff28;
+  background: linear-gradient(0deg, rgba(5, 20, 33, 0) 8.11%, rgba(5, 20, 33, 0) 51.76%, rgba(38, 153, 254, 0.2) 95.41%);
+}
+
+@media (orientation: portrait) {
+  .clipboard-feedback {
+    font-size: 1.3rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+.clipboard-feedback.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clipboard-feedback.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
 }
