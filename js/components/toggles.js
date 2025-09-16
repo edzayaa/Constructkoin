@@ -46,15 +46,12 @@ export class Toggles {
   }
 
   setupAccordionToggle() {
-
-
-    const triggers  = document.querySelectorAll("[data-accordion-trigger]");
+    const triggers = document.querySelectorAll("[data-accordion-trigger]");
     const accordionStatus = document.querySelectorAll("[data-accordion-status]");
     const accordionWrapper = document.querySelector("[data-current-accordion]");
-    
+
     triggers.forEach((trigger) => {
       trigger.addEventListener("click", () => {
-      
         const target = trigger.getAttribute("data-accordion-trigger");
 
         triggers.forEach((trigger) => {
@@ -66,12 +63,9 @@ export class Toggles {
         });
 
         trigger.classList.add("is--active");
-      
 
         accordionWrapper.setAttribute("data-current-accordion", target);
         ScrollTrigger.refresh();
-        
-
       });
     });
   }

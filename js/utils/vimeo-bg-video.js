@@ -141,6 +141,7 @@ export class VimeoBGVideo {
     // Close & pause lightbox
     const closeLightbox = () => {
       lightbox.setAttribute("data-vimeo-activated", "false");
+
       modalWrapper.removeAttribute("data-modal-open");
       this.lenis.start();
 
@@ -290,7 +291,6 @@ export class VimeoBGVideo {
       // Build a brand-new player if needed
       if (!player) {
         iframe.src = `https://player.vimeo.com/video/${id}?api=1&background=1&autoplay=0&loop=0&muted=0`;
-
         player = new Vimeo.Player(iframe);
         setupPlayerEvents();
         currentVideoID = id;
@@ -298,6 +298,9 @@ export class VimeoBGVideo {
       }
 
       // Now sizing is ready — show lightbox
+      const isNotActive = lightbox.getAttribute("data-vimeo-activated") === "false";
+      if (isNotActive) return;
+
       lightbox.setAttribute("data-vimeo-activated", "true");
 
       // Autoplay logic
