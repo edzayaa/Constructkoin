@@ -1,6 +1,5 @@
 import "../config/gsap-config.js";
 import { LenisSmooth } from "../config/scrollsmooth.js";
-import { ActiveLinks } from "../components/active-links.js";
 import { Navbar } from "../components/navbar.js";
 import { CustomSwiper } from "../components/global-swiper.js";
 import { HomepageAnimations } from "../animations/homepage.js";
@@ -18,7 +17,6 @@ import { PopUpHandler } from "../components/pop-up-handler.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
   const lenis = new LenisSmooth();
-  new ActiveLinks();
   new CustomSwiper();
   new HomepageAnimations(lenis);
   new SharedAnimations();
