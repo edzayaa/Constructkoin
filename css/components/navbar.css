@@ -240,6 +240,14 @@ body[data-scrolling-direction="up"] .navbar {
 @media screen and (max-width: 950px) and (orientation: landscape), screen and (orientation: portrait) {
   .navbar .navbar-inner .navbar-right .navbar-price {
     gap: 0rem;
+    padding: 1.3rem 1.3rem;
+    border-radius: 3rem;
+  }
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .navbar .navbar-inner .navbar-right .navbar-price {
+    gap: 0rem;
     padding: 0rem;
     border-radius: 0rem;
     background: none;
@@ -306,6 +314,7 @@ body[data-scrolling-direction="up"] .navbar {
   margin-left: 0.5rem;
   grid-area: stack;
   transition: opacity var(--transition);
+  font-weight: 600;
 }
 
 .navbar .navbar-inner .navbar-right .navbar-price__text-loader {

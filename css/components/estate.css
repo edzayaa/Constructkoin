@@ -19,7 +19,7 @@
 
 @media screen and (orientation: portrait) {
   .estate {
-    padding-block: 5rem;
+    padding-block: 10rem 5rem;
     padding-inline: 1.5rem;
   }
 

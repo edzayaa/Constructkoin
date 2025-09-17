@@ -3,7 +3,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  /* background: linear-gradient(to bottom, #0B3964 0%, #0b396400 30%); */
 }
 
 .partners .partners-gradient {
@@ -48,7 +47,7 @@
   }
 
   .partners .partners-wrapper {
-    padding: 5rem 0;
+    padding: 10rem 0 5rem;
     gap: 4.5rem;
   }
 
