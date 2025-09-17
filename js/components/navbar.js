@@ -9,10 +9,17 @@ export class Navbar {
 
   setupActiveNavbarSection() {
     const navbar = document.querySelector(".navbar-center-list");
+    const menu = document.querySelector(".menu-list");
+
     const listItems = Array.from(navbar.children);
+    const menuItems = Array.from(menu.children);
 
     const removeActiveClass = () => {
       listItems.forEach((item) => {
+        item.classList.remove("is--active");
+      });
+
+      menuItems.forEach((item) => {
         item.classList.remove("is--active");
       });
     };
@@ -31,10 +38,12 @@ export class Navbar {
         end: end,
         onEnter: () => {
           listItems[index].classList.add("is--active");
+          menuItems[index].classList.add("is--active");
         },
 
         onEnterBack: () => {
           listItems[index].classList.add("is--active");
+          menuItems[index].classList.add("is--active");
         },
         onLeave: () => {
           removeActiveClass();

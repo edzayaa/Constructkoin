@@ -1,6 +1,24 @@
 /* ========== TOKENOMICS ========== */
 .tokenomics {
   padding: 8.5rem 5rem;
+  position: relative;
+}
+
+.tokenomics .tokenomics-gradient {
+  display: none;
+}
+
+.tokenomics .tokenomics-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+  mask-image: linear-gradient(black 70%, transparent);
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
 }
 
 .tokenomics .tokenomics-flex {
@@ -42,6 +60,28 @@
   .tokenomics {
     height: fit-content;
     padding: 5rem 1.5rem;
+  }
+
+  .tokenomics .tokenomics-gradient {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 180vh;
+    transform: translateY(-30%);
+    z-index: -1;
+    user-select: none;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(11, 57, 100, 1) 0%, rgba(11, 57, 100, 1) 0%, rgba(255, 255, 255, 0) 80%);
+    pointer-events: none;
+    mask-image: linear-gradient(transparent, black 20%);
+
+    opacity: 0.8;
+  }
+
+  .tokenomics .tokenomics-background {
+    display: none;
   }
 
   .tokenomics .tokenomics-flex {
@@ -183,10 +223,10 @@
 
 /* table center */
 .tokenomics .tokenomics-table__center {
-  padding: 2.5rem 2.5rem;
+  padding: 7rem 2.5rem;
   display: grid;
   gap: min(1rem, 1vh);
-  flex-grow: 1;
+  gap: 4rem;
 }
 .tokenomics .tokenomics-table__center .tokenomics-table__row {
   display: flex;
@@ -734,6 +774,5 @@
   .tokenomics .tokenomics-header {
     max-width: 33rem;
     margin-inline: auto;
-    
   }
 }

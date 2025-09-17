@@ -9,7 +9,7 @@
 @media screen and (orientation: portrait) {
   .roadmap {
     height: fit-content;
-    padding-block: min(5.7rem, 5.7vh) min(10rem, 10vh);
+    padding-block: min(10rem, 10vh) min(10rem, 10vh);
     padding-inline: 0;
     margin-top: 0;
   }
@@ -97,10 +97,26 @@
   gap: min(3.5rem, 3.5vh);
 }
 
+
+@media (hover:hover) and (pointer: fine) {
+  .roadmap .roadmap-swiper-slide:hover .roadmap-slide__number
+  {
+    transform: translateX(-1rem);
+  }
+
+  .roadmap .roadmap-swiper-slide:hover .roadmap-slide__bottom,
+  .roadmap .roadmap-swiper-slide:hover .roadmap-slide__stage {
+    transform: scale(1.05);
+
+  }
+}
+
 .roadmap-swiper-slide .roadmap-slide__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.6s var(--ease);
+
 }
 
 .roadmap-swiper-slide .roadmap-slide__top .roadmap-slide__stage {
@@ -118,6 +134,7 @@
   width: 19.5rem;
   height: 7rem;
   display: grid;
+  transition: transform 0.6s var(--ease);
   place-items: center;
 }
 
@@ -125,6 +142,9 @@
   width: 10.9rem;
   height: 10.9rem;
   flex-shrink: 0;
+  transition: transform 0.6s var(--ease);
+
+
 }
 
 .roadmap-swiper-slide .roadmap-slide__bottom {
@@ -136,6 +156,8 @@
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   flex-grow: 1;
+  transition: transform 0.6s var(--ease);
+
 }
 
 .roadmap-swiper-slide .roadmap-slide__bottom .roadmap-slide__ul {

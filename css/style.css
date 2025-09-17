@@ -13,7 +13,6 @@
   font-family: "Aventa";
   font-weight: 400;
   font-style: normal;
-  line-height: 1;
 }
 
 img,
@@ -165,13 +164,6 @@ html.lenis body {
   isolation: isolate;
 }
 
-.backgrounds .backgrounds-color {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  will-change: background;
-}
-
 .backgrounds .backgrounds-pixels {
   position: absolute;
   inset: 0;
@@ -219,3 +211,5 @@ html.lenis body {
   opacity: 0;
   transform: translateY(20px);
 }
+
+

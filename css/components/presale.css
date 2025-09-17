@@ -3,6 +3,18 @@
   padding: 5rem 5rem 10rem;
   display: flex;
   gap: 10rem;
+  position: relative;
+}
+
+.presale .presale-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  transform: scale(-1);
+  mask-image: linear-gradient(black 90%, transparent);
 }
 
 .presale .presale-content {
@@ -25,7 +37,6 @@
     font-size: 5.5rem;
   }
 }
-
 
 .presale-content .presale-description,
 .presale-content .presale-subheading {
@@ -79,7 +90,11 @@
     flex-direction: column-reverse;
     gap: 5.5rem;
   }
-  
+
+  .presale .presale-background {
+    display: none;
+  }
+
   .presale .presale-content {
     align-items: center;
     width: 100%;
@@ -133,6 +148,5 @@
   .presale .presale-media__container {
     aspect-ratio: 1.7;
     height: auto;
-   
   }
 }

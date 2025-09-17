@@ -27,7 +27,7 @@
     gap: 4rem;
   }
 
-  .estate-header__buttons  .estate-cta-button{
+  .estate-header__buttons .estate-cta-button {
     padding: 1rem 1.5rem;
   }
 }
@@ -120,6 +120,18 @@
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   padding-inline: 4.5rem 2.5rem;
+  position: relative;
+}
+
+.estate .accordion-css__item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right, #0e1d2baa 60%, #143451);
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
 }
 
 .estate .accordion-css__item-top {
@@ -140,7 +152,7 @@
 
   .estate .accordion-css__item-top {
     align-items: flex-start;
-    padding:1.8rem 0 0;
+    padding: 1.8rem 0 0;
     gap: 0rem;
   }
 
@@ -224,7 +236,7 @@
 .estate .accordion-css__item-h2 {
   color: #fff;
   font-size: 1.6rem;
-line-height: normal;
+  line-height: normal;
   font-weight: 300;
 }
 
@@ -285,9 +297,9 @@ line-height: normal;
     display: none;
   }
 
-   .estate .accordion-css__item {
+  .estate .accordion-css__item {
     padding-inline: 2rem 1.2rem;
-   }
+  }
 
   .estate .accordion-css__item-h3,
   .accordion-css__item-span {
@@ -322,7 +334,6 @@ line-height: normal;
     width: 70%;
   }
 }
-
 
 .vimeo-bg {
   pointer-events: auto;
@@ -371,4 +382,8 @@ line-height: normal;
   opacity: 0;
   transition-delay: 0.2s;
   pointer-events: none;
+}
+
+.estate [data-accordion-status="active"].accordion-css__item::before {
+  opacity: 1;
 }
