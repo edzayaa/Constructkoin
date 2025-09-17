@@ -29,6 +29,10 @@
     padding-inline: 1.5rem;
   }
 
+  .buy .buy-background {
+    display: none;
+  }
+
   .buy .buy-gradient {
     display: block;
     position: absolute;
@@ -45,7 +49,6 @@
     mask-image: linear-gradient(transparent, black 20%);
     opacity: 0.8;
   }
-
 
   .buy .buy-flex {
     display: flex;
@@ -90,7 +93,6 @@
   }
 }
 
-
 .buy .buy-flex .buy-content .buy-block {
   width: 67rem;
 }
@@ -129,7 +131,6 @@
     line-height: 126%;
     width: 100%;
     text-align: center;
-
   }
 
   .buy .buy-flex .buy-content .buy-cta-button.cta-button-1 {

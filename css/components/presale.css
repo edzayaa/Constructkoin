@@ -14,7 +14,7 @@
   width: 100%;
   height: auto;
   transform: scale(-1);
-  mask-image: linear-gradient(black 90%, transparent);
+  mask-image: linear-gradient(transparent, black 20%,black 50%, transparent);
 }
 
 .presale .presale-content {
