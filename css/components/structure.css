@@ -15,6 +15,8 @@
   z-index: -1;
   mask-image: linear-gradient(black 70%, transparent);
   transform: scaleX(-1) translateY(-20%);
+  pointer-events:none;
+  user-select:none;
 }
 
 @media screen and (orientation: portrait) {
