@@ -95,6 +95,14 @@
   justify-content: center;
 }
 
+.details .details-wrapper .details-grid .details-grid__bottom p{
+  max-width: 28rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+
 .details .details-wrapper .details-grid .details-grid__block {
   display: flex;
   gap: 1rem;

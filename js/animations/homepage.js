@@ -187,7 +187,7 @@ export class HomepageAnimations {
   }
 
   copyToClipboard() {
-    const textToCopy = "0x4B34baAf17Fc2b09f407";
+    const textToCopy = "0x4B34baAf17Fc2b09f407576373166801b8ccF5E8";
 
     navigator.clipboard
       .writeText(textToCopy)
