@@ -157,3 +157,8 @@
   opacity: 0;
   visibility: hidden;
 }
+
+.highlight-blue {
+  color: #2699fe;
+  font-weight: inherit;
+}

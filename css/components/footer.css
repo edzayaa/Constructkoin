@@ -16,7 +16,8 @@
 .footer .footer-content .footer-grid .footer-disclaimer {
   margin-right: 5rem;
   display: grid;
-  gap: 1.3rem;
+  gap: 2.5rem;
+  margin-top: -2rem;
 }
 
 .footer .footer-content .footer-grid .footer-disclaimer__logo {
@@ -35,6 +36,11 @@
   line-height: 125%;
   width: 48rem;
 }
+
+.footer .footer-content .footer-grid .footer-disclaimer__text span {
+  font-weight: bold;
+}
+
 
 /* columns  */
 .footer .footer-content .footer-grid .footer-column {
@@ -137,6 +143,8 @@
   .footer .footer-content .footer-grid .footer-disclaimer {
     margin-right: 0rem;
     width: 100%;
+  margin-top:0rem;
+
   }
 
   .footer .footer-content .footer-grid .footer-disclaimer__logo {

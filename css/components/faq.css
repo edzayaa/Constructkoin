@@ -274,6 +274,7 @@
   line-height: normal;
   text-transform: capitalize;
   width: 90%;
+  transition: color 0.3s ease-out;
 }
 
 .faq .accordion-css__item-icon {
@@ -289,6 +290,10 @@
 
 [data-accordion-status="active"] .faq .accordion-css__item-icon {
   transform: rotate(0.001deg);
+}
+
+[data-accordion-status="active"] .accordion-css__item-h3 {
+  color: #2699fe;
 }
 
 .faq .accordion-css__item-icon-svg {
