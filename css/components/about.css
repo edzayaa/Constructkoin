@@ -40,7 +40,7 @@
 
 @media screen and (orientation: portrait) {
   .about .about-content .about-heading {
-    margin-bottom:1.6rem;
+    margin-bottom: 1.6rem;
     font-size: 3rem;
     width: 85%;
   }
@@ -103,16 +103,41 @@
 }
 
 /* selectors  */
+.about .about-content .about-swiper-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .about .about-content .about-selectors {
   display: flex;
   gap: 4rem;
 }
+
+.about .about-content .about-selectors {
+}
+.about .about-content .about-selectors-wrapper {
+  width: fit-content;
+}
+
+.about .about-content .about-selectors .about-swiper-slide {
+  flex-shrink: 0;
+}
+
 .about .about-content .about-selectors .about-selector__wrapper.selector-wrapper {
   display: flex;
   gap: 1.6rem;
   align-items: center;
   cursor: pointer;
 }
+
+.about .about-content .about-swiper-navigation {
+  display: none;
+}
+
 .about .about-content .about-selectors .selector__video {
   width: 7.4rem;
   height: 4.3rem;
@@ -158,9 +183,23 @@
 }
 
 @media screen and (orientation: portrait) {
+  .about .about-content .about-swiper-container {
+  }
+
   .about .about-content .about-selectors {
-    gap: 1rem;
-    overflow: auto;
+    gap: 0rem;
+  }
+
+  .about .about-content .about-swiper-wrapper {
+    width: 100%;
+  }
+
+  .about .about-content .about-swiper-navigation {
+    display: flex;
+    margin-top: 4rem;
+  }
+
+  .about .about-content .about-selectors {
     width: 100%;
     padding-inline: 0.5rem;
   }
