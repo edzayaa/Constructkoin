@@ -26,6 +26,16 @@ body[data-scrolling-direction="up"] .navbar {
   .navbar {
     padding: 3rem 1.5rem;
   }
+
+  body[data-scrolling-direction="down"] .navbar {
+    transform: translateY(0);
+    transition: transform 0.8s ease-out;
+  }
+
+  body[data-scrolling-direction="up"] .navbar {
+    transform: translateY(0%);
+    transition: transform 0.5s ease-out;
+  }
 }
 
 .navbar .navbar-inner {
