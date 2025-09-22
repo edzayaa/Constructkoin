@@ -1,6 +1,7 @@
 export class CryptoSwap {
   constructor(cryptoData) {
     this.price = cryptoData.currentPrice;
+    
     this.init();
   }
 

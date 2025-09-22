@@ -3,6 +3,7 @@ export class CryptoData {
     this.isFetching = false;
     this.navbarPriceElement = document.querySelector(".navbar-price__text span");
     this.currentPrice = 0;
+    this.nextPrice = 11.005;
     this.timeRemaining = 0;
     this.cryptoService = cryptoService;
   }
@@ -14,6 +15,7 @@ export class CryptoData {
 
     if (data) {
       this.currentPrice = data.price;
+      this.nextPrice = data.nextPrice;
       this.updateNavbarPrice(data.price);
       this.updateCardData(data);
     }
@@ -34,26 +36,23 @@ export class CryptoData {
     const tokensSold = parseFloat(data.tokensSold);
     const totalTokens = parseFloat(data.totalTokens);
     const percentageSold = ((tokensSold / totalTokens) * 100).toFixed(2);
-    const nextPrice = 1.00;
-    // const nextPrice = parseFloat(data.price) + 0.01;
-
 
     const tokenSoldPercentageElement = document.querySelector(".protocol-card__loader-text");
     const tokenSoldElement = document.querySelector(".protocol-card__token-sold strong");
     const tokenSoldLineElement = document.querySelector(".protocol-card__loader-line");
     const currentPriceElement = document.querySelector(".protocol-card__current-price strong");
     const heroCurrentPriceElement = document.querySelector(".hero-current-price");
-    const heroNextPriceElement = document.querySelector(".hero-next-price");
-    const nextPriceElement = document.querySelector(".protocol-card__next-price strong");
+    const heroNextPriceElement = document.querySelectorAll("[data-next-price-tag]");
 
     if (tokenSoldPercentageElement) tokenSoldPercentageElement.textContent = `${percentageSold}% Sold`;
     if (tokenSoldElement) tokenSoldElement.textContent = tokensSold.toLocaleString();
     if (tokenSoldLineElement) tokenSoldLineElement.style = `transform: translateX(${percentageSold * 100}%)`;
     if (currentPriceElement) currentPriceElement.textContent = `$${data.price}`;
     if (heroCurrentPriceElement) heroCurrentPriceElement.textContent = `$${data.price}`;
-    if (nextPriceElement) nextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
-    // if (heroNextPriceElement) heroNextPriceElement.textContent = `$${nextPrice.toFixed(2)}`;
-    // if (heroNextPriceElement) heroNextPriceElement.textContent = `$1.00!`;
+
+    heroNextPriceElement.forEach((element) => {
+      element.textContent = `$${this.nextPrice.toFixed(3)}`;
+    });
   }
 
   setupPriceButton() {

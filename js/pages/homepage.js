@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   const cryptoService = new CryptoService("https://apidashboard.constructkoin.com/api/wallet/data");
   const cryptoData = await new CryptoData(cryptoService).init();
+  
   new CryptoSwap(cryptoData);
   // new CountdownTimer(cryptoData.timeRemaining, ".countdown", { expiredMessage: "" });
 });
