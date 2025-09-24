@@ -360,7 +360,7 @@
     border-radius: 2rem;
     border: 1px solid rgba(246, 246, 246, 0.12);
     overflow: hidden;
-    padding: min(3rem, 3vh)  min(3rem, 3vh);
+    padding: min(3rem, 3vh) min(3rem, 3vh);
   }
 }
 
@@ -430,9 +430,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: transparent;
-  
   }
-  
 }
 
 @media screen and (min-width: 482px) and (max-width: 991px) and (orientation: portrait) {
@@ -450,18 +448,20 @@
 
 .protocol .protocol-card__loader {
   position: relative;
-  height: 1rem;
+  height: 3rem;
   width: 100%;
-  border-radius: 2.5rem;
+  border-radius: 0.6rem;
   background: rgba(255, 255, 255, 0.2);
   overflow: hidden;
-  margin-bottom: min(0.9rem, 0.9vh);
+  margin-bottom: min(1.5rem, 1.5vh);
+  display: flex;
+  align-items: center;
 }
 
 .protocol .protocol-card__loader-line {
   position: absolute;
   z-index: 1;
-  border-radius: 2.5rem;
+  border-radius: 0.6rem;
   top: 0;
   left: -100%;
   width: 100%;
@@ -474,15 +474,24 @@
   text-align: right;
   font-size: min(1.6rem, 1.6vh);
   display: block;
+  color: #26fe8b;
+  margin-right: 1.5rem;
 }
 
-.protocol .protocol-card__token-sold {
+.protocol .protocol-card__token-raised  {
+}
+
+.protocol .protocol-card__token-sold,
+.protocol .protocol-card__token-raised {
+  text-align: center;
   font-size: min(1.6rem, 1.6vh);
   font-weight: 300;
   margin-bottom: 0.7rem;
   display: block;
+  text-transform: uppercase;
 }
-.protocol .protocol-card__token-sold strong {
+.protocol .protocol-card__token-sold strong,
+.protocol .protocol-card__token-raised strong {
   font-weight: 700;
 }
 
@@ -493,21 +502,21 @@
   }
 
   .protocol .protocol-card__loader {
-    height: 7px;
-    border-radius: 50px;
+    height: 3rem;
+    border-radius: 1rem;
     margin-bottom: 0.7rem;
   }
 
   .protocol .protocol-card__loader-line {
-    border-radius: 50px;
+    border-radius: 1rem;
   }
 
   .protocol .protocol-card__loader-text {
     font-size: 1.4rem;
-    margin-bottom: 1rem;
   }
 
-  .protocol .protocol-card__token-sold {
+  .protocol .protocol-card__token-sold,
+  .protocol .protocol-card__token-raised {
     font-size: 1.4rem;
   }
 }
@@ -527,6 +536,11 @@
 .protocol .protocol-card__flex span {
   font-size: min(1.6rem, 1.6vh);
   font-weight: 300;
+}
+
+.protocol-card__next-price {
+  color: #26fe8b;
+
 }
 
 .protocol .protocol-card__flex strong {
@@ -586,7 +600,8 @@
   .protocol .protocol-card__flex {
     margin-bottom: 0.5rem;
     justify-content: space-between;
-    grid-row: 2;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .protocol .protocol-card__flex span {
@@ -879,4 +894,3 @@ input[type="number"] {
     width: 80%;
   }
 }
-

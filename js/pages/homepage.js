@@ -13,6 +13,7 @@ import { CryptoSwap } from "../components/crypto-swap.js";
 import { CountdownTimer } from "../components/countdown.js";
 import { IPservice } from "../services/ip-service.js";
 import { CryptoService } from "../services/crypto-service.js";
+import { PricesService } from "../services/prices-service.js";
 import { PopUpHandler } from "../components/pop-up-handler.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -31,9 +32,12 @@ window.addEventListener("DOMContentLoaded", async () => {
   // for newsletter form handler
   // new Newsletter();
 
+  const pricesService = new PricesService("https://apidashboard.constructkoin.com/api/presale/payment/prices");
+  const pricesData = await pricesService.getPricesData();
+
   const cryptoService = new CryptoService("https://apidashboard.constructkoin.com/api/wallet/data");
   const cryptoData = await new CryptoData(cryptoService).init();
-  
-  new CryptoSwap(cryptoData);
+
+  new CryptoSwap(pricesData.prices, cryptoData.currentPrice);
   // new CountdownTimer(cryptoData.timeRemaining, ".countdown", { expiredMessage: "" });
 });
