@@ -15,6 +15,7 @@ export class CryptoData {
 
     if (data) {
       this.currentPrice = data.tokenPrice;
+      this.currentPrice = data.tokenPrice;
       this.nextPrice = data.nextPhase.tokenPrice;
       this.updateNavbarPrice(data.tokenPrice);
       this.updateCardData(data);
@@ -32,7 +33,7 @@ export class CryptoData {
 
   updateCardData(data) {
     if (!data) return;
-
+    console.log(data)
     const tokensSold = parseFloat(data.tokensSold);
 
     const totalTokens = parseFloat(data.tokenLimit);
@@ -50,6 +51,8 @@ export class CryptoData {
     if (tokenSoldPercentageElement) tokenSoldPercentageElement.textContent = `${percentageSold}% Sold`;
     if (tokenSoldElement) tokenSoldElement.textContent = tokensSold.toLocaleString();
     if (tokenSoldLineElement) tokenSoldLineElement.style = `transform: translateX(${(tokensSold / totalTokens) * 100}%)`;
+    if (currentPriceElement) currentPriceElement.textContent = `$${data.tokenPrice}`;
+    if (heroCurrentPriceElement) heroCurrentPriceElement.textContent = `$${data.tokenPrice}`;
     if (currentPriceElement) currentPriceElement.textContent = `$${data.tokenPrice}`;
     if (heroCurrentPriceElement) heroCurrentPriceElement.textContent = `$${data.tokenPrice}`;
     if (usdRaisedElement) usdRaisedElement.textContent = `$${usdRaised}`;
